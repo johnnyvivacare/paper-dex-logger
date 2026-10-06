@@ -137,8 +137,10 @@ def outcome(tok, snaps, tp, sl, maxh, hold, trail=None):
     last, peak = None, p0
     for ts, price, liq, present in snaps:
         if ts <= t0: continue
+                # Missing data does not prove a rug or a total loss.
+        # Wait for another valid price; keep the position unresolved.
         if not present or not liq or not price:
-            return ts, 0.0, "rug"
+            continue
         gross = units * price
         val = max(gross * (1 - impact(gross, liq)) * (1 - FEE) - gas, 0.0)
         last = (ts, val)
