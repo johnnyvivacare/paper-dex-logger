@@ -1,17 +1,17 @@
 # Solana paper test — $500 USD
 
 Started: 2026-10-06 23:55 UTC
-Last collection: 2026-10-07 19:59 UTC
-Cycles: 42
+Last collection: 2026-10-07 20:22 UTC
+Cycles: 43
 
 | Item | USD |
 |---|---:|
 | Paper cash | 19.51 |
 | Realised simulated P/L | +19.51 |
-| Open positions, recent estimated sale value | 229.05 |
-| Unresolved positions, last estimated value ONLY | 301.12 |
+| Open positions, recent estimated sale value | 0.00 |
+| Unresolved positions, last estimated value ONLY | 530.17 |
 
-Open positions: 10; unresolved: 6.
+Open positions: 10; unresolved: 10.
 Total portfolio value is uncertain. Stale estimates are not available cash.
 
 Rule: Solana profiles/boosts; reported liquidity >= $50,000; $50 per entry; at most 10 positions; one entry per token. Confirm the same pool on a later cycle before buying.
@@ -26,4 +26,8 @@ Latest collection was incomplete:
 - Malformed pair response: HU22UBaTZa7AjMkDJaSyoDHtfFw6XVS6d9bSXLt9ugDB
 - Malformed pair response: 8NVFB1unNk9aDtL5hooF8Hahf2rt4GLPWx9ctEadikHg
 - Malformed pair response: FcfEJ9uJFnfcSiaZgDueseCmj2np6MYxdm5h2JpFZBDc
+- Malformed pair response: BmFtnNskdCAyf7RKX73jhtWtzeDyaLVS9HthqsuwQwdP
+- Malformed pair response: 12jc1DzJpzbCDaKuM4brAKh9jcFry2TLG1FfGsL4ftCG
+- Malformed pair response: 2ddkUY8TnuziF5SNULx8CWn1J9yd2X8HkyTUUN838zk5
 - Malformed pair response: FkfDrvbzJLB7rUT27yAyRHyVBuGNdhcWyEP8AcogJVwh
+- Malformed pair response: 867dKvaCcyRrUDP66bqNXbujXfjaxsNB9wTpc4CmBdAD

@@ -76,7 +76,7 @@
       "previous_quote": 1791403160,
       "mark": 49.276383702030664,
       "last_quote": 1791403160,
-      "status": "observed"
+      "status": "invalid response"
     },
     "HMYd9tosnUXuNHmq7pXmoePRVBLBBjA3JBfydq6upump": {
       "pool": "12jc1DzJpzbCDaKuM4brAKh9jcFry2TLG1FfGsL4ftCG",
@@ -86,7 +86,7 @@
       "previous_quote": 1791403161,
       "mark": 73.30414708461787,
       "last_quote": 1791403161,
-      "status": "observed"
+      "status": "invalid response"
     },
     "F6DPzjeqR75mqVLZVAACtD4JSUM2oJKqL7DKtwt1pump": {
       "pool": "2ddkUY8TnuziF5SNULx8CWn1J9yd2X8HkyTUUN838zk5",
@@ -96,7 +96,7 @@
       "previous_quote": 1791403161,
       "mark": 55.11256529399294,
       "last_quote": 1791403161,
-      "status": "observed"
+      "status": "invalid response"
     },
     "9Bgjx6N4g38ERqKzA3THJxHWKFTVY1FKaeftGryGpump": {
       "pool": "FkfDrvbzJLB7rUT27yAyRHyVBuGNdhcWyEP8AcogJVwh",
@@ -116,18 +116,10 @@
       "previous_quote": 1791403161,
       "mark": 51.354873133360854,
       "last_quote": 1791403161,
-      "status": "observed"
+      "status": "invalid response"
     }
   },
   "pending": {
-    "AAYnxkQJySJ4RkTQidjUoi4c7P7RNBHDWgzpHjbapump": {
-      "pool": "6kSizKgALECrFQLGpyoKYfUFFtyy9fG51nh8ZdiNFpZQ",
-      "discovered": 1791397107
-    },
-    "Fecv9hvh7yQ2iU1Ju7km5rMPC5iT7LGodXZmP75Apump": {
-      "pool": "B7qcpi3ksavHvN63VoGfSt7qSv5YB7QJGAVc397WV4ER",
-      "discovered": 1791397110
-    },
     "2UfBjNeDwzZsoUnr3hNKF4vkzAgiGmBNYCAxLq72cPa2": {
       "pool": "BEHtrQRFGFaMdp82vBJ161Ybd8xyEDB422HWaF1Gfm3U",
       "discovered": 1791399048
@@ -914,15 +906,19 @@
       "discovered": 1791391696
     }
   ],
-  "cycles": 42,
-  "last_run": 1791403164,
+  "cycles": 43,
+  "last_run": 1791404562,
   "errors": [
     "Malformed pair response: 7sY6BrhDBkJdcYFrDd1M49hinSXrqk2bzS3rT6Juanch",
     "Malformed pair response: 9tkeoJW4TdWSh5yYh1tDECB2zbVd3AyrBSBTMquJvvMh",
     "Malformed pair response: HU22UBaTZa7AjMkDJaSyoDHtfFw6XVS6d9bSXLt9ugDB",
     "Malformed pair response: 8NVFB1unNk9aDtL5hooF8Hahf2rt4GLPWx9ctEadikHg",
     "Malformed pair response: FcfEJ9uJFnfcSiaZgDueseCmj2np6MYxdm5h2JpFZBDc",
-    "Malformed pair response: FkfDrvbzJLB7rUT27yAyRHyVBuGNdhcWyEP8AcogJVwh"
+    "Malformed pair response: BmFtnNskdCAyf7RKX73jhtWtzeDyaLVS9HthqsuwQwdP",
+    "Malformed pair response: 12jc1DzJpzbCDaKuM4brAKh9jcFry2TLG1FfGsL4ftCG",
+    "Malformed pair response: 2ddkUY8TnuziF5SNULx8CWn1J9yd2X8HkyTUUN838zk5",
+    "Malformed pair response: FkfDrvbzJLB7rUT27yAyRHyVBuGNdhcWyEP8AcogJVwh",
+    "Malformed pair response: 867dKvaCcyRrUDP66bqNXbujXfjaxsNB9wTpc4CmBdAD"
   ],
   "history": [
     {
@@ -1350,6 +1346,27 @@
         "Malformed pair response: 8NVFB1unNk9aDtL5hooF8Hahf2rt4GLPWx9ctEadikHg",
         "Malformed pair response: FcfEJ9uJFnfcSiaZgDueseCmj2np6MYxdm5h2JpFZBDc",
         "Malformed pair response: FkfDrvbzJLB7rUT27yAyRHyVBuGNdhcWyEP8AcogJVwh"
+      ]
+    },
+    {
+      "ts": 1791404562,
+      "cash": 19.513447391561243,
+      "realized": 19.51344739156128,
+      "fresh_estimate": 0.0,
+      "stale_estimate": 530.1689777482261,
+      "unresolved": 10,
+      "open": 10,
+      "errors": [
+        "Malformed pair response: 7sY6BrhDBkJdcYFrDd1M49hinSXrqk2bzS3rT6Juanch",
+        "Malformed pair response: 9tkeoJW4TdWSh5yYh1tDECB2zbVd3AyrBSBTMquJvvMh",
+        "Malformed pair response: HU22UBaTZa7AjMkDJaSyoDHtfFw6XVS6d9bSXLt9ugDB",
+        "Malformed pair response: 8NVFB1unNk9aDtL5hooF8Hahf2rt4GLPWx9ctEadikHg",
+        "Malformed pair response: FcfEJ9uJFnfcSiaZgDueseCmj2np6MYxdm5h2JpFZBDc",
+        "Malformed pair response: BmFtnNskdCAyf7RKX73jhtWtzeDyaLVS9HthqsuwQwdP",
+        "Malformed pair response: 12jc1DzJpzbCDaKuM4brAKh9jcFry2TLG1FfGsL4ftCG",
+        "Malformed pair response: 2ddkUY8TnuziF5SNULx8CWn1J9yd2X8HkyTUUN838zk5",
+        "Malformed pair response: FkfDrvbzJLB7rUT27yAyRHyVBuGNdhcWyEP8AcogJVwh",
+        "Malformed pair response: 867dKvaCcyRrUDP66bqNXbujXfjaxsNB9wTpc4CmBdAD"
       ]
     }
   ]
