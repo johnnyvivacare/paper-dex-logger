@@ -1,27 +1,64 @@
 name: paper-dex-logger
+
 on:
   schedule:
     - cron: "*/5 * * * *"
   workflow_dispatch:
+
 permissions:
   contents: write
+
 concurrency:
   group: logger
   cancel-in-progress: false
+
 jobs:
   cycle:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+
     steps:
       - uses: actions/checkout@v4
-      - name: cycle (public DexScreener data only; nothing here can trade)
-        run: python3 dexlog.py cycle --jsonl data
-      - name: commit the new rows
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Configure report commits
         run: |
-          git config user.name  "paper-logger"
+          git config user.name "paper-logger"
           git config user.email "paper-logger@users.noreply.github.com"
-          git add data
-          git diff --cached --quiet && echo "nothing new" && exit 0
-          git commit -m "cycle $(date -u +%FT%TZ)"
-          git pull --rebase
-          git push
+
+      - name: Four paper checks about one minute apart
+        shell: python
+        run: |
+          import subprocess
+          import time
+
+          def run(*args):
+              subprocess.run(args, check=True, timeout=120)
+
+          for cycle in range(4):
+              started = time.monotonic()
+
+              # Continue the existing paper account.
+              run("python3", "dexlog.py", "cycle", "--jsonl", "data")
+
+              # Save each completed check to GitHub.
+              run("git", "add", "data")
+              result = subprocess.run(
+                  ["git", "diff", "--cached", "--quiet"],
+                  timeout=30,
+              )
+
+              if result.returncode == 1:
+                  run("git", "commit", "-m",
+                      "paper cycle " + time.strftime(
+                          "%Y-%m-%dT%H:%M:%SZ", time.gmtime()))
+                  run("git", "pull", "--rebase", "origin", "main")
+                  run("git", "push", "origin", "HEAD:main")
+              elif result.returncode != 0:
+                  raise RuntimeError("Could not check staged changes")
+
+              if cycle < 3:
+                  elapsed = time.monotonic() - started
+                  time.sleep(max(0, 60 - elapsed))
