@@ -323,7 +323,7 @@ def main():
     parser.add_argument("--jsonl", default="data", help="existing workflow data folder")
     args = parser.parse_args()
     directory = Path(args.jsonl)
-    path = directory / "paper_v2.json"
+    path = directory / "paper_v2_run2.json"
     if args.command == "report" and not path.exists():
         print("V2 has not started. Its first successful cycle creates the separate $500 account.")
         return
