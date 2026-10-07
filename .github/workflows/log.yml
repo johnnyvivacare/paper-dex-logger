@@ -37,7 +37,7 @@ jobs:
           def run(*args):
               subprocess.run(args, check=True, timeout=120)
 
-          for cycle in range(4):
+          for cycle in range(8):
               started = time.monotonic()
 
               # Continue the existing paper account.
@@ -59,6 +59,6 @@ jobs:
               elif result.returncode != 0:
                   raise RuntimeError("Could not check staged changes")
 
-              if cycle < 3:
+              if cycle < 7:
                   elapsed = time.monotonic() - started
-                  time.sleep(max(0, 60 - elapsed))
+                  time.sleep(max(0, 30 - elapsed))
