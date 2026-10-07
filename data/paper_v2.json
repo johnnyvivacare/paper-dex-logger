@@ -15,35 +15,71 @@
     "stale_seconds": 1800,
     "pending_seconds": 7200
   },
-  "cash": 500.0,
+  "cash": 200.0,
   "realized": 0.0,
-  "positions": {},
-  "pending": {
+  "positions": {
     "45VHsie7CwFfPKWCw28PCdZdJWMA5Y6k56wDam9Hpump": {
       "pool": "A2ASUorCeTj9KWkmzhF3PvSSLGzrNMNgHiQkU8UEGQmj",
-      "discovered": 1791330952
+      "entered": 1791332781,
+      "cost": 50.0,
+      "units": 87152.08832664102,
+      "previous_quote": 1791332781,
+      "mark": 49.04450682109625,
+      "last_quote": 1791332781,
+      "status": "observed"
     },
     "546KkLu9bXk3E32CaGmRixxfvdMRjpPqH8HD8kJYpump": {
       "pool": "6Ri3bSncKVPUozdt3hCBHNc7uoonSBGeT5wDVpT89Vh8",
-      "discovered": 1791330953
+      "entered": 1791332781,
+      "cost": 50.0,
+      "units": 57854.0878084159,
+      "previous_quote": 1791332781,
+      "mark": 49.07382786375633,
+      "last_quote": 1791332781,
+      "status": "observed"
     },
     "8erE7RkkoiGYJtCyQdfwMpnNA8cAkY14Xe6RYjjHAdKP": {
       "pool": "7sY6BrhDBkJdcYFrDd1M49hinSXrqk2bzS3rT6Juanch",
-      "discovered": 1791330957
+      "entered": 1791332782,
+      "cost": 50.0,
+      "units": 111303.30801281155,
+      "previous_quote": 1791332782,
+      "mark": 49.020623733167284,
+      "last_quote": 1791332782,
+      "status": "observed"
     },
     "ADPN2aqzY5RhkBC7bNQWFhTFFEYKY4drHUQG887Cpump": {
       "pool": "7mQDGteiaD4Tkupg9hStyPQNeSTNTRaUEhh1zJ1awp8x",
-      "discovered": 1791330957
+      "entered": 1791332782,
+      "cost": 50.0,
+      "units": 36700.55155724994,
+      "previous_quote": 1791332782,
+      "mark": 49.09570085742814,
+      "last_quote": 1791332782,
+      "status": "observed"
     },
     "CHsC7xqDLrTy8NMizomPUx3sNKxJzXGDaswc9Zs9DeLn": {
       "pool": "9tkeoJW4TdWSh5yYh1tDECB2zbVd3AyrBSBTMquJvvMh",
-      "discovered": 1791330959
+      "entered": 1791332782,
+      "cost": 50.0,
+      "units": 55389.00723327542,
+      "previous_quote": 1791332782,
+      "mark": 49.062337496211654,
+      "last_quote": 1791332782,
+      "status": "observed"
     },
     "J9qzFhTLYnmf3tZYvHBaF96rH3YKToELAAVMzz66pump": {
       "pool": "HU22UBaTZa7AjMkDJaSyoDHtfFw6XVS6d9bSXLt9ugDB",
-      "discovered": 1791330963
+      "entered": 1791332783,
+      "cost": 50.0,
+      "units": 143774.6493491702,
+      "previous_quote": 1791332783,
+      "mark": 49.00859376564404,
+      "last_quote": 1791332783,
+      "status": "observed"
     }
   },
+  "pending": {},
   "seen": {
     "24vWkfSdkSSwXN2EjUMfRhmJE4gvG4XCbvhqB1D7P7C5": 1791330950,
     "2eXhFki4uomAuuiXvT7ePToJJPHW2zKczdVWLRESpump": 1791330950,
@@ -93,11 +129,100 @@
     "Hp6sG21D3Cpz7f6RCbaEFPMupHQz4bcpF5xUgNBrhSiq": 1791330962,
     "J9qzFhTLYnmf3tZYvHBaF96rH3YKToELAAVMzz66pump": 1791330963,
     "WCTDewh3xRuMbzEgQDhrRTWfgorvfBuCesbYtzQspWN": 1791330963,
-    "fzqZYzuUuCpMpE5FR8ZSMPYVJQJjJ3fpaELkawUpump": 1791330963
+    "fzqZYzuUuCpMpE5FR8ZSMPYVJQJjJ3fpaELkawUpump": 1791330963,
+    "3TWZ2jxSYUiRm9aS2PiD8dUUaUac7Kd8627cvFGDpump": 1791332785,
+    "49VZNZqvkcsGajJ8k9xrEzDZTLRDV5rZn9YYthg53czn": 1791332785,
+    "6sH975zcpMyK5xcDEBnCWrgrGnRf53uVokayhsDQpump": 1791332786,
+    "8xu4aFUUJ1Uq7Vye2Pr5eNyetPm9egNMaEeT4WbApump": 1791332786,
+    "9qggaAJgctnNUJT1ZtpMfJQwVg3WXwVXEqyBfiDyH9wG": 1791332786,
+    "BTQ1RdUxu5LakcJGgpv2oJVWGz1sXR5z2iXcWJGQyX3F": 1791332786,
+    "BeUACFcmwmCKeGrvgCDqFMnwnP2sbAHodPdDcqEvpump": 1791332787,
+    "CyazN94YsKwdNUWk7VXKAg1H9tfqL81FYMZTidk7pump": 1791332787,
+    "EWtVtmYPwTEk8abdZa7WK42sD3sgLjqU1T5JGpkusUgF": 1791332787,
+    "EsDfW3B7LUWpYVBQgoaaVAqyMMgRyunbo8frArpUDdfi": 1791332787
   },
-  "trades": [],
-  "cycles": 1,
-  "last_run": 1791330963,
+  "trades": [
+    {
+      "side": "buy",
+      "ts": 1791332781,
+      "token": "45VHsie7CwFfPKWCw28PCdZdJWMA5Y6k56wDam9Hpump",
+      "pool": "A2ASUorCeTj9KWkmzhF3PvSSLGzrNMNgHiQkU8UEGQmj",
+      "usd": 50.0,
+      "quote": {
+        "price": 0.0005682,
+        "liquidity": 69510.09,
+        "pool": "A2ASUorCeTj9KWkmzhF3PvSSLGzrNMNgHiQkU8UEGQmj"
+      },
+      "discovered": 1791330952
+    },
+    {
+      "side": "buy",
+      "ts": 1791332781,
+      "token": "546KkLu9bXk3E32CaGmRixxfvdMRjpPqH8HD8kJYpump",
+      "pool": "6Ri3bSncKVPUozdt3hCBHNc7uoonSBGeT5wDVpT89Vh8",
+      "usd": 50.0,
+      "quote": {
+        "price": 0.0008562,
+        "liquidity": 87920.77,
+        "pool": "6Ri3bSncKVPUozdt3hCBHNc7uoonSBGeT5wDVpT89Vh8"
+      },
+      "discovered": 1791330953
+    },
+    {
+      "side": "buy",
+      "ts": 1791332782,
+      "token": "8erE7RkkoiGYJtCyQdfwMpnNA8cAkY14Xe6RYjjHAdKP",
+      "pool": "7sY6BrhDBkJdcYFrDd1M49hinSXrqk2bzS3rT6Juanch",
+      "usd": 50.0,
+      "quote": {
+        "price": 0.0004448,
+        "liquidity": 59372.28,
+        "pool": "7sY6BrhDBkJdcYFrDd1M49hinSXrqk2bzS3rT6Juanch"
+      },
+      "discovered": 1791330957
+    },
+    {
+      "side": "buy",
+      "ts": 1791332782,
+      "token": "ADPN2aqzY5RhkBC7bNQWFhTFFEYKY4drHUQG887Cpump",
+      "pool": "7mQDGteiaD4Tkupg9hStyPQNeSTNTRaUEhh1zJ1awp8x",
+      "usd": 50.0,
+      "quote": {
+        "price": 0.00135,
+        "liquidity": 109541.88,
+        "pool": "7mQDGteiaD4Tkupg9hStyPQNeSTNTRaUEhh1zJ1awp8x"
+      },
+      "discovered": 1791330957
+    },
+    {
+      "side": "buy",
+      "ts": 1791332782,
+      "token": "CHsC7xqDLrTy8NMizomPUx3sNKxJzXGDaswc9Zs9DeLn",
+      "pool": "9tkeoJW4TdWSh5yYh1tDECB2zbVd3AyrBSBTMquJvvMh",
+      "usd": 50.0,
+      "quote": {
+        "price": 0.0008942,
+        "liquidity": 79655.89,
+        "pool": "9tkeoJW4TdWSh5yYh1tDECB2zbVd3AyrBSBTMquJvvMh"
+      },
+      "discovered": 1791330959
+    },
+    {
+      "side": "buy",
+      "ts": 1791332783,
+      "token": "J9qzFhTLYnmf3tZYvHBaF96rH3YKToELAAVMzz66pump",
+      "pool": "HU22UBaTZa7AjMkDJaSyoDHtfFw6XVS6d9bSXLt9ugDB",
+      "usd": 50.0,
+      "quote": {
+        "price": 0.0003443,
+        "liquidity": 55306.32,
+        "pool": "HU22UBaTZa7AjMkDJaSyoDHtfFw6XVS6d9bSXLt9ugDB"
+      },
+      "discovered": 1791330963
+    }
+  ],
+  "cycles": 2,
+  "last_run": 1791332788,
   "errors": [],
   "history": [
     {
@@ -108,6 +233,16 @@
       "stale_estimate": 0.0,
       "unresolved": 0,
       "open": 0,
+      "errors": []
+    },
+    {
+      "ts": 1791332788,
+      "cash": 200.0,
+      "realized": 0.0,
+      "fresh_estimate": 294.3055905373037,
+      "stale_estimate": 0.0,
+      "unresolved": 0,
+      "open": 6,
       "errors": []
     }
   ]
