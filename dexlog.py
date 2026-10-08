@@ -2,7 +2,7 @@
 """Solana paper experiment v2. Public data only; no wallet or trading API.
 Compatible with: python3 dexlog.py cycle --jsonl data
 Report: python3 dexlog.py report --jsonl data
-Old JSONL logs are preserved. New state is data/paper_v2.json.
+Old JSONL logs are preserved. Current state remains data/paper_v2_run2.json.
 """
 import argparse
 import datetime as dt
@@ -137,6 +137,7 @@ def mark(position, q, now):
     position["mark"] = sale_value(position["units"], q)
     position["last_quote"] = now
     position["status"] = "observed"
+    ctrl_observe(position, q, now)
 
 
 def exit_reason(position, now):
@@ -145,6 +146,9 @@ def exit_reason(position, now):
         return "take profit"
     if change <= CONFIG["stop_loss"]:
         return "stop loss"
+    extra_reason = ctrl_exit_reason(position)
+    if extra_reason:
+        return extra_reason
     if now - position["entered"] >= CONFIG["max_hold_hours"] * 3600:
         return "time limit"
     return None
@@ -154,7 +158,7 @@ def totals(state, now):
     fresh = stale = 0.0
     unresolved = 0
     for p in state["positions"].values():
-        if p["status"] != "observed" or now - p["last_quote"] > CONFIG["stale_seconds"]:
+        if p["status"] != "observed" or not 0 <= now - p["last_quote"] <= ctrl_RULES["quote_max_age"]:
             stale += p["mark"]
             unresolved += 1
         else:
@@ -163,6 +167,7 @@ def totals(state, now):
 
 
 def cycle(state):
+    ctrl_begin(state, int(time.time()))
     errors = []
     # Existing positions always get priority and never age off the watchlist.
     for token, p in list(state["positions"].items()):
@@ -181,6 +186,8 @@ def cycle(state):
                 "side": "sell", "ts": observed, "token": token, "pool": p["pool"],
                 "usd": proceeds, "pnl": proceeds - p["cost"], "reason": reason,
                 "quote": q, "entry_ts": p["entered"],
+                "controls_version": ctrl_VERSION,
+                "cost_estimate": ctrl_sell_costs(p["units"], proceeds, q, CONFIG),
                 "observation_gap_seconds": observed - p.get("previous_quote", p["entered"]),
             })
             del state["positions"][token]
@@ -190,12 +197,14 @@ def cycle(state):
 
     # A candidate must be observed again in a later cycle before paper entry.
     # It must still have the same pool and adequate reported liquidity.
+    ctrl_entries_allowed(state, int(time.time()), errors)
     for token, candidate in list(state["pending"].items()):
         now = int(time.time())
         if now - candidate["discovered"] > CONFIG["pending_seconds"]:
             del state["pending"][token]
             continue
-        if errors or len(state["positions"]) >= CONFIG["slots"] or state["cash"] < CONFIG["size"]:
+        if (not ctrl_entries_allowed(state, now, errors)
+                or len(state["positions"]) >= CONFIG["slots"] or state["cash"] < CONFIG["size"]):
             continue
         if now - candidate["discovered"] < 60:
             continue
@@ -214,6 +223,8 @@ def cycle(state):
         state["trades"].append({
             "side": "buy", "ts": now, "token": token, "pool": q["pool"],
             "usd": cost, "quote": q, "discovered": candidate["discovered"],
+            "controls_version": ctrl_VERSION,
+            "cost_estimate": ctrl_buy_costs(cost, position["units"], q, CONFIG),
         })
         del state["pending"][token]
         time.sleep(0.25)
@@ -269,6 +280,7 @@ def cycle(state):
         "fresh_estimate": fresh, "stale_estimate": stale, "unresolved": unresolved,
         "open": len(state["positions"]), "errors": errors,
     })
+    ctrl_finish(state, now)
 
 
 def report(state, now):
@@ -314,7 +326,194 @@ def report(state, now):
         lines += ["Latest collection was incomplete:"] + ["- " + e for e in state["errors"]]
     else:
         lines.append("No request errors recorded in the latest cycle.")
-    return "\n".join(lines) + "\n"
+    return "\n".join(lines) + "\n" + ctrl_report(state, now)
+
+
+# Embedded controls: keep this file standalone for GitHub uploads.
+"""Shared paper-only controls. Independent implementation; no transaction APIs."""
+import datetime as dt
+import math
+
+ctrl_VERSION = "controls-1"
+ctrl_RULES = dict(trail_arm=.25, trail_drop=.20, liquidity_drop=.35,
+             loss_pause_drawdown=.10, loss_window_seconds=86400,
+             pause_seconds=21600, quote_max_age=120)
+
+def ctrl_valuation(state, now):
+    total = state["cash"]
+    unresolved = 0
+    for p in state["positions"].values():
+        value = p.get("mark")
+        if (p.get("status") != "observed" or not isinstance(value, (float, int))
+                or not math.isfinite(value) or value < 0
+                or not 0 <= now-p.get("last_quote", 0) <= ctrl_RULES["quote_max_age"]):
+            unresolved += 1
+        else:
+            total += value
+    return (None if unresolved else total), unresolved
+
+def ctrl_begin(state, now):
+    if "controls" not in state:
+        state["controls"] = dict(
+            version=ctrl_VERSION, rules=dict(ctrl_RULES), enabled_at=now,
+            initial_cash=state["cash"], prior_trades=len(state["trades"]),
+            prior_cycles=state["cycles"], initial_equity=None,
+            equity_peak=None, max_drawdown=0., points=[], pause_until=0,
+            pauses=[], last_cycle=None, last_gap=0, max_gap=0,
+            blocked=[], costs=dict(entry=0., exit=0., fees=0., gas=0.,
+                                   impact=0., slippage=0.),
+            accounted_trades=len(state["trades"]), valued_cycles=0,
+            unresolved_cycles=0)
+        state.setdefault("upgrades", []).append(dict(
+            version=ctrl_VERSION, ts=now, rules=dict(ctrl_RULES),
+            cash=state["cash"], positions=len(state["positions"]),
+            previous_trades=len(state["trades"])))
+    c = state["controls"]
+    if c["version"] != ctrl_VERSION or c["rules"] != ctrl_RULES:
+        raise ValueError("Controls version mismatch; explicit migration required")
+    return c
+
+def ctrl_observe(p, q, now):
+    # Called only after a usable quote. Never invent historical peaks.
+    prior = p.get("controls_mark")
+    net = p["mark"]
+    if prior is None:
+        prior = p["controls_mark"] = dict(
+            since=now, peak_net=net, peak_liquidity=q["liquidity"],
+            armed=False, last=now, max_gap=0)
+    prior["max_gap"] = max(prior["max_gap"], now-prior["last"])
+    prior["last"] = now
+    prior["peak_net"] = max(prior["peak_net"], net)
+    prior["peak_liquidity"] = max(prior["peak_liquidity"], q["liquidity"])
+    prior["liquidity"] = q["liquidity"]
+    if net >= p["cost"]*(1+ctrl_RULES["trail_arm"]):
+        prior["armed"] = True
+
+def ctrl_exit_reason(p):
+    m = p.get("controls_mark")
+    if not m:
+        return None
+    if m["liquidity"] <= m["peak_liquidity"]*(1-ctrl_RULES["liquidity_drop"]):
+        return "reported liquidity drop"
+    if m["armed"] and p["mark"] <= m["peak_net"]*(1-ctrl_RULES["trail_drop"]):
+        return "trailing pullback"
+    return None
+
+def ctrl_checkpoint(state, now):
+    c = ctrl_begin(state, now)
+    equity, unresolved = ctrl_valuation(state, now)
+    c["points"] = [p for p in c["points"] if now-p["ts"] <= ctrl_RULES["loss_window_seconds"]]
+    if equity is not None:
+        if c["initial_equity"] is None:
+            c["initial_equity"] = equity
+        peak = max([equity]+[p["equity"] for p in c["points"]])
+        decline = 0 if peak <= 0 else 1-equity/peak
+        if decline + 1e-12 >= ctrl_RULES["loss_pause_drawdown"] and now >= c["pause_until"]:
+            c["pause_until"] = now+ctrl_RULES["pause_seconds"]
+            c["pauses"].append(dict(ts=now, until=c["pause_until"],
+                                   drawdown=decline, equity=equity))
+        c["points"].append(dict(ts=now, equity=equity))
+        c["equity_peak"] = max(equity, c["equity_peak"] or equity)
+        if c["equity_peak"] > 0:
+            c["max_drawdown"] = max(c["max_drawdown"], 1-equity/c["equity_peak"])
+    return equity, unresolved
+
+def ctrl_entries_allowed(state, now, errors):
+    _, unresolved = ctrl_checkpoint(state, now)
+    c = state["controls"]
+    reasons = []
+    if errors:
+        reasons.append("request errors")
+    if unresolved:
+        reasons.append("unresolved or old position quotes")
+    if now < c["pause_until"]:
+        reasons.append("portfolio loss pause")
+    c["blocked"] = reasons
+    return not reasons
+
+def ctrl_buy_costs(cost, units, q, config):
+    gas = min(cost,config["gas"])
+    fee = (cost-gas)*config["fee"]
+    net = cost-gas-fee
+    impacted = net/(1+net/(q["liquidity"]/2))
+    slippage = impacted*config["extra_slippage"]
+    return dict(total=cost-units*q["price"], fees=fee, gas=gas,
+                impact=net-impacted, slippage=slippage)
+
+def ctrl_sell_costs(units, proceeds, q, config):
+    gross = units*q["price"]
+    impacted = gross/(1+gross/(q["liquidity"]/2))
+    fee = impacted*config["fee"]
+    slippage = (impacted-fee)*config["extra_slippage"]
+    gas = min(config["gas"], max(0, impacted-fee-slippage))
+    return dict(total=gross-proceeds, fees=fee, gas=gas,
+                impact=gross-impacted, slippage=slippage)
+
+def ctrl_finish(state, now):
+    c = ctrl_begin(state, now)
+    equity, unresolved = ctrl_checkpoint(state, now)
+    if c["last_cycle"] is not None:
+        c["last_gap"] = max(0,now-c["last_cycle"])
+        c["max_gap"] = max(c["max_gap"],c["last_gap"])
+    c["last_cycle"] = now
+    c["unresolved_cycles" if unresolved else "valued_cycles"] += 1
+    for trade in state["trades"][c["accounted_trades"]:]:
+        costs = trade.get("cost_estimate")
+        if costs:
+            c["costs"]["entry" if trade["side"] == "buy" else "exit"] += costs["total"]
+            for k in ("fees","gas","impact","slippage"):
+                c["costs"][k] += costs[k]
+    c["accounted_trades"] = len(state["trades"])
+    state["history"][-1].update(controls_version=ctrl_VERSION, observed_equity=equity,
+                                entries_blocked=list(c["blocked"]))
+    # Log one decision per cycle; all older trade records remain unchanged.
+    c["last_value"], c["unresolved"] = equity, unresolved
+
+def ctrl_utc(ts):
+    return dt.datetime.fromtimestamp(ts,dt.timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
+
+def ctrl_report(state, now):
+    c = state.get("controls")
+    if not c:
+        return "\nControls upgrade has not run yet.\n"
+    equity, unresolved = ctrl_valuation(state, now)
+    paused = now<c["pause_until"]
+    costs = c["costs"]
+    lines = ["", "## Controls upgrade "+ctrl_VERSION, "",
+             "Enabled: "+ctrl_utc(c["enabled_at"])+". Existing balance and history preserved.",
+             "Metrics below cover only the period since this upgrade.",
+             "Initial valued equity: "+("unavailable" if c["initial_equity"] is None
+                                       else "$%.2f" % c["initial_equity"]),
+             "Current equity with quotes <=120s old: "+
+             ("uncertain (%d unresolved/old quotes)" % unresolved if equity is None
+              else "$%.2f" % equity),
+             "Maximum observed portfolio decline since upgrade: %.2f%%" % (100*c["max_drawdown"]),
+             "Latest / largest saved-cycle gap: %ss / %ss." % (c["last_gap"],c["max_gap"]),
+             "Cycles with uncertain equity: %s." % c["unresolved_cycles"],
+             "New entries: "+("PAUSED until "+ctrl_utc(c["pause_until"]) if paused else
+                               ("blocked: "+", ".join(c["blocked"]) if c["blocked"] else "allowed by controls")),
+             "", "### Modeled costs since upgrade", "",
+             "| Component | USD |", "|---|---:|",
+             "| Fees | %.4f |" % costs["fees"],
+             "| Gas | %.4f |" % costs["gas"],
+             "| Pool impact | %.4f |" % costs["impact"],
+             "| Extra slippage | %.4f |" % costs["slippage"],
+             "| Total entry + exit drag | %.4f |" % (costs["entry"]+costs["exit"]),
+             "", "Costs above are assumptions already included in P/L, not extra charges or actual swap fees.",
+             "Trailing exit: arms at +25% net, triggers on 20% pullback from the observed net peak.",
+             "Reported liquidity exit: 35% decline from the observed liquidity peak. A USD liquidity drop is not proof of a rug.",
+             "10% drawdown from the preceding 24h observed equity peak pauses new entries for 6h; existing exits continue. A continuing breach can renew the pause.",
+             "Original +100% target, -50% stop and 24h holding limit remain. Fills use the next observed estimated sale value; thresholds never guarantee proceeds.",
+             "Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger losses and peaks. Missing prices never count as completed sales.",
+             "", "### Latest decisions", ""]
+    for t in state["trades"][-10:]:
+        reason = t.get("reason")
+        if not reason:
+            reason = "opportunity score "+str(t["score"]) if "score" in t else "liquidity filter and second observation"
+        lines.append("- "+ctrl_utc(t["ts"])+" "+t["side"]+" "+t["token"]+
+                     ": $%.2f; " % t["usd"]+reason+
+                     ("; pre-upgrade" if t.get("controls_version") != ctrl_VERSION else ""))
+    return "\n".join(lines)+"\n"
 
 
 def main():
