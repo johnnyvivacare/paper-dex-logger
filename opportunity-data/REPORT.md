@@ -2,23 +2,23 @@
 
 Started: 2026-10-07 22:50 UTC
 Last collection: 2026-10-08 03:03 UTC
-Cycles: 121
+Cycles: 122
 
 | Item | USD |
 |---|---:|
 | Cash | 450.00 |
 | Realized simulated P/L | +0.00 |
-| Recent estimated position value | 88.97 |
+| Recent estimated position value | 91.05 |
 | Unresolved last marks (not cash) | 0.00 |
 
 Open positions: 1; unresolved: 0.
-Estimated equity: $538.97; estimated P/L: $+38.97.
+Estimated equity: $541.05; estimated P/L: $+41.05.
 
 ## Positions
 
 | Token | Entry score | Current score |
 |---|---:|---:|
-| HXqxTwCzREUXNK4CbNDgNEUEh2jLzFKdC4tvTuojpump | 72.78 | 93.81 |
+| HXqxTwCzREUXNK4CbNDgNEUEh2jLzFKdC4tvTuojpump | 72.78 | 92.78 |
 
 ## Recent trades
 
