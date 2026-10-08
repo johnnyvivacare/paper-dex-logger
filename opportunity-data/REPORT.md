@@ -2,25 +2,27 @@
 
 Started: 2026-10-07 22:50 UTC
 Last collection: 2026-10-08 01:45 UTC
-Cycles: 84
+Cycles: 85
 
 | Item | USD |
 |---|---:|
-| Cash | 500.00 |
+| Cash | 450.00 |
 | Realized simulated P/L | +0.00 |
-| Recent estimated position value | 0.00 |
+| Recent estimated position value | 49.01 |
 | Unresolved last marks (not cash) | 0.00 |
 
-Open positions: 0; unresolved: 0.
-Estimated equity: $500.00; estimated P/L: $+0.00.
+Open positions: 1; unresolved: 0.
+Estimated equity: $499.01; estimated P/L: $-0.99.
 
 ## Positions
 
 | Token | Entry score | Current score |
 |---|---:|---:|
+| HXqxTwCzREUXNK4CbNDgNEUEh2jLzFKdC4tvTuojpump | 72.78 | None |
 
 ## Recent trades
 
+- 2026-10-08 01:45 UTC buy HXqxTwCzREUXNK4CbNDgNEUEh2jLzFKdC4tvTuojpump: $50.00 (score 72.78)
 
 Experimental score, NOT a probability of profit. Profiles/boosts are a limited promotional sample, not all new tokens or verified memes.
 Pairs aged 30 minutes–72 hours; reported liquidity >=$50k; 5m volume >=$5k; buying and positive momentum required. Missing fields or history prevent entry.
