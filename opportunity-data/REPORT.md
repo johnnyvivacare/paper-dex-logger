@@ -1,8 +1,8 @@
 # Opportunity paper experiment — $500 USD
 
 Started: 2026-10-07 22:50 UTC
-Last collection: 2026-10-08 06:03 UTC
-Cycles: 208
+Last collection: 2026-10-08 06:12 UTC
+Cycles: 209
 
 | Item | USD |
 |---|---:|
@@ -31,3 +31,36 @@ Paper only; no wallet, signing, or transactions. Same approximate pool-impact an
 Unavailable prices remain unresolved, not assumed sales. GitHub scheduling and API delays create monitoring gaps. Compare returns from matching timestamps, not different start balances/dates.
 
 Errors: 0
+
+## Controls upgrade controls-1
+
+Enabled: 2026-10-08 06:12:06 UTC. Existing balance and history preserved.
+Metrics below cover only the period since this upgrade.
+Initial valued equity: $555.94
+Current equity with quotes <=120s old: $555.94
+Maximum observed portfolio decline since upgrade: 0.00%
+Latest / largest saved-cycle gap: 0s / 0s.
+Cycles with uncertain equity: 0.
+New entries: allowed by controls
+
+### Modeled costs since upgrade
+
+| Component | USD |
+|---|---:|
+| Fees | 0.0000 |
+| Gas | 0.0000 |
+| Pool impact | 0.0000 |
+| Extra slippage | 0.0000 |
+| Total entry + exit drag | 0.0000 |
+
+Costs above are assumptions already included in P/L, not extra charges or actual swap fees.
+Trailing exit: arms at +25% net, triggers on 20% pullback from the observed net peak.
+Reported liquidity exit: 35% decline from the observed liquidity peak. A USD liquidity drop is not proof of a rug.
+10% drawdown from the preceding 24h observed equity peak pauses new entries for 6h; existing exits continue. A continuing breach can renew the pause.
+Original +100% target, -50% stop and 24h holding limit remain. Fills use the next observed estimated sale value; thresholds never guarantee proceeds.
+Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger losses and peaks. Missing prices never count as completed sales.
+
+### Latest decisions
+
+- 2026-10-08 01:45:54 UTC buy HXqxTwCzREUXNK4CbNDgNEUEh2jLzFKdC4tvTuojpump: $50.00; opportunity score 72.78; pre-upgrade
+- 2026-10-08 03:05:34 UTC sell HXqxTwCzREUXNK4CbNDgNEUEh2jLzFKdC4tvTuojpump: $105.94; take profit; pre-upgrade
