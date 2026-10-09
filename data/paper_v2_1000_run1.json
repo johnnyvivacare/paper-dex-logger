@@ -24,16 +24,16 @@
       "entered": 1791507661,
       "cost": 100.0,
       "units": 90068.81762689959,
-      "previous_quote": 1791570943,
+      "previous_quote": 1791570973,
       "mark": 80.54873363263533,
-      "last_quote": 1791570943,
+      "last_quote": 1791570973,
       "status": "observed",
       "controls_mark": {
         "since": 1791507661,
         "peak_net": 100.47715602845383,
         "peak_liquidity": 97207.96,
         "armed": false,
-        "last": 1791570943,
+        "last": 1791570973,
         "max_gap": 1506,
         "liquidity": 86939.21
       }
@@ -43,18 +43,18 @@
       "entered": 1791509167,
       "cost": 100.0,
       "units": 132982.96588439494,
-      "previous_quote": 1791570944,
-      "mark": 69.21255464418209,
-      "last_quote": 1791570944,
+      "previous_quote": 1791570974,
+      "mark": 69.56776275169597,
+      "last_quote": 1791570974,
       "status": "observed",
       "controls_mark": {
         "since": 1791509167,
         "peak_net": 123.34499215204234,
         "peak_liquidity": 99902.62,
         "armed": false,
-        "last": 1791570944,
+        "last": 1791570974,
         "max_gap": 1505,
-        "liquidity": 75398.31
+        "liquidity": 75597.97
       }
     },
     "AhuPBbDHo2B77qehebV6AzsULve7ghpV41tovqhgpump": {
@@ -62,18 +62,18 @@
       "entered": 1791563603,
       "cost": 100.0,
       "units": 270788.6320183521,
-      "previous_quote": 1791570944,
-      "mark": 106.29270048757934,
-      "last_quote": 1791570944,
+      "previous_quote": 1791570974,
+      "mark": 104.34283349334525,
+      "last_quote": 1791570974,
       "status": "observed",
       "controls_mark": {
         "since": 1791563603,
         "peak_net": 108.6959353664261,
         "peak_liquidity": 54741.17,
         "armed": false,
-        "last": 1791570944,
+        "last": 1791570974,
         "max_gap": 1292,
-        "liquidity": 54129.33
+        "liquidity": 53567.98
       }
     },
     "AyYNfPtftg2zDP4ZbgcoQMggQtwLh4zpfVVmUJs2thto": {
@@ -81,16 +81,16 @@
       "entered": 1791567425,
       "cost": 100.0,
       "units": 371115.45944714925,
-      "previous_quote": 1791570944,
+      "previous_quote": 1791570974,
       "mark": 96.09549365517906,
-      "last_quote": 1791570944,
+      "last_quote": 1791570974,
       "status": "observed",
       "controls_mark": {
         "since": 1791567425,
         "peak_net": 98.0018968070542,
         "peak_liquidity": 68243.52,
         "armed": false,
-        "last": 1791570944,
+        "last": 1791570974,
         "max_gap": 1292,
         "liquidity": 67484.76
       }
@@ -1037,8 +1037,8 @@
       }
     }
   ],
-  "cycles": 396,
-  "last_run": 1791570947,
+  "cycles": 397,
+  "last_run": 1791570977,
   "errors": [],
   "history": [
     {
@@ -6188,6 +6188,19 @@
       "controls_version": "controls-1",
       "observed_equity": 676.3702411400441,
       "entries_blocked": []
+    },
+    {
+      "ts": 1791570977,
+      "cash": 324.22075872046815,
+      "realized": -275.77924127953173,
+      "fresh_estimate": 350.5548235328556,
+      "stale_estimate": 0.0,
+      "unresolved": 0,
+      "open": 4,
+      "errors": [],
+      "controls_version": "controls-1",
+      "observed_equity": 674.7755822533238,
+      "entries_blocked": []
     }
   ],
   "controls": {
@@ -9696,11 +9709,19 @@
       {
         "ts": 1791570947,
         "equity": 676.3702411400441
+      },
+      {
+        "ts": 1791570975,
+        "equity": 674.7755822533238
+      },
+      {
+        "ts": 1791570977,
+        "equity": 674.7755822533238
       }
     ],
     "pause_until": 0,
     "pauses": [],
-    "last_cycle": 1791570947,
+    "last_cycle": 1791570977,
     "last_gap": 30,
     "max_gap": 1506,
     "blocked": [],
@@ -9713,10 +9734,10 @@
       "slippage": 10.596982636436522
     },
     "accounted_trades": 24,
-    "valued_cycles": 396,
+    "valued_cycles": 397,
     "unresolved_cycles": 0,
     "loss_pause_enabled": false,
-    "last_value": 676.3702411400441,
+    "last_value": 674.7755822533238,
     "unresolved": 0
   },
   "upgrades": [
