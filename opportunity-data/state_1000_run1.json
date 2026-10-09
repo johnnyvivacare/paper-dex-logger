@@ -31,19 +31,19 @@
       "units": 106010.55314625174,
       "previous_quote": 1791572534,
       "entry_score": 83.54,
-      "mark": 72.97528006954775,
-      "last_quote": 1791577402,
+      "mark": 69.79814879083422,
+      "last_quote": 1791577432,
       "status": "observed",
       "controls_mark": {
         "since": 1791572534,
         "peak_net": 118.83814463667106,
         "peak_liquidity": 94306.17,
         "armed": false,
-        "last": 1791577402,
+        "last": 1791577432,
         "max_gap": 955,
-        "liquidity": 73802.7
+        "liquidity": 72134.87
       },
-      "score": 24.83
+      "score": 15.91
     },
     "5yuiTSNd32qxBM4rkuxqNd6gaSLBqCykJEaKwK4Jpump": {
       "pool": "ayhExWrXQtPT9ZKJC3ySiELa1kCQUAKGXW6o8uTQFV2",
@@ -52,19 +52,19 @@
       "units": 249941.9299934017,
       "previous_quote": 1791576338,
       "entry_score": 71.38,
-      "mark": 89.310849267087,
-      "last_quote": 1791577403,
+      "mark": 100.36003923303261,
+      "last_quote": 1791577433,
       "status": "observed",
       "controls_mark": {
         "since": 1791576338,
-        "peak_net": 97.67071203901327,
-        "peak_liquidity": 54051.96,
+        "peak_net": 100.36003923303261,
+        "peak_liquidity": 55024.55,
         "armed": false,
-        "last": 1791577403,
+        "last": 1791577433,
         "max_gap": 885,
-        "liquidity": 51786.79
+        "liquidity": 55024.55
       },
-      "score": 34.38
+      "score": 67.53
     }
   },
   "pending": {},
@@ -235,8 +235,8 @@
       }
     }
   ],
-  "cycles": 512,
-  "last_run": 1791577413,
+  "cycles": 513,
+  "last_run": 1791577443,
   "errors": [],
   "history": [
     {
@@ -5358,21 +5358,20 @@
       "controls_version": "controls-1",
       "observed_equity": 976.8554734642548,
       "entries_blocked": []
+    },
+    {
+      "ts": 1791577443,
+      "cash": 814.5693441276201,
+      "fresh_estimate": 170.15818802386684,
+      "stale_estimate": 0.0,
+      "unresolved": 0,
+      "controls_version": "controls-1",
+      "observed_equity": 984.7275321514869,
+      "entries_blocked": []
     }
   ],
   "samples": {
     "AhuPBbDHo2B77qehebV6AzsULve7ghpV41tovqhgpump": [
-      {
-        "price": 0.0003849,
-        "liquidity": 53242.97,
-        "pool": "2NbMXz48YZdWqjHy2SfCQuerD9GwKW9zM9ao1k8cC2mR",
-        "ts": 1791570436,
-        "buys": 5.0,
-        "sells": 10.0,
-        "volume": 1561.7,
-        "change": -3.53,
-        "created": 1791169428000.0
-      },
       {
         "price": 0.0003849,
         "liquidity": 53242.97,
@@ -5801,20 +5800,20 @@
         "volume": 1308.38,
         "change": 2.06,
         "created": 1791169428000.0
+      },
+      {
+        "price": 0.0003566,
+        "liquidity": 51130.64,
+        "pool": "2NbMXz48YZdWqjHy2SfCQuerD9GwKW9zM9ao1k8cC2mR",
+        "ts": 1791577441,
+        "buys": 6.0,
+        "sells": 6.0,
+        "volume": 1155.16,
+        "change": 0.4,
+        "created": 1791169428000.0
       }
     ],
     "7SsZWPvLHpMizSGD8RByEbjUA8VatHWAts4UpjB4pump": [
-      {
-        "price": 0.001095,
-        "liquidity": 92809.15,
-        "pool": "6nnQPX13ZKShe66rRc4PnhKXpCieM4pkrAej5my88uaM",
-        "ts": 1791572674,
-        "buys": 261.0,
-        "sells": 28.0,
-        "volume": 18310.1,
-        "change": 26.55,
-        "created": 1791559797000.0
-      },
       {
         "price": 0.0009659,
         "liquidity": 87106.15,
@@ -6242,6 +6241,17 @@
         "sells": 1359.0,
         "volume": 11869.02,
         "change": 9.8,
+        "created": 1791559797000.0
+      },
+      {
+        "price": 0.0006651,
+        "liquidity": 72134.87,
+        "pool": "6nnQPX13ZKShe66rRc4PnhKXpCieM4pkrAej5my88uaM",
+        "ts": 1791577432,
+        "buys": 122.0,
+        "sells": 1360.0,
+        "volume": 11076.01,
+        "change": 4.05,
         "created": 1791559797000.0
       }
     ],
@@ -6951,6 +6961,17 @@
         "volume": 9474.22,
         "change": -1.77,
         "created": 1791571624000.0
+      },
+      {
+        "price": 0.0004063,
+        "liquidity": 55024.55,
+        "pool": "ayhExWrXQtPT9ZKJC3ySiELa1kCQUAKGXW6o8uTQFV2",
+        "ts": 1791577433,
+        "buys": 132.0,
+        "sells": 65.0,
+        "volume": 9407.49,
+        "change": 7.69,
+        "created": 1791571624000.0
       }
     ],
     "258hQ12j9UeGdiEaJzYuMjrgPFbsveNuK72uVKAR3DQj": [
@@ -7441,6 +7462,17 @@
         "volume": 141481.39,
         "change": -35.41,
         "created": 1791574751000.0
+      },
+      {
+        "price": 0.0005209,
+        "liquidity": 64056.78,
+        "pool": "92no3Qwt6LrfmmRgLpkV2e2TNwm94R5e44k2hjgE1VPE",
+        "ts": 1791577434,
+        "buys": 1825.0,
+        "sells": 743.0,
+        "volume": 149717.49,
+        "change": -39.63,
+        "created": 1791574751000.0
       }
     ]
   },
@@ -7574,7 +7606,7 @@
     "9wk8xngMCkvraqg3nrPWrxxGKF33XMRz89MAV75epump": 1791529524,
     "CFye7D3Vfw7eM4K8QjNpZWzwjpFWtzgDbHhXNgcPWaew": 1791529586,
     "DBLCTYkzHaEWQr8xXMqynFYz89Nko3JisEDETKEbgzzC": 1791521317,
-    "GbbphECbBru9LCHZxn9AdeJMPV5itFLvLc73DXHPznty": 1791577380,
+    "GbbphECbBru9LCHZxn9AdeJMPV5itFLvLc73DXHPznty": 1791577435,
     "49gr2VBv3igYyXXVthoozw2bCsHhHaF3WJufgfQrpump": 1791554626,
     "66ZXRfHeigbBWR7mh8FUWKvcL5V6Vw2DBZfns3xuQjcG": 1791529646,
     "E5ryHkjHJ6o7o1YR3mxLbifd1m4DCchh9QizArYjpump": 1791529615,
@@ -7640,7 +7672,7 @@
     "Wm8zwfbWoYXHpziVCd1UrMANdZGpdr3htdArc4wpump": 1791545193,
     "CCybKBbWx4TBo1mPTm78LKCVJRG6WfNwLjdGFnFTpump": 1791538967,
     "4DFMHQ28oyjDQtxYdCakP6Zd9WqmXHd2bmBP8c7cmoon": 1791546280,
-    "F19jaEKTrSXhx6L8tzLZcLishuhUb9wM9yzPoYWvZhi4": 1791577378,
+    "F19jaEKTrSXhx6L8tzLZcLishuhUb9wM9yzPoYWvZhi4": 1791577433,
     "HGHHH35t5sp5acD86DzAjRjYZiEGPqnNSUYGZngLoJCd": 1791546397,
     "HvujGAr3hRyhaMhZyFkTF1g8scTe95GwGhhLyfMxCb8z": 1791546398,
     "9os9vrvzgu3XfK7Pq3Gdr1S2TfyMW9TjaYkKCZeMpump": 1791546402,
@@ -7743,7 +7775,7 @@
     "EamFdJXUyRPh5Zh3WxujSVnWdbNHy48FGRVkC8Skpump": 1791559629,
     "EbNHtCQTsP8d86YR9rcCXkjqS6GLVADiPHLgvzxQpump": 1791559630,
     "HhqwhfyJnG12i3c6y93i1hdZoPvQF8TKcjvSLNMApump": 1791559603,
-    "52wQ7ymuAQSEFcFG7bH3F19TTE2MYsy1YdJnDdxSpump": 1791577407,
+    "52wQ7ymuAQSEFcFG7bH3F19TTE2MYsy1YdJnDdxSpump": 1791577442,
     "6WpWchQ9BvDRdEBXSaSZ5DszEwTDBqv29V4Gvtwxpump": 1791572681,
     "8r91bsFzz2DKCZyaAqx3Ko5NS8PTwHV4FNeEWEB8pump": 1791573849,
     "CWoEsVF2Sr4mXSYtAaJE7xwwtYnS8LN7hvXGaxQkpump": 1791560805,
@@ -7782,7 +7814,7 @@
     "GMU9zu9jdgCWYet7uuwAyPyT5RyabXy2fPKUgGyJvmjg": 1791564184,
     "HoLyEv2uMF1dPqoGTx1BCgf9YSidpNojokNet9CmSinu": 1791565242,
     "USDFsqepRXFpqP8Jx2fz3zW1bwMiFkPRj6Nhf94aeC5": 1791565173,
-    "27WxDJvuFUg1TxGKoDyQ8FGhPWdDrqYrePm78snapump": 1791577405,
+    "27WxDJvuFUg1TxGKoDyQ8FGhPWdDrqYrePm78snapump": 1791577440,
     "8PHFpyVL3rkeSKxWX6UBN3sq76tPPVg6A83Tw9sZzt8x": 1791565243,
     "2x3kudsxqCWdWeZA1vSNr9uKkHUBQG81m5mBGRAPpump": 1791567261,
     "3jzVLg8JVfJ7jYpn2cxfzY1v2ANStgC5MophFtL4pump": 1791565263,
@@ -7793,7 +7825,7 @@
     "7SsZWPvLHpMizSGD8RByEbjUA8VatHWAts4UpjB4pump": 1791572532,
     "7veuJcgGJGbhSK1e1HwKtK6LotLqKJTAGH2E74fepump": 1791566300,
     "8nV3xKVvhX7KVnoxVN93ahcvFSecrWovturHggMHruQn": 1791565267,
-    "AhuPBbDHo2B77qehebV6AzsULve7ghpV41tovqhgpump": 1791577406,
+    "AhuPBbDHo2B77qehebV6AzsULve7ghpV41tovqhgpump": 1791577441,
     "BXRpBc6Mu54vJ8XpCyCrQpiF4u82uFfNMsapUPnFpump": 1791566303,
     "DG4xWYspMC2AodKf5SHETMXLgvRXku7DxHmSHzm4aVpS": 1791565269,
     "FFs3eZAA4LGTb1Jchw66pDTp5RzNDdKrvfL75CMSTNK": 1791567288,
@@ -7820,7 +7852,7 @@
     "FTh6xgiyF8GXLGkSzGtvXNSbD5LFZDLi5U2DDbtpump": 1791570440,
     "21kdSFe9BXc9A3yYjzPfuRVhg7riNEBFfeRshmG3YDEG": 1791570469,
     "4U76kwkEmzUqRgK4hcypATeGnVio8ehwe6CNau46pump": 1791571694,
-    "AVfHaN2eC5DoYapE5wrkEfhDtqqWpJqvAfEEoaTtpump": 1791577404,
+    "AVfHaN2eC5DoYapE5wrkEfhDtqqWpJqvAfEEoaTtpump": 1791577439,
     "AyYNfPtftg2zDP4ZbgcoQMggQtwLh4zpfVVmUJs2thto": 1791577413,
     "Bi5h8p2hpcGFEq6CFsjrUFjXhVJHwAjcw3hVfprW9TeK": 1791570439,
     "DNyj2mtNkdQmD2z6gGY3LJLE4csiKC6K6QYPLyVapump": 1791571721,
@@ -7842,7 +7874,7 @@
     "J2wFmjjKyiFZUDXn5JtCAPSRt2sDZLH1kqX9RE38pump": 1791572651,
     "Dm7Sa246LwoRjgJa1sFWqBW7DZoCfwQgLv4t8ZLuCeNt": 1791572654,
     "J5h8bqFW7tncH2LM3ZvFxd1kZV2AJ4rq44Puc1sGpump": 1791572680,
-    "2jcvq8QcJ8TzEYJKYMCjR61kXVSzib4mEkz89tQxpump": 1791577379,
+    "2jcvq8QcJ8TzEYJKYMCjR61kXVSzib4mEkz89tQxpump": 1791577434,
     "2qhpdPyTUFu8xKedT9Bikdn2sEtnhdwDFobxR2n5pump": 1791572683,
     "2usvGShZzYmfxYcyjUv7QcQNzx1MY5spabayf3NDpump": 1791572684,
     "82Uhgh6bHZguP5k1mndSM9JBUURyN3coxLDDAuDFpump": 1791572684,
@@ -7857,7 +7889,7 @@
     "FchSmXMCbh4ziawt8CdHCQn3RBnWcWRsvXD8Nqqipump": 1791572677,
     "21VYsxUZ5PwZhKhfoY2xtPWd1XpAkHSpY1VCYukMpump": 1791573842,
     "54jMPwKcuJmxQAhxdbbbNbSyHnhsZrHRECg5hqUwpump": 1791573843,
-    "48HimqX34gdcKQeMJdqgW4etPyDo3xCcdHNXMDnCpump": 1791577406,
+    "48HimqX34gdcKQeMJdqgW4etPyDo3xCcdHNXMDnCpump": 1791577440,
     "Gs5ar5v3HBywTM9XizbiNDroLGrcNs9QFunbdyDrkPWS": 1791573848,
     "26mZEqrMcwpRAg4MQJyk6iShvQBra7uN5TMybCoeszXF": 1791574827,
     "2G6ZBcMWFdEh6YSXX3NipKGn5PuZ3kgA98SeH8s2fyea": 1791574828,
@@ -7880,7 +7912,7 @@
     "4BCyeFuXvHMmqfRAEVPX7ZSkngoMeLCKHRq4Aye2yDGn": 1791576327,
     "4riDXZW79vkk4ftXoSS3K72dpF4x1RK32ycji2mFpump": 1791576328,
     "Aq7Mna5V6pCM25u12hakzT8jmhTVN8ivG9NmSc2Tpump": 1791576296,
-    "CLdygysvBpTrWQrwQC3oxoHfz6kzzTKMFvdCuiMYpump": 1791577408,
+    "CLdygysvBpTrWQrwQC3oxoHfz6kzzTKMFvdCuiMYpump": 1791577443,
     "EijKhpq5ndJxZeUXq7jy3kdAdb5wfF5JHUyqfBNy8pou": 1791576298,
     "FY2mnDApz1uyKQQwiycMX7YcLVHFYGSTLYE2WHUGduve": 1791576299,
     "GNPyf2nZSMiwGrza52YrU6pZwW6CdYJRoXY6W8z9pump": 1791576320,
@@ -7891,31 +7923,31 @@
     "6sMugmPJykSHaWi72Bv9T8q2sBnuefX13v8Z9qQ3pump": 1791577411,
     "9pZL5BtFgYFeSGrGMeMf8sKyNX1Mg4R7LjfbpLkJAYT": 1791577413,
     "FQTs7tHw8vM9tUCU6PuRB3r6VK835cvMWZBJBHiBXKoq": 1791576326,
-    "FfAYkFVhbm9oTYQpuRuJ6rTdVpCZy53qAKueRfrdpump": 1791577379,
-    "GVyvq334J7KJTZA6s9NPz8STQkScVCsG4fWLuY1wpump": 1791577379,
-    "HKRWQKZFeE9GVTUZsM7RUexYfAzRgGHw7h2x5TMMpump": 1791577380,
+    "FfAYkFVhbm9oTYQpuRuJ6rTdVpCZy53qAKueRfrdpump": 1791577434,
+    "GVyvq334J7KJTZA6s9NPz8STQkScVCsG4fWLuY1wpump": 1791577434,
+    "HKRWQKZFeE9GVTUZsM7RUexYfAzRgGHw7h2x5TMMpump": 1791577435,
     "HYfLASqxmT4bhYozwGnNLwwQDEYToD9EMqkwCKYHpump": 1791577381,
-    "7UhL5K7t1UDPLdhoj2Sz59kyn79Qvxkvk75ukfxDTUSD": 1791577408,
+    "7UhL5K7t1UDPLdhoj2Sz59kyn79Qvxkvk75ukfxDTUSD": 1791577442,
     "9wcpJweVnKaGWhBd9xYT4ZXrjsyed53iipNiPQi6pump": 1791577409,
     "JCNXtLEjQtKEK5fpRivjKeg4ocrhkDVapS6ZjCZepump": 1791577410,
     "6ihAn9TKtLEJpHtDgCjheBfLMXePS4YZzuNbjSocpump": 1791577411,
-    "8F6B9qfAPmygkxzYAdQe57qoCrSjGuCsfgbVHCeRpump": 1791577408,
-    "45r5wh6HjonoTQYGgrBnbnKy3UjnsqyHy6LuvZpUbLic": 1791577380,
-    "5iLefqN8U2qqi3iWStnJ5rco4j334qJ56aQ4QHeNpump": 1791577381,
-    "5pHhLJn3nXKLXyHMpoMP8YLrt1Brt3z84NWspPkKWaep": 1791577381,
-    "7QyHZ8C9sfXB9L2P1ZUrLd3Geygb9hYEYBeeCFnBpump": 1791577382,
-    "9hmMNLtDeY8Y7Xj5a32vAwWH8xEz6HwxQkE5agq1Jcip": 1791577382,
-    "AZpnxRag4i52Z9y5PjpBoiaw3RvhYuvmThVMAuRVpump": 1791577382,
-    "CbKdcERT731h5B3tdgNdVKus5ZyRxhAUPauBzfzTpump": 1791577383,
-    "CkFRyczBmCfvcrDe5jJNkhU7iVn2dZv9FZExCwQxpump": 1791577383,
-    "Cri47RmQKhwwnGUp9Rr6AVtffbKtYS184AnDFQgWpump": 1791577404,
-    "DETekaU5deBrYZfQZLRYqxnhtSpRnDT2SVqGFrd4pump": 1791577404,
-    "DGEUFmpGDbVSjhRNvUJsno27HSoDB9bvPHpaTxvpREAL": 1791577405,
-    "DeqsPTYwvsNjkf5G8zDxziUnFPp55nQZA4vrNM2apump": 1791577406,
-    "ThJsrUYige56LCtKbsZSUxx1HFyX1gMjfZTV8xppump": 1791577406,
-    "jUkfMxYEd4CD5oXi3AtCKsHZWjDkFJJjS1ThLsdpump": 1791577407,
-    "8Zo7doNYxqqDmsNKVDU5HS6xVUmGdHsyPuXYeyGHmSeM": 1791577403,
-    "E4WCiYnfLBV6mFYDTxDkjD8tHZWRiKuMcKtE2uorpump": 1791577403
+    "8F6B9qfAPmygkxzYAdQe57qoCrSjGuCsfgbVHCeRpump": 1791577443,
+    "45r5wh6HjonoTQYGgrBnbnKy3UjnsqyHy6LuvZpUbLic": 1791577434,
+    "5iLefqN8U2qqi3iWStnJ5rco4j334qJ56aQ4QHeNpump": 1791577436,
+    "5pHhLJn3nXKLXyHMpoMP8YLrt1Brt3z84NWspPkKWaep": 1791577436,
+    "7QyHZ8C9sfXB9L2P1ZUrLd3Geygb9hYEYBeeCFnBpump": 1791577436,
+    "9hmMNLtDeY8Y7Xj5a32vAwWH8xEz6HwxQkE5agq1Jcip": 1791577437,
+    "AZpnxRag4i52Z9y5PjpBoiaw3RvhYuvmThVMAuRVpump": 1791577437,
+    "CbKdcERT731h5B3tdgNdVKus5ZyRxhAUPauBzfzTpump": 1791577437,
+    "CkFRyczBmCfvcrDe5jJNkhU7iVn2dZv9FZExCwQxpump": 1791577438,
+    "Cri47RmQKhwwnGUp9Rr6AVtffbKtYS184AnDFQgWpump": 1791577439,
+    "DETekaU5deBrYZfQZLRYqxnhtSpRnDT2SVqGFrd4pump": 1791577439,
+    "DGEUFmpGDbVSjhRNvUJsno27HSoDB9bvPHpaTxvpREAL": 1791577440,
+    "DeqsPTYwvsNjkf5G8zDxziUnFPp55nQZA4vrNM2apump": 1791577441,
+    "ThJsrUYige56LCtKbsZSUxx1HFyX1gMjfZTV8xppump": 1791577441,
+    "jUkfMxYEd4CD5oXi3AtCKsHZWjDkFJJjS1ThLsdpump": 1791577442,
+    "8Zo7doNYxqqDmsNKVDU5HS6xVUmGdHsyPuXYeyGHmSeM": 1791577438,
+    "E4WCiYnfLBV6mFYDTxDkjD8tHZWRiKuMcKtE2uorpump": 1791577438
   },
   "sold": {
     "DNtZMNDZ65hAJbJXRiP9NnV98ZTrwLTEJZ78fWKCpump": 1791524343,
@@ -12120,11 +12152,23 @@
       {
         "ts": 1791577413,
         "equity": 976.8554734642548
+      },
+      {
+        "ts": 1791577443,
+        "equity": 984.7275321514869
+      },
+      {
+        "ts": 1791577443,
+        "equity": 984.7275321514869
+      },
+      {
+        "ts": 1791577443,
+        "equity": 984.7275321514869
       }
     ],
     "pause_until": 0,
     "pauses": [],
-    "last_cycle": 1791577413,
+    "last_cycle": 1791577443,
     "last_gap": 30,
     "max_gap": 1453,
     "blocked": [],
@@ -12137,10 +12181,10 @@
       "slippage": 3.0659802604640674
     },
     "accounted_trades": 6,
-    "valued_cycles": 512,
+    "valued_cycles": 513,
     "unresolved_cycles": 0,
     "loss_pause_enabled": false,
-    "last_value": 976.8554734642548,
+    "last_value": 984.7275321514869,
     "unresolved": 0
   },
   "upgrades": [
@@ -12171,5 +12215,10 @@
       "reason": "Paper experiment: continue evaluating qualifying entries after losses"
     }
   ],
-  "ranked": []
+  "ranked": [
+    [
+      67.53,
+      "5yuiTSNd32qxBM4rkuxqNd6gaSLBqCykJEaKwK4Jpump"
+    ]
+  ]
 }
