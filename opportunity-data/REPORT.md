@@ -1,24 +1,23 @@
 # Opportunity paper experiment — $1,000 USD
 
 Started: 2026-10-09 00:41 UTC
-Last collection: 2026-10-09 22:02 UTC
-Cycles: 561
+Last collection: 2026-10-09 22:17 UTC
+Cycles: 562
 
 | Item | USD |
 |---|---:|
-| Cash | 862.47 |
-| Realized simulated P/L | -37.53 |
-| Recent estimated position value | 106.26 |
+| Cash | 963.96 |
+| Realized simulated P/L | -36.04 |
+| Recent estimated position value | 0.00 |
 | Unresolved last marks (not cash) | 0.00 |
 
-Open positions: 1; unresolved: 0.
-Estimated equity: $968.72; estimated P/L: $-31.28.
+Open positions: 0; unresolved: 0.
+Estimated equity: $963.96; estimated P/L: $-36.04.
 
 ## Positions
 
 | Token | Entry score | Current score |
 |---|---:|---:|
-| 5yuiTSNd32qxBM4rkuxqNd6gaSLBqCykJEaKwK4Jpump | 71.38 | 26.59 |
 
 ## Recent trades
 
@@ -29,6 +28,7 @@ Estimated equity: $968.72; estimated P/L: $-31.28.
 - 2026-10-09 19:02 UTC buy 7SsZWPvLHpMizSGD8RByEbjUA8VatHWAts4UpjB4pump: $100.00 (score 83.54)
 - 2026-10-09 20:05 UTC buy 5yuiTSNd32qxBM4rkuxqNd6gaSLBqCykJEaKwK4Jpump: $100.00 (score 71.38)
 - 2026-10-09 21:27 UTC sell 7SsZWPvLHpMizSGD8RByEbjUA8VatHWAts4UpjB4pump: $47.90 (stop loss)
+- 2026-10-09 22:17 UTC sell 5yuiTSNd32qxBM4rkuxqNd6gaSLBqCykJEaKwK4Jpump: $101.50 (trailing pullback)
 
 Experimental score, NOT a probability of profit. Profiles/boosts are a limited promotional sample, not all new tokens or verified memes.
 Pairs aged 30 minutes–72 hours; reported liquidity >=$50k; 5m volume >=$5k; buying and positive momentum required. Missing fields or history prevent entry.
@@ -43,9 +43,9 @@ Errors: 0
 Enabled: 2026-10-09 00:41:02 UTC. Existing balance and history preserved.
 Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
-Current equity with quotes <=120s old: $968.72
-Maximum observed portfolio decline since upgrade: 8.13%
-Latest / largest saved-cycle gap: 30s / 1453s.
+Current equity with quotes <=120s old: $963.96
+Maximum observed portfolio decline since upgrade: 8.58%
+Latest / largest saved-cycle gap: 893s / 1453s.
 Cycles with uncertain equity: 0.
 New entries: allowed by controls
 
@@ -53,11 +53,11 @@ New entries: allowed by controls
 
 | Component | USD |
 |---|---:|
-| Fees | 1.9937 |
-| Gas | 0.0700 |
-| Pool impact | 2.0133 |
-| Extra slippage | 3.3067 |
-| Total entry + exit drag | 7.3838 |
+| Fees | 2.3007 |
+| Gas | 0.0800 |
+| Pool impact | 2.3907 |
+| Extra slippage | 3.8168 |
+| Total entry + exit drag | 8.5882 |
 
 Costs above are assumptions already included in P/L, not extra charges or actual swap fees.
 Trailing exit: arms at +25% net, triggers on 20% pullback from the observed net peak.
@@ -75,3 +75,4 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 - 2026-10-09 19:02:14 UTC buy 7SsZWPvLHpMizSGD8RByEbjUA8VatHWAts4UpjB4pump: $100.00; opportunity score 83.54
 - 2026-10-09 20:05:38 UTC buy 5yuiTSNd32qxBM4rkuxqNd6gaSLBqCykJEaKwK4Jpump: $100.00; opportunity score 71.38
 - 2026-10-09 21:27:50 UTC sell 7SsZWPvLHpMizSGD8RByEbjUA8VatHWAts4UpjB4pump: $47.90; stop loss
+- 2026-10-09 22:17:23 UTC sell 5yuiTSNd32qxBM4rkuxqNd6gaSLBqCykJEaKwK4Jpump: $101.50; trailing pullback
