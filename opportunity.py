@@ -382,6 +382,8 @@ import datetime as dt
 import math
 
 ctrl_VERSION = "controls-1"
+# Paper experiment: keep evaluating entries after drawdowns.
+ctrl_LOSS_PAUSE_ENABLED = False
 ctrl_RULES = dict(trail_arm=.25, trail_drop=.20, liquidity_drop=.35,
              loss_pause_drawdown=.10, loss_window_seconds=86400,
              pause_seconds=21600, quote_max_age=120)
@@ -418,6 +420,18 @@ def ctrl_begin(state, now):
     c = state["controls"]
     if c["version"] != ctrl_VERSION or c["rules"] != ctrl_RULES:
         raise ValueError("Controls version mismatch; explicit migration required")
+    previous_policy = c.get("loss_pause_enabled", True)
+    if previous_policy != ctrl_LOSS_PAUSE_ENABLED:
+        state.setdefault("upgrades", []).append(dict(
+            version="controls-1-entry-policy", ts=now,
+            loss_pause_enabled=ctrl_LOSS_PAUSE_ENABLED,
+            previous_loss_pause_enabled=previous_policy,
+            previous_pause_until=c["pause_until"],
+            cash=state["cash"], positions=len(state["positions"]),
+            reason="Paper experiment: continue evaluating qualifying entries after losses"))
+        c["pause_until"] = 0
+        c["blocked"] = [r for r in c["blocked"] if r != "portfolio loss pause"]
+    c["loss_pause_enabled"] = ctrl_LOSS_PAUSE_ENABLED
     return c
 
 def ctrl_observe(p, q, now):
@@ -455,7 +469,8 @@ def ctrl_checkpoint(state, now):
             c["initial_equity"] = equity
         peak = max([equity]+[p["equity"] for p in c["points"]])
         decline = 0 if peak <= 0 else 1-equity/peak
-        if decline + 1e-12 >= ctrl_RULES["loss_pause_drawdown"] and now >= c["pause_until"]:
+        if (ctrl_LOSS_PAUSE_ENABLED and decline + 1e-12 >= ctrl_RULES["loss_pause_drawdown"]
+                and now >= c["pause_until"]):
             c["pause_until"] = now+ctrl_RULES["pause_seconds"]
             c["pauses"].append(dict(ts=now, until=c["pause_until"],
                                    drawdown=decline, equity=equity))
@@ -473,7 +488,7 @@ def ctrl_entries_allowed(state, now, errors):
         reasons.append("request errors")
     if unresolved:
         reasons.append("unresolved or old position quotes")
-    if now < c["pause_until"]:
+    if ctrl_LOSS_PAUSE_ENABLED and now < c["pause_until"]:
         reasons.append("portfolio loss pause")
     c["blocked"] = reasons
     return not reasons
@@ -524,7 +539,7 @@ def ctrl_report(state, now):
     if not c:
         return "\nControls upgrade has not run yet.\n"
     equity, unresolved = ctrl_valuation(state, now)
-    paused = now<c["pause_until"]
+    paused = ctrl_LOSS_PAUSE_ENABLED and now<c["pause_until"]
     costs = c["costs"]
     lines = ["", "## Controls upgrade "+ctrl_VERSION, "",
              "Enabled: "+ctrl_utc(c["enabled_at"])+". Existing balance and history preserved.",
@@ -549,7 +564,9 @@ def ctrl_report(state, now):
              "", "Costs above are assumptions already included in P/L, not extra charges or actual swap fees.",
              "Trailing exit: arms at +25% net, triggers on 20% pullback from the observed net peak.",
              "Reported liquidity exit: 35% decline from the observed liquidity peak. A USD liquidity drop is not proof of a rug.",
-             "10% drawdown from the preceding 24h observed equity peak pauses new entries for 6h; existing exits continue. A continuing breach can renew the pause.",
+             ("10% drawdown from the preceding 24h observed equity peak pauses new entries for 6h; existing exits continue. A continuing breach can renew the pause."
+              if ctrl_LOSS_PAUSE_ENABLED else
+              "Loss-based entry pause: DISABLED for this paper experiment. Qualifying purchases continue after drawdowns; entry filters, data checks and exit rules still apply."),
              "Original +100% target, -50% stop and 24h holding limit remain. Fills use the next observed estimated sale value; thresholds never guarantee proceeds.",
              "Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger losses and peaks. Missing prices never count as completed sales.",
              "", "### Latest decisions", ""]
