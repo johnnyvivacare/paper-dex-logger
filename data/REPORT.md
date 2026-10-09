@@ -1,18 +1,18 @@
 # Solana paper test — $1,000 USD
 
 Started: 2026-10-09 00:41 UTC
-Last collection: 2026-10-09 14:25 UTC
-Cycles: 301
+Last collection: 2026-10-09 14:26 UTC
+Cycles: 302
 
 | Item | USD |
 |---|---:|
-| Paper cash | 407.83 |
+| Paper cash | 307.83 |
 | Realised simulated P/L | -292.17 |
-| Open positions, recent estimated sale value | 281.21 |
+| Open positions, recent estimated sale value | 377.94 |
 | Unresolved positions, last estimated value ONLY | 0.00 |
 
-Open positions: 3; unresolved: 0.
-Estimated paper equity: $689.04; estimated P/L: $-310.96.
+Open positions: 4; unresolved: 0.
+Estimated paper equity: $685.77; estimated P/L: $-314.23.
 
 Rule: Solana profiles/boosts; reported liquidity >= $50,000; $100 per entry; at most 10 positions; one entry per token. Confirm the same pool on a later cycle before buying.
 Exit at an observed estimated +100%, -50%, or after 24 hours. Exits use the next available observation, not an assumed stop fill.
@@ -27,7 +27,7 @@ No request errors recorded in the latest cycle.
 Enabled: 2026-10-09 00:41:02 UTC. Existing balance and history preserved.
 Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
-Current equity with quotes <=120s old: $689.04
+Current equity with quotes <=120s old: $685.77
 Maximum observed portfolio decline since upgrade: 33.35%
 Latest / largest saved-cycle gap: 30s / 1506s.
 Cycles with uncertain equity: 0.
@@ -37,11 +37,11 @@ New entries: allowed by controls
 
 | Component | USD |
 |---|---:|
-| Fees | 4.2332 |
-| Gas | 0.1700 |
-| Pool impact | 4.1135 |
-| Extra slippage | 7.0196 |
-| Total entry + exit drag | 15.5364 |
+| Fees | 4.5332 |
+| Gas | 0.1800 |
+| Pool impact | 4.4324 |
+| Extra slippage | 7.5165 |
+| Total entry + exit drag | 16.6621 |
 
 Costs above are assumptions already included in P/L, not extra charges or actual swap fees.
 Trailing exit: arms at +25% net, triggers on 20% pullback from the observed net peak.
@@ -52,7 +52,6 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 
 ### Latest decisions
 
-- 2026-10-09 01:47:05 UTC sell Y9ccqrALa5Yr3Bxzv8NQe37KP1Yy9uTCSJuap4Cpump: $48.03; stop loss
 - 2026-10-09 02:05:47 UTC sell 9oxWMhM4QN1hLGNutaTFcBjMjJce6QxrvVxAcGW6pump: $49.02; stop loss
 - 2026-10-09 03:25:42 UTC buy k3TjSYCXLPMZBajZGNhAG3ccuE7L3PYMdPFifZqpump: $100.00; liquidity filter and second observation
 - 2026-10-09 03:47:05 UTC sell k3TjSYCXLPMZBajZGNhAG3ccuE7L3PYMdPFifZqpump: $0.70; stop loss
@@ -62,3 +61,4 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 - 2026-10-09 08:06:01 UTC buy 9XKzy4KahcZaGJPJtz1PtqGPB3CiseoBrx7TcQhEpump: $100.00; liquidity filter and second observation
 - 2026-10-09 10:19:28 UTC buy CDFAVmJZK1eGoF3KxGa8yNVaSQDoRoAQnBNSGcjhpump: $100.00; liquidity filter and second observation
 - 2026-10-09 10:58:26 UTC sell CDFAVmJZK1eGoF3KxGa8yNVaSQDoRoAQnBNSGcjhpump: $0.48; stop loss
+- 2026-10-09 14:26:19 UTC buy 9vHPLDY6wa9ZkNBNZoWcv2AABdiNj97tpHc3u56npump: $100.00; liquidity filter and second observation
