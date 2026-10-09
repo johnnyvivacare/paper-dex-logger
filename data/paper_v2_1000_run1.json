@@ -24,18 +24,18 @@
       "entered": 1791507661,
       "cost": 100.0,
       "units": 90068.81762689959,
-      "previous_quote": 1791558451,
-      "mark": 84.51379644761086,
-      "last_quote": 1791558451,
+      "previous_quote": 1791558481,
+      "mark": 85.52947670288755,
+      "last_quote": 1791558481,
       "status": "observed",
       "controls_mark": {
         "since": 1791507661,
         "peak_net": 100.47715602845383,
         "peak_liquidity": 97207.96,
         "armed": false,
-        "last": 1791558451,
+        "last": 1791558481,
         "max_gap": 1506,
-        "liquidity": 89206.78
+        "liquidity": 89752.65
       }
     },
     "HbPDWSqu8hpVMX6gMjwMDGe5rVgicWo3Qh3Jaojypump": {
@@ -43,18 +43,18 @@
       "entered": 1791509167,
       "cost": 100.0,
       "units": 132982.96588439494,
-      "previous_quote": 1791558451,
-      "mark": 64.6729271116865,
-      "last_quote": 1791558451,
+      "previous_quote": 1791558481,
+      "mark": 63.87035303236989,
+      "last_quote": 1791558481,
       "status": "observed",
       "controls_mark": {
         "since": 1791509167,
         "peak_net": 123.34499215204234,
         "peak_liquidity": 99902.62,
         "armed": false,
-        "last": 1791558451,
+        "last": 1791558481,
         "max_gap": 1505,
-        "liquidity": 72401.04
+        "liquidity": 71936.55
       }
     },
     "9XKzy4KahcZaGJPJtz1PtqGPB3CiseoBrx7TcQhEpump": {
@@ -62,18 +62,18 @@
       "entered": 1791533161,
       "cost": 100.0,
       "units": 143670.37934585373,
-      "previous_quote": 1791558452,
-      "mark": 113.86477602167268,
-      "last_quote": 1791558452,
+      "previous_quote": 1791558482,
+      "mark": 115.44058398090202,
+      "last_quote": 1791558482,
       "status": "observed",
       "controls_mark": {
         "since": 1791533161,
         "peak_net": 140.70448206732172,
         "peak_liquidity": 97185.52,
         "armed": true,
-        "last": 1791558452,
+        "last": 1791558482,
         "max_gap": 1434,
-        "liquidity": 87219.62
+        "liquidity": 87839.91
       }
     }
   },
@@ -377,7 +377,9 @@
     "DiHNMd2GCsjc73jMphP7V5RPUBcW3sYJbCvoGhiD5Pm5": 1791558456,
     "EamFdJXUyRPh5Zh3WxujSVnWdbNHy48FGRVkC8Skpump": 1791558456,
     "EbNHtCQTsP8d86YR9rcCXkjqS6GLVADiPHLgvzxQpump": 1791558456,
-    "HhqwhfyJnG12i3c6y93i1hdZoPvQF8TKcjvSLNMApump": 1791558457
+    "HhqwhfyJnG12i3c6y93i1hdZoPvQF8TKcjvSLNMApump": 1791558457,
+    "52wQ7ymuAQSEFcFG7bH3F19TTE2MYsy1YdJnDdxSpump": 1791558484,
+    "6WpWchQ9BvDRdEBXSaSZ5DszEwTDBqv29V4Gvtwxpump": 1791558485
   },
   "trades": [
     {
@@ -804,8 +806,8 @@
       "observation_gap_seconds": 30
     }
   ],
-  "cycles": 314,
-  "last_run": 1791558457,
+  "cycles": 315,
+  "last_run": 1791558485,
   "errors": [],
   "history": [
     {
@@ -4889,6 +4891,19 @@
       "controls_version": "controls-1",
       "observed_equity": 678.6140858047424,
       "entries_blocked": []
+    },
+    {
+      "ts": 1791558485,
+      "cash": 415.5625862237724,
+      "realized": -284.4374137762275,
+      "fresh_estimate": 264.84041371615945,
+      "stale_estimate": 0.0,
+      "unresolved": 0,
+      "open": 3,
+      "errors": [],
+      "controls_version": "controls-1",
+      "observed_equity": 680.4029999399319,
+      "entries_blocked": []
     }
   ],
   "controls": {
@@ -7705,12 +7720,20 @@
       {
         "ts": 1791558457,
         "equity": 678.6140858047424
+      },
+      {
+        "ts": 1791558482,
+        "equity": 680.4029999399319
+      },
+      {
+        "ts": 1791558485,
+        "equity": 680.4029999399319
       }
     ],
     "pause_until": 0,
     "pauses": [],
-    "last_cycle": 1791558457,
-    "last_gap": 741,
+    "last_cycle": 1791558485,
+    "last_gap": 28,
     "max_gap": 1506,
     "blocked": [],
     "costs": {
@@ -7722,10 +7745,10 @@
       "slippage": 8.057927605954218
     },
     "accounted_trades": 19,
-    "valued_cycles": 314,
+    "valued_cycles": 315,
     "unresolved_cycles": 0,
     "loss_pause_enabled": false,
-    "last_value": 678.6140858047424,
+    "last_value": 680.4029999399319,
     "unresolved": 0
   },
   "upgrades": [
