@@ -24,16 +24,16 @@
       "entered": 1791507661,
       "cost": 100.0,
       "units": 90068.81762689959,
-      "previous_quote": 1791557503,
+      "previous_quote": 1791557533,
       "mark": 86.29579221673515,
-      "last_quote": 1791557503,
+      "last_quote": 1791557533,
       "status": "observed",
       "controls_mark": {
         "since": 1791507661,
         "peak_net": 100.47715602845383,
         "peak_liquidity": 97207.96,
         "armed": false,
-        "last": 1791557503,
+        "last": 1791557533,
         "max_gap": 1506,
         "liquidity": 90222.9
       }
@@ -43,18 +43,18 @@
       "entered": 1791509167,
       "cost": 100.0,
       "units": 132982.96588439494,
-      "previous_quote": 1791557503,
-      "mark": 55.52806590486078,
-      "last_quote": 1791557503,
+      "previous_quote": 1791557533,
+      "mark": 55.488592835366504,
+      "last_quote": 1791557533,
       "status": "observed",
       "controls_mark": {
         "since": 1791509167,
         "peak_net": 123.34499215204234,
         "peak_liquidity": 99902.62,
         "armed": false,
-        "last": 1791557503,
+        "last": 1791557533,
         "max_gap": 1505,
-        "liquidity": 66935.15
+        "liquidity": 66914.24
       }
     },
     "9XKzy4KahcZaGJPJtz1PtqGPB3CiseoBrx7TcQhEpump": {
@@ -62,16 +62,16 @@
       "entered": 1791533161,
       "cost": 100.0,
       "units": 143670.37934585373,
-      "previous_quote": 1791557503,
+      "previous_quote": 1791557534,
       "mark": 117.41378652792014,
-      "last_quote": 1791557503,
+      "last_quote": 1791557534,
       "status": "observed",
       "controls_mark": {
         "since": 1791533161,
         "peak_net": 140.70448206732172,
         "peak_liquidity": 97185.52,
         "armed": true,
-        "last": 1791557503,
+        "last": 1791557534,
         "max_gap": 1434,
         "liquidity": 88597.17
       }
@@ -81,18 +81,18 @@
       "entered": 1791555979,
       "cost": 100.0,
       "units": 208551.52611883712,
-      "previous_quote": 1791557504,
-      "mark": 135.83028240149008,
-      "last_quote": 1791557504,
+      "previous_quote": 1791557534,
+      "mark": 133.13481165800735,
+      "last_quote": 1791557534,
       "status": "observed",
       "controls_mark": {
         "since": 1791555979,
         "peak_net": 135.83028240149008,
         "peak_liquidity": 75014.47,
         "armed": true,
-        "last": 1791557504,
+        "last": 1791557534,
         "max_gap": 1435,
-        "liquidity": 75014.47
+        "liquidity": 74263.4
       }
     }
   },
@@ -791,8 +791,8 @@
       }
     }
   ],
-  "cycles": 306,
-  "last_run": 1791557508,
+  "cycles": 307,
+  "last_run": 1791557536,
   "errors": [],
   "history": [
     {
@@ -4772,6 +4772,19 @@
       "controls_version": "controls-1",
       "observed_equity": 702.894805260421,
       "entries_blocked": []
+    },
+    {
+      "ts": 1791557536,
+      "cash": 307.8268782094148,
+      "realized": -292.1731217905851,
+      "fresh_estimate": 392.3329832380291,
+      "stale_estimate": 0.0,
+      "unresolved": 0,
+      "open": 4,
+      "errors": [],
+      "controls_version": "controls-1",
+      "observed_equity": 700.159861447444,
+      "entries_blocked": []
     }
   ],
   "controls": {
@@ -7524,12 +7537,20 @@
       {
         "ts": 1791557508,
         "equity": 702.894805260421
+      },
+      {
+        "ts": 1791557534,
+        "equity": 700.159861447444
+      },
+      {
+        "ts": 1791557536,
+        "equity": 700.159861447444
       }
     ],
     "pause_until": 0,
     "pauses": [],
-    "last_cycle": 1791557508,
-    "last_gap": 1437,
+    "last_cycle": 1791557536,
+    "last_gap": 28,
     "max_gap": 1506,
     "blocked": [],
     "costs": {
@@ -7541,10 +7562,10 @@
       "slippage": 7.516491887289105
     },
     "accounted_trades": 18,
-    "valued_cycles": 306,
+    "valued_cycles": 307,
     "unresolved_cycles": 0,
     "loss_pause_enabled": false,
-    "last_value": 702.894805260421,
+    "last_value": 700.159861447444,
     "unresolved": 0
   },
   "upgrades": [
