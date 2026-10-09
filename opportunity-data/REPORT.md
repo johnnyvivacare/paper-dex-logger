@@ -1,8 +1,8 @@
 # Opportunity paper experiment — $500 USD
 
 Started: 2026-10-07 22:50 UTC
-Last collection: 2026-10-09 00:04 UTC
-Cycles: 672
+Last collection: 2026-10-09 00:26 UTC
+Cycles: 673
 
 | Item | USD |
 |---|---:|
@@ -45,9 +45,9 @@ Metrics below cover only the period since this upgrade.
 Initial valued equity: $555.94
 Current equity with quotes <=120s old: $500.17
 Maximum observed portfolio decline since upgrade: 12.54%
-Latest / largest saved-cycle gap: 30s / 1587s.
+Latest / largest saved-cycle gap: 1306s / 1587s.
 Cycles with uncertain equity: 0.
-New entries: PAUSED until 2026-10-09 06:02:54 UTC
+New entries: allowed by controls
 
 ### Modeled costs since upgrade
 
@@ -62,7 +62,7 @@ New entries: PAUSED until 2026-10-09 06:02:54 UTC
 Costs above are assumptions already included in P/L, not extra charges or actual swap fees.
 Trailing exit: arms at +25% net, triggers on 20% pullback from the observed net peak.
 Reported liquidity exit: 35% decline from the observed liquidity peak. A USD liquidity drop is not proof of a rug.
-10% drawdown from the preceding 24h observed equity peak pauses new entries for 6h; existing exits continue. A continuing breach can renew the pause.
+Loss-based entry pause: DISABLED for this paper experiment. Qualifying purchases continue after drawdowns; entry filters, data checks and exit rules still apply.
 Original +100% target, -50% stop and 24h holding limit remain. Fills use the next observed estimated sale value; thresholds never guarantee proceeds.
 Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger losses and peaks. Missing prices never count as completed sales.
 
