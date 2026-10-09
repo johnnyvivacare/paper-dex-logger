@@ -10,10 +10,12 @@ import re
 import time
 import urllib.request
 
+EXPERIMENT_ID = "paper-1000-run1"
+STATE_NAME = "state_1000_run1.json"
 API = "https://api.dexscreener.com"
 ADDR = re.compile(r"[1-9A-HJ-NP-Za-km-z]{32,44}")
 CONFIG = {
-    "budget": 500.0, "size": 50.0, "slots": 10,
+    "budget": 1000.0, "size": 100.0, "slots": 10,
     "min_liquidity": 50000.0,
     "take_profit": 1.0, "stop_loss": -0.5, "max_hold_hours": 24,
     "fee": 0.003, "gas": 0.01, "extra_slippage": 0.005,
@@ -56,7 +58,8 @@ def safe_fetch(path, errors):
 
 def new_state(now):
     return {
-        "version": 2, "started": now, "config": dict(CONFIG),
+        "version": 2, "experiment_id": EXPERIMENT_ID,
+        "started": now, "config": dict(CONFIG),
         "cash": CONFIG["budget"], "realized": 0.0,
         "positions": {}, "pending": {}, "seen": {},
         "trades": [], "cycles": 0, "last_run": None,
@@ -68,7 +71,8 @@ def load(path, now):
     if not path.exists():
         return new_state(now)
     state = json.loads(path.read_text())
-    if state.get("version") != 2 or state.get("config") != CONFIG:
+    if (state.get("version") != 2 or state.get("config") != CONFIG
+            or state.get("experiment_id") != EXPERIMENT_ID):
         raise ValueError("State/config mismatch. Do not overwrite the existing experiment.")
     return state
 
@@ -345,8 +349,8 @@ def cycle(state):
 
 def report(state, now):
     fresh, stale, unresolved = totals(state,now)
-    lines = ["# Opportunity paper experiment — $500 USD", "",
-             "Started: "+stamp(state["started"]), "Last collection: "+stamp(state["last_run"]),
+    lines = ["# Opportunity paper experiment — $1,000 USD", "",
+             "Started: "+stamp(state["started"]), "Last collection: "+(stamp(state["last_run"]) if state["last_run"] else "not collected yet"),
              "Cycles: "+str(state["cycles"]), "",
              "| Item | USD |", "|---|---:|",
              "| Cash | %.2f |" % state["cash"],
@@ -356,7 +360,7 @@ def report(state, now):
              "Open positions: %s; unresolved: %s." % (len(state["positions"]),unresolved)]
     if not unresolved:
         lines.append("Estimated equity: $%.2f; estimated P/L: $%+.2f." %
-                     (state["cash"]+fresh,state["cash"]+fresh-500))
+                     (state["cash"]+fresh,state["cash"]+fresh-CONFIG["budget"]))
     else:
         lines.append("Total equity is uncertain because some positions are unresolved.")
     lines += ["", "## Positions", "", "| Token | Entry score | Current score |",
@@ -370,7 +374,7 @@ def report(state, now):
                       tr.get("reason","score "+str(tr.get("score")))))
     lines += ["", "Experimental score, NOT a probability of profit. Profiles/boosts are a limited promotional sample, not all new tokens or verified memes.",
               "Pairs aged 30 minutes–72 hours; reported liquidity >=$50k; 5m volume >=$5k; buying and positive momentum required. Missing fields or history prevent entry.",
-              "$50 entries, 10 slots maximum. Hold cash if no candidates qualify. Exit at observed +100%, -50%, or 24 hours. Rotate only after 30 minutes held, a 20-point score advantage, and a 30-minute rotation cooldown. One-hour token reentry cooldown.",
+              "$100 entries, 10 slots maximum. Hold cash if no candidates qualify. Exit at observed +100%, -50%, or 24 hours. Rotate only after 30 minutes held, a 20-point score advantage, and a 30-minute rotation cooldown. One-hour token reentry cooldown.",
               "Paper only; no wallet, signing, or transactions. Same approximate pool-impact and cost model as the baseline: 0.3% fee, $0.01 gas, 0.5% extra slippage each side. No executable swap quotes, sellability checks, or rug prediction.",
               "Unavailable prices remain unresolved, not assumed sales. GitHub scheduling and API delays create monitoring gaps. Compare returns from matching timestamps, not different start balances/dates.", ""]
     lines += ["Errors: "+str(len(state["errors"]))] + ["- "+e for e in state["errors"]]
@@ -585,7 +589,10 @@ def main():
     parser.add_argument("--data", default="opportunity-data")
     args = parser.parse_args()
     directory = Path(args.data)
-    path = directory/"state.json"
+    path = directory/STATE_NAME
+    if not path.exists():
+        print("The $1,000 comparison is waiting for Start $1,000 comparison in GitHub Actions.")
+        return
     state = load(path,int(time.time()))
     for key,default in (("samples",{}),("scanned",{}),("sold",{}),("last_rotation",0)):
         state.setdefault(key,default)
