@@ -2,24 +2,24 @@
 
 Started: 2026-10-09 00:41 UTC
 Last collection: 2026-10-09 20:21 UTC
-Cycles: 507
+Cycles: 508
 
 | Item | USD |
 |---|---:|
 | Cash | 814.57 |
 | Realized simulated P/L | +14.57 |
-| Recent estimated position value | 162.52 |
+| Recent estimated position value | 165.07 |
 | Unresolved last marks (not cash) | 0.00 |
 
 Open positions: 2; unresolved: 0.
-Estimated equity: $977.09; estimated P/L: $-22.91.
+Estimated equity: $979.64; estimated P/L: $-20.36.
 
 ## Positions
 
 | Token | Entry score | Current score |
 |---|---:|---:|
-| 7SsZWPvLHpMizSGD8RByEbjUA8VatHWAts4UpjB4pump | 83.54 | None |
-| 5yuiTSNd32qxBM4rkuxqNd6gaSLBqCykJEaKwK4Jpump | 71.38 | None |
+| 7SsZWPvLHpMizSGD8RByEbjUA8VatHWAts4UpjB4pump | 83.54 | 38.67 |
+| 5yuiTSNd32qxBM4rkuxqNd6gaSLBqCykJEaKwK4Jpump | 71.38 | 40.7 |
 
 ## Recent trades
 
@@ -43,9 +43,9 @@ Errors: 0
 Enabled: 2026-10-09 00:41:02 UTC. Existing balance and history preserved.
 Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
-Current equity with quotes <=120s old: $977.09
+Current equity with quotes <=120s old: $979.64
 Maximum observed portfolio decline since upgrade: 7.43%
-Latest / largest saved-cycle gap: 29s / 1453s.
+Latest / largest saved-cycle gap: 30s / 1453s.
 Cycles with uncertain equity: 0.
 New entries: allowed by controls
 
