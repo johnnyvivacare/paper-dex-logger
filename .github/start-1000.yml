@@ -1,0 +1,42 @@
+name: Start $1,000 comparison
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: logger
+  cancel-in-progress: false
+jobs:
+  start:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Configure report commits
+        run: |
+          git config user.name "paper-logger"
+          git config user.email "paper-logger@users.noreply.github.com"
+      - name: Start both accounts once and collect first observations
+        shell: python
+        run: |
+          import subprocess
+          def run(*args):
+              subprocess.run(args, check=True, timeout=120)
+          def publish():
+              run("git", "add", "data", "opportunity-data")
+              diff = subprocess.run(["git", "diff", "--cached", "--quiet"], timeout=30)
+              if diff.returncode == 1:
+                  run("git", "commit", "-m", "Start or update $1000 paper comparison")
+                  run("git", "pull", "--rebase", "origin", "main")
+                  run("git", "push", "origin", "HEAD:main")
+              elif diff.returncode != 0:
+                  raise RuntimeError("Could not check saved changes")
+          run("python3", "dexlog.py", "start-comparison", "--jsonl", "data")
+          publish()
+          run("python3", "dexlog.py", "cycle", "--jsonl", "data")
+          publish()
+          run("python3", "opportunity.py")
+          publish()
