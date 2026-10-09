@@ -1,0 +1,100 @@
+{
+  "version": 2,
+  "experiment_id": "paper-1000-run1",
+  "started": 1791506462,
+  "config": {
+    "budget": 1000.0,
+    "size": 100.0,
+    "slots": 10,
+    "min_liquidity": 50000.0,
+    "take_profit": 1.0,
+    "stop_loss": -0.5,
+    "max_hold_hours": 24,
+    "fee": 0.003,
+    "gas": 0.01,
+    "extra_slippage": 0.005,
+    "stale_seconds": 1800,
+    "pending_seconds": 7200
+  },
+  "cash": 1000.0,
+  "realized": 0.0,
+  "positions": {},
+  "pending": {},
+  "seen": {},
+  "trades": [],
+  "cycles": 0,
+  "last_run": null,
+  "errors": [],
+  "history": [],
+  "controls": {
+    "version": "controls-1",
+    "rules": {
+      "trail_arm": 0.25,
+      "trail_drop": 0.2,
+      "liquidity_drop": 0.35,
+      "loss_pause_drawdown": 0.1,
+      "loss_window_seconds": 86400,
+      "pause_seconds": 21600,
+      "quote_max_age": 120
+    },
+    "enabled_at": 1791506462,
+    "initial_cash": 1000.0,
+    "prior_trades": 0,
+    "prior_cycles": 0,
+    "initial_equity": 1000.0,
+    "equity_peak": 1000.0,
+    "max_drawdown": 0.0,
+    "points": [
+      {
+        "ts": 1791506462,
+        "equity": 1000.0
+      }
+    ],
+    "pause_until": 0,
+    "pauses": [],
+    "last_cycle": null,
+    "last_gap": 0,
+    "max_gap": 0,
+    "blocked": [],
+    "costs": {
+      "entry": 0.0,
+      "exit": 0.0,
+      "fees": 0.0,
+      "gas": 0.0,
+      "impact": 0.0,
+      "slippage": 0.0
+    },
+    "accounted_trades": 0,
+    "valued_cycles": 0,
+    "unresolved_cycles": 0,
+    "loss_pause_enabled": false
+  },
+  "upgrades": [
+    {
+      "version": "controls-1",
+      "ts": 1791506462,
+      "rules": {
+        "trail_arm": 0.25,
+        "trail_drop": 0.2,
+        "liquidity_drop": 0.35,
+        "loss_pause_drawdown": 0.1,
+        "loss_window_seconds": 86400,
+        "pause_seconds": 21600,
+        "quote_max_age": 120
+      },
+      "cash": 1000.0,
+      "positions": 0,
+      "previous_trades": 0
+    },
+    {
+      "version": "controls-1-entry-policy",
+      "ts": 1791506462,
+      "loss_pause_enabled": false,
+      "previous_loss_pause_enabled": true,
+      "previous_pause_until": 0,
+      "cash": 1000.0,
+      "positions": 0,
+      "reason": "Paper experiment: continue evaluating qualifying entries after losses"
+    }
+  ]
+}
