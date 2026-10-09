@@ -24,16 +24,16 @@
       "entered": 1791507661,
       "cost": 100.0,
       "units": 90068.81762689959,
-      "previous_quote": 1791542358,
+      "previous_quote": 1791542388,
       "mark": 89.16440969349277,
-      "last_quote": 1791542358,
+      "last_quote": 1791542388,
       "status": "observed",
       "controls_mark": {
         "since": 1791507661,
         "peak_net": 100.47715602845383,
         "peak_liquidity": 97207.96,
         "armed": false,
-        "last": 1791542358,
+        "last": 1791542388,
         "max_gap": 1506,
         "liquidity": 91683.19
       }
@@ -43,18 +43,18 @@
       "entered": 1791509167,
       "cost": 100.0,
       "units": 132982.96588439494,
-      "previous_quote": 1791542358,
-      "mark": 120.34785699562664,
-      "last_quote": 1791542358,
+      "previous_quote": 1791542388,
+      "mark": 119.04661302809293,
+      "last_quote": 1791542388,
       "status": "observed",
       "controls_mark": {
         "since": 1791509167,
         "peak_net": 123.34499215204234,
         "peak_liquidity": 99902.62,
         "armed": false,
-        "last": 1791542358,
+        "last": 1791542388,
         "max_gap": 1505,
-        "liquidity": 98517.79
+        "liquidity": 97971.96
       }
     },
     "9XKzy4KahcZaGJPJtz1PtqGPB3CiseoBrx7TcQhEpump": {
@@ -62,16 +62,16 @@
       "entered": 1791533161,
       "cost": 100.0,
       "units": 143670.37934585373,
-      "previous_quote": 1791542359,
+      "previous_quote": 1791542389,
       "mark": 94.15542785635708,
-      "last_quote": 1791542359,
+      "last_quote": 1791542389,
       "status": "observed",
       "controls_mark": {
         "since": 1791533161,
         "peak_net": 108.02816224329587,
         "peak_liquidity": 84428.1,
         "armed": false,
-        "last": 1791542359,
+        "last": 1791542389,
         "max_gap": 1239,
         "liquidity": 78711.91
       }
@@ -81,18 +81,18 @@
       "entered": 1791541168,
       "cost": 100.0,
       "units": 173730.1632297892,
-      "previous_quote": 1791542359,
-      "mark": 101.73027959744732,
-      "last_quote": 1791542359,
+      "previous_quote": 1791542389,
+      "mark": 92.90829417687536,
+      "last_quote": 1791542389,
       "status": "observed",
       "controls_mark": {
         "since": 1791541168,
         "peak_net": 122.87239559954386,
         "peak_liquidity": 77416.82,
         "armed": false,
-        "last": 1791542359,
+        "last": 1791542389,
         "max_gap": 1071,
-        "liquidity": 72986.26
+        "liquidity": 69732.37
       }
     }
   },
@@ -666,8 +666,8 @@
       }
     }
   ],
-  "cycles": 218,
-  "last_run": 1791542363,
+  "cycles": 219,
+  "last_run": 1791542391,
   "errors": [],
   "history": [
     {
@@ -3503,6 +3503,19 @@
       "controls_version": "controls-1",
       "observed_equity": 812.7426127512595,
       "entries_blocked": []
+    },
+    {
+      "ts": 1791542391,
+      "cash": 407.3446386083357,
+      "realized": -192.65536139166426,
+      "fresh_estimate": 395.2747447548182,
+      "stale_estimate": 0.0,
+      "unresolved": 0,
+      "open": 4,
+      "errors": [],
+      "controls_version": "controls-1",
+      "observed_equity": 802.6193833631537,
+      "entries_blocked": []
     }
   ],
   "controls": {
@@ -5539,12 +5552,20 @@
       {
         "ts": 1791542363,
         "equity": 812.7426127512595
+      },
+      {
+        "ts": 1791542389,
+        "equity": 802.6193833631537
+      },
+      {
+        "ts": 1791542391,
+        "equity": 802.6193833631537
       }
     ],
     "pause_until": 0,
     "pauses": [],
-    "last_cycle": 1791542363,
-    "last_gap": 1073,
+    "last_cycle": 1791542391,
+    "last_gap": 28,
     "max_gap": 1506,
     "blocked": [],
     "costs": {
@@ -5556,10 +5577,10 @@
       "slippage": 7.0171626504347335
     },
     "accounted_trades": 16,
-    "valued_cycles": 218,
+    "valued_cycles": 219,
     "unresolved_cycles": 0,
     "loss_pause_enabled": false,
-    "last_value": 812.7426127512595,
+    "last_value": 802.6193833631537,
     "unresolved": 0
   },
   "upgrades": [
