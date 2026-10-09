@@ -1,23 +1,24 @@
 # Opportunity paper experiment — $1,000 USD
 
 Started: 2026-10-09 00:41 UTC
-Last collection: 2026-10-09 22:38 UTC
-Cycles: 575
+Last collection: 2026-10-09 22:39 UTC
+Cycles: 576
 
 | Item | USD |
 |---|---:|
-| Cash | 963.96 |
+| Cash | 863.96 |
 | Realized simulated P/L | -36.04 |
-| Recent estimated position value | 0.00 |
+| Recent estimated position value | 97.83 |
 | Unresolved last marks (not cash) | 0.00 |
 
-Open positions: 0; unresolved: 0.
-Estimated equity: $963.96; estimated P/L: $-36.04.
+Open positions: 1; unresolved: 0.
+Estimated equity: $961.79; estimated P/L: $-38.21.
 
 ## Positions
 
 | Token | Entry score | Current score |
 |---|---:|---:|
+| AVJk6piE392EvzCnP8SXTbq158ALSfUUeY3wKEsNpump | 66.52 | None |
 
 ## Recent trades
 
@@ -29,6 +30,7 @@ Estimated equity: $963.96; estimated P/L: $-36.04.
 - 2026-10-09 20:05 UTC buy 5yuiTSNd32qxBM4rkuxqNd6gaSLBqCykJEaKwK4Jpump: $100.00 (score 71.38)
 - 2026-10-09 21:27 UTC sell 7SsZWPvLHpMizSGD8RByEbjUA8VatHWAts4UpjB4pump: $47.90 (stop loss)
 - 2026-10-09 22:17 UTC sell 5yuiTSNd32qxBM4rkuxqNd6gaSLBqCykJEaKwK4Jpump: $101.50 (trailing pullback)
+- 2026-10-09 22:39 UTC buy AVJk6piE392EvzCnP8SXTbq158ALSfUUeY3wKEsNpump: $100.00 (score 66.52)
 
 Experimental score, NOT a probability of profit. Profiles/boosts are a limited promotional sample, not all new tokens or verified memes.
 Pairs aged 30 minutes–72 hours; reported liquidity >=$50k; 5m volume >=$5k; buying and positive momentum required. Missing fields or history prevent entry.
@@ -43,8 +45,8 @@ Errors: 0
 Enabled: 2026-10-09 00:41:02 UTC. Existing balance and history preserved.
 Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
-Current equity with quotes <=120s old: $963.96
-Maximum observed portfolio decline since upgrade: 8.58%
+Current equity with quotes <=120s old: $961.79
+Maximum observed portfolio decline since upgrade: 8.78%
 Latest / largest saved-cycle gap: 30s / 1453s.
 Cycles with uncertain equity: 0.
 New entries: allowed by controls
@@ -53,11 +55,11 @@ New entries: allowed by controls
 
 | Component | USD |
 |---|---:|
-| Fees | 2.3007 |
-| Gas | 0.0800 |
-| Pool impact | 2.3907 |
-| Extra slippage | 3.8168 |
-| Total entry + exit drag | 8.5882 |
+| Fees | 2.6007 |
+| Gas | 0.0900 |
+| Pool impact | 2.6771 |
+| Extra slippage | 4.3138 |
+| Total entry + exit drag | 9.6816 |
 
 Costs above are assumptions already included in P/L, not extra charges or actual swap fees.
 Trailing exit: arms at +25% net, triggers on 20% pullback from the observed net peak.
@@ -76,3 +78,4 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 - 2026-10-09 20:05:38 UTC buy 5yuiTSNd32qxBM4rkuxqNd6gaSLBqCykJEaKwK4Jpump: $100.00; opportunity score 71.38
 - 2026-10-09 21:27:50 UTC sell 7SsZWPvLHpMizSGD8RByEbjUA8VatHWAts4UpjB4pump: $47.90; stop loss
 - 2026-10-09 22:17:23 UTC sell 5yuiTSNd32qxBM4rkuxqNd6gaSLBqCykJEaKwK4Jpump: $101.50; trailing pullback
+- 2026-10-09 22:39:09 UTC buy AVJk6piE392EvzCnP8SXTbq158ALSfUUeY3wKEsNpump: $100.00; opportunity score 66.52
