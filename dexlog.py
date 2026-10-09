@@ -2,7 +2,7 @@
 """Solana paper experiment v2. Public data only; no wallet or trading API.
 Compatible with: python3 dexlog.py cycle --jsonl data
 Report: python3 dexlog.py report --jsonl data
-Old JSONL logs are preserved. Current state remains data/paper_v2_run2.json.
+Old JSONL logs are preserved. The new comparison uses data/paper_v2_1000_run1.json; old accounts are preserved.
 """
 import argparse
 import datetime as dt
@@ -14,10 +14,12 @@ import re
 import time
 import urllib.request
 
+EXPERIMENT_ID = "paper-1000-run1"
+STATE_NAME = "paper_v2_1000_run1.json"
 API = "https://api.dexscreener.com"
 ADDR = re.compile(r"[1-9A-HJ-NP-Za-km-z]{32,44}")
 CONFIG = {
-    "budget": 500.0, "size": 50.0, "slots": 10,
+    "budget": 1000.0, "size": 100.0, "slots": 10,
     "min_liquidity": 50000.0,
     "take_profit": 1.0, "stop_loss": -0.5, "max_hold_hours": 24,
     "fee": 0.003, "gas": 0.01, "extra_slippage": 0.005,
@@ -60,7 +62,8 @@ def safe_fetch(path, errors):
 
 def new_state(now):
     return {
-        "version": 2, "started": now, "config": dict(CONFIG),
+        "version": 2, "experiment_id": EXPERIMENT_ID,
+        "started": now, "config": dict(CONFIG),
         "cash": CONFIG["budget"], "realized": 0.0,
         "positions": {}, "pending": {}, "seen": {},
         "trades": [], "cycles": 0, "last_run": None,
@@ -72,7 +75,8 @@ def load(path, now):
     if not path.exists():
         return new_state(now)
     state = json.loads(path.read_text())
-    if state.get("version") != 2 or state.get("config") != CONFIG:
+    if (state.get("version") != 2 or state.get("config") != CONFIG
+            or state.get("experiment_id") != EXPERIMENT_ID):
         raise ValueError("State/config mismatch. Do not overwrite the existing experiment.")
     return state
 
@@ -287,7 +291,7 @@ def report(state, now):
     fresh, stale, unresolved = totals(state, now)
     last = stamp(state["last_run"]) if state["last_run"] else "not collected yet"
     lines = [
-        "# Solana paper test — $500 USD",
+        "# Solana paper test — $1,000 USD",
         "",
         "Started: " + stamp(state["started"]),
         "Last collection: " + last,
@@ -310,7 +314,7 @@ def report(state, now):
     lines += [
         "",
         "Rule: Solana profiles/boosts; reported liquidity >= $50,000; "
-        "$50 per entry; at most 10 positions; one entry per token. "
+        "$100 per entry; at most 10 positions; one entry per token. "
         "Confirm the same pool on a later cycle before buying.",
         "Exit at an observed estimated +100%, -50%, or after 24 hours. "
         "Exits use the next available observation, not an assumed stop fill.",
@@ -533,15 +537,62 @@ def ctrl_report(state, now):
     return "\n".join(lines)+"\n"
 
 
+
+def start_comparison(directory):
+    """Create both ledgers once; repeat launches never reset results."""
+    import opportunity
+    baseline = __import__(__name__)
+    now = int(time.time())
+    targets = [(baseline, directory),
+               (opportunity, directory.parent / "opportunity-data")]
+    for module, _ in targets:
+        if (module.EXPERIMENT_ID != EXPERIMENT_ID or module.CONFIG["budget"] != 1000
+                or module.CONFIG["size"] != 100 or module.CONFIG["slots"] != 10
+                or module.ctrl_LOSS_PAUSE_ENABLED):
+            raise ValueError("Upload both matching $1,000 scripts before starting")
+    present = [(folder/module.STATE_NAME).exists() for module,folder in targets]
+    if all(present):
+        accounts = [module.load(folder/module.STATE_NAME, now) for module,folder in targets]
+        if accounts[0]["started"] != accounts[1]["started"]:
+            raise ValueError("Account start times differ; no balances were reset")
+        print("$1,000 comparison already exists. Continuing without resetting either account.")
+        return
+    if any(present):
+        raise ValueError("Partial comparison found. No account was reset; check both state files.")
+    prepared = []
+    for module,folder in targets:
+        account = module.new_state(now)
+        if module is opportunity:
+            account.update(samples={},scanned={},sold={},last_rotation=0)
+        module.ctrl_begin(account,now)
+        module.ctrl_checkpoint(account,now)
+        prepared.append((module,folder,account,module.report(account,now)))
+    # Archive existing reports before publishing the new comparison reports.
+    for _,folder,_,_ in prepared:
+        folder.mkdir(parents=True,exist_ok=True)
+        old_report = folder/"REPORT.md"
+        archive = folder/"REPORT_before_1000_run1.md"
+        if old_report.exists() and not archive.exists():
+            with archive.open("xb") as handle:
+                handle.write(old_report.read_bytes())
+    for module,folder,account,output in prepared:
+        module.save(folder/module.STATE_NAME,account)
+        (folder/"REPORT.md").write_text(output)
+    print("Both paper accounts initialized at $1,000 with the same start time. Old ledgers preserved.")
+
+
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("command", choices=["cycle", "report"], nargs="?", default="report")
+    parser.add_argument("command", choices=["cycle", "report", "start-comparison"], nargs="?", default="report")
     parser.add_argument("--jsonl", default="data", help="existing workflow data folder")
     args = parser.parse_args()
     directory = Path(args.jsonl)
-    path = directory / "paper_v2_run2.json"
-    if args.command == "report" and not path.exists():
-        print("V2 has not started. Its first successful cycle creates the separate $500 account.")
+    path = directory / STATE_NAME
+    if args.command == "start-comparison":
+        start_comparison(directory)
+        return
+    if not path.exists():
+        print("The $1,000 comparison is waiting for Start $1,000 comparison in GitHub Actions.")
         return
     state = load(path, int(time.time()))
     if args.command == "cycle":
