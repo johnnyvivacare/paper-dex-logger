@@ -24,16 +24,16 @@
       "entered": 1791507661,
       "cost": 100.0,
       "units": 90068.81762689959,
-      "previous_quote": 1791567484,
+      "previous_quote": 1791567514,
       "mark": 81.11908473575298,
-      "last_quote": 1791567484,
+      "last_quote": 1791567514,
       "status": "observed",
       "controls_mark": {
         "since": 1791507661,
         "peak_net": 100.47715602845383,
         "peak_liquidity": 97207.96,
         "armed": false,
-        "last": 1791567484,
+        "last": 1791567514,
         "max_gap": 1506,
         "liquidity": 87314.27
       }
@@ -43,18 +43,18 @@
       "entered": 1791509167,
       "cost": 100.0,
       "units": 132982.96588439494,
-      "previous_quote": 1791567484,
-      "mark": 65.35763375174797,
-      "last_quote": 1791567484,
+      "previous_quote": 1791567514,
+      "mark": 64.19983788642975,
+      "last_quote": 1791567514,
       "status": "observed",
       "controls_mark": {
         "since": 1791509167,
         "peak_net": 123.34499215204234,
         "peak_liquidity": 99902.62,
         "armed": false,
-        "last": 1791567484,
+        "last": 1791567514,
         "max_gap": 1505,
-        "liquidity": 73138.01
+        "liquidity": 72479.13
       }
     },
     "AhuPBbDHo2B77qehebV6AzsULve7ghpV41tovqhgpump": {
@@ -62,18 +62,18 @@
       "entered": 1791563603,
       "cost": 100.0,
       "units": 270788.6320183521,
-      "previous_quote": 1791567484,
-      "mark": 105.78534608692522,
-      "last_quote": 1791567484,
+      "previous_quote": 1791567514,
+      "mark": 106.93370055151556,
+      "last_quote": 1791567514,
       "status": "observed",
       "controls_mark": {
         "since": 1791563603,
         "peak_net": 108.6959353664261,
         "peak_liquidity": 54741.17,
         "armed": false,
-        "last": 1791567484,
+        "last": 1791567514,
         "max_gap": 1204,
-        "liquidity": 54001.31
+        "liquidity": 54308.73
       }
     },
     "AyYNfPtftg2zDP4ZbgcoQMggQtwLh4zpfVVmUJs2thto": {
@@ -81,16 +81,16 @@
       "entered": 1791567425,
       "cost": 100.0,
       "units": 371115.45944714925,
-      "previous_quote": 1791567485,
+      "previous_quote": 1791567515,
       "mark": 98.0018968070542,
-      "last_quote": 1791567485,
+      "last_quote": 1791567515,
       "status": "observed",
       "controls_mark": {
         "since": 1791567425,
         "peak_net": 98.0018968070542,
         "peak_liquidity": 68221.21,
         "armed": false,
-        "last": 1791567485,
+        "last": 1791567515,
         "max_gap": 30,
         "liquidity": 68221.21
       }
@@ -1014,8 +1014,8 @@
       }
     }
   ],
-  "cycles": 376,
-  "last_run": 1791567488,
+  "cycles": 377,
+  "last_run": 1791567517,
   "errors": [],
   "history": [
     {
@@ -5905,6 +5905,19 @@
       "controls_version": "controls-1",
       "observed_equity": 674.4847201019486,
       "entries_blocked": []
+    },
+    {
+      "ts": 1791567517,
+      "cash": 324.22075872046815,
+      "realized": -275.77924127953173,
+      "fresh_estimate": 350.2545199807525,
+      "stale_estimate": 0.0,
+      "unresolved": 0,
+      "open": 4,
+      "errors": [],
+      "controls_version": "controls-1",
+      "observed_equity": 674.4752787012206,
+      "entries_blocked": []
     }
   ],
   "controls": {
@@ -9253,12 +9266,20 @@
       {
         "ts": 1791567488,
         "equity": 674.4847201019486
+      },
+      {
+        "ts": 1791567515,
+        "equity": 674.4752787012206
+      },
+      {
+        "ts": 1791567517,
+        "equity": 674.4752787012206
       }
     ],
     "pause_until": 0,
     "pauses": [],
-    "last_cycle": 1791567488,
-    "last_gap": 31,
+    "last_cycle": 1791567517,
+    "last_gap": 29,
     "max_gap": 1506,
     "blocked": [],
     "costs": {
@@ -9270,10 +9291,10 @@
       "slippage": 10.596982636436522
     },
     "accounted_trades": 24,
-    "valued_cycles": 376,
+    "valued_cycles": 377,
     "unresolved_cycles": 0,
     "loss_pause_enabled": false,
-    "last_value": 674.4847201019486,
+    "last_value": 674.4752787012206,
     "unresolved": 0
   },
   "upgrades": [

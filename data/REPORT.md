@@ -2,13 +2,13 @@
 
 Started: 2026-10-09 00:41 UTC
 Last collection: 2026-10-09 17:38 UTC
-Cycles: 376
+Cycles: 377
 
 | Item | USD |
 |---|---:|
 | Paper cash | 324.22 |
 | Realised simulated P/L | -275.78 |
-| Open positions, recent estimated sale value | 350.26 |
+| Open positions, recent estimated sale value | 350.25 |
 | Unresolved positions, last estimated value ONLY | 0.00 |
 
 Open positions: 4; unresolved: 0.
@@ -29,7 +29,7 @@ Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
 Current equity with quotes <=120s old: $674.48
 Maximum observed portfolio decline since upgrade: 33.64%
-Latest / largest saved-cycle gap: 31s / 1506s.
+Latest / largest saved-cycle gap: 29s / 1506s.
 Cycles with uncertain equity: 0.
 New entries: allowed by controls
 
