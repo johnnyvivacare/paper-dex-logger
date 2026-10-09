@@ -1,26 +1,28 @@
 # Opportunity paper experiment — $1,000 USD
 
 Started: 2026-10-09 00:41 UTC
-Last collection: 2026-10-09 03:00 UTC
-Cycles: 65
+Last collection: 2026-10-09 03:14 UTC
+Cycles: 66
 
 | Item | USD |
 |---|---:|
-| Cash | 1000.00 |
+| Cash | 900.00 |
 | Realized simulated P/L | +0.00 |
-| Recent estimated position value | 0.00 |
+| Recent estimated position value | 97.71 |
 | Unresolved last marks (not cash) | 0.00 |
 
-Open positions: 0; unresolved: 0.
-Estimated equity: $1000.00; estimated P/L: $+0.00.
+Open positions: 1; unresolved: 0.
+Estimated equity: $997.71; estimated P/L: $-2.29.
 
 ## Positions
 
 | Token | Entry score | Current score |
 |---|---:|---:|
+| DNtZMNDZ65hAJbJXRiP9NnV98ZTrwLTEJZ78fWKCpump | 88.14 | None |
 
 ## Recent trades
 
+- 2026-10-09 03:14 UTC buy DNtZMNDZ65hAJbJXRiP9NnV98ZTrwLTEJZ78fWKCpump: $100.00 (score 88.14)
 
 Experimental score, NOT a probability of profit. Profiles/boosts are a limited promotional sample, not all new tokens or verified memes.
 Pairs aged 30 minutes–72 hours; reported liquidity >=$50k; 5m volume >=$5k; buying and positive momentum required. Missing fields or history prevent entry.
@@ -35,9 +37,9 @@ Errors: 0
 Enabled: 2026-10-09 00:41:02 UTC. Existing balance and history preserved.
 Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
-Current equity with quotes <=120s old: $1000.00
-Maximum observed portfolio decline since upgrade: 0.00%
-Latest / largest saved-cycle gap: 30s / 1047s.
+Current equity with quotes <=120s old: $997.71
+Maximum observed portfolio decline since upgrade: 0.23%
+Latest / largest saved-cycle gap: 802s / 1047s.
 Cycles with uncertain equity: 0.
 New entries: allowed by controls
 
@@ -45,11 +47,11 @@ New entries: allowed by controls
 
 | Component | USD |
 |---|---:|
-| Fees | 0.0000 |
-| Gas | 0.0000 |
-| Pool impact | 0.0000 |
-| Extra slippage | 0.0000 |
-| Total entry + exit drag | 0.0000 |
+| Fees | 0.3000 |
+| Gas | 0.0100 |
+| Pool impact | 0.3463 |
+| Extra slippage | 0.4967 |
+| Total entry + exit drag | 1.1530 |
 
 Costs above are assumptions already included in P/L, not extra charges or actual swap fees.
 Trailing exit: arms at +25% net, triggers on 20% pullback from the observed net peak.
@@ -60,3 +62,4 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 
 ### Latest decisions
 
+- 2026-10-09 03:14:18 UTC buy DNtZMNDZ65hAJbJXRiP9NnV98ZTrwLTEJZ78fWKCpump: $100.00; opportunity score 88.14
