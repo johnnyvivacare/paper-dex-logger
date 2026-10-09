@@ -24,18 +24,18 @@
       "entered": 1791507661,
       "cost": 100.0,
       "units": 90068.81762689959,
-      "previous_quote": 1791568458,
-      "mark": 80.97648266795883,
-      "last_quote": 1791568458,
+      "previous_quote": 1791568488,
+      "mark": 80.97650512647435,
+      "last_quote": 1791568488,
       "status": "observed",
       "controls_mark": {
         "since": 1791507661,
         "peak_net": 100.47715602845383,
         "peak_liquidity": 97207.96,
         "armed": false,
-        "last": 1791568458,
+        "last": 1791568488,
         "max_gap": 1506,
-        "liquidity": 87212.16
+        "liquidity": 87225.08
       }
     },
     "HbPDWSqu8hpVMX6gMjwMDGe5rVgicWo3Qh3Jaojypump": {
@@ -43,18 +43,18 @@
       "entered": 1791509167,
       "cost": 100.0,
       "units": 132982.96588439494,
-      "previous_quote": 1791568459,
-      "mark": 68.35734736595575,
-      "last_quote": 1791568459,
+      "previous_quote": 1791568489,
+      "mark": 67.64691687909152,
+      "last_quote": 1791568489,
       "status": "observed",
       "controls_mark": {
         "since": 1791509167,
         "peak_net": 123.34499215204234,
         "peak_liquidity": 99902.62,
         "armed": false,
-        "last": 1791568459,
+        "last": 1791568489,
         "max_gap": 1505,
-        "liquidity": 74875.9
+        "liquidity": 74475.1
       }
     },
     "AhuPBbDHo2B77qehebV6AzsULve7ghpV41tovqhgpump": {
@@ -62,18 +62,18 @@
       "entered": 1791563603,
       "cost": 100.0,
       "units": 270788.6320183521,
-      "previous_quote": 1791568459,
-      "mark": 105.94562704818041,
-      "last_quote": 1791568459,
+      "previous_quote": 1791568489,
+      "mark": 105.51830960125979,
+      "last_quote": 1791568489,
       "status": "observed",
       "controls_mark": {
         "since": 1791563603,
         "peak_net": 108.6959353664261,
         "peak_liquidity": 54741.17,
         "armed": false,
-        "last": 1791568459,
+        "last": 1791568489,
         "max_gap": 1204,
-        "liquidity": 54049.9
+        "liquidity": 53933.17
       }
     },
     "AyYNfPtftg2zDP4ZbgcoQMggQtwLh4zpfVVmUJs2thto": {
@@ -81,16 +81,16 @@
       "entered": 1791567425,
       "cost": 100.0,
       "units": 371115.45944714925,
-      "previous_quote": 1791568459,
+      "previous_quote": 1791568490,
       "mark": 96.60887508113734,
-      "last_quote": 1791568459,
+      "last_quote": 1791568490,
       "status": "observed",
       "controls_mark": {
         "since": 1791567425,
         "peak_net": 98.0018968070542,
         "peak_liquidity": 68221.21,
         "armed": false,
-        "last": 1791568459,
+        "last": 1791568490,
         "max_gap": 855,
         "liquidity": 67710.98
       }
@@ -1020,8 +1020,8 @@
       }
     }
   ],
-  "cycles": 381,
-  "last_run": 1791568462,
+  "cycles": 382,
+  "last_run": 1791568492,
   "errors": [],
   "history": [
     {
@@ -5976,6 +5976,19 @@
       "controls_version": "controls-1",
       "observed_equity": 676.1090908837004,
       "entries_blocked": []
+    },
+    {
+      "ts": 1791568492,
+      "cash": 324.22075872046815,
+      "realized": -275.77924127953173,
+      "fresh_estimate": 350.750606687963,
+      "stale_estimate": 0.0,
+      "unresolved": 0,
+      "open": 4,
+      "errors": [],
+      "controls_version": "controls-1",
+      "observed_equity": 674.9713654084312,
+      "entries_blocked": []
     }
   ],
   "controls": {
@@ -9364,11 +9377,19 @@
       {
         "ts": 1791568462,
         "equity": 676.1090908837004
+      },
+      {
+        "ts": 1791568490,
+        "equity": 674.9713654084312
+      },
+      {
+        "ts": 1791568492,
+        "equity": 674.9713654084312
       }
     ],
     "pause_until": 0,
     "pauses": [],
-    "last_cycle": 1791568462,
+    "last_cycle": 1791568492,
     "last_gap": 30,
     "max_gap": 1506,
     "blocked": [],
@@ -9381,10 +9402,10 @@
       "slippage": 10.596982636436522
     },
     "accounted_trades": 24,
-    "valued_cycles": 381,
+    "valued_cycles": 382,
     "unresolved_cycles": 0,
     "loss_pause_enabled": false,
-    "last_value": 676.1090908837004,
+    "last_value": 674.9713654084312,
     "unresolved": 0
   },
   "upgrades": [
