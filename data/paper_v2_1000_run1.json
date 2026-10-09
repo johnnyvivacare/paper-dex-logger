@@ -24,18 +24,18 @@
       "entered": 1791507661,
       "cost": 100.0,
       "units": 90068.81762689959,
-      "previous_quote": 1791518771,
-      "mark": 93.97536837977096,
-      "last_quote": 1791518771,
+      "previous_quote": 1791519991,
+      "mark": 93.79731201406831,
+      "last_quote": 1791519991,
       "status": "observed",
       "controls_mark": {
         "since": 1791507661,
         "peak_net": 100.47715602845383,
         "peak_liquidity": 97207.96,
         "armed": false,
-        "last": 1791518771,
-        "max_gap": 1205,
-        "liquidity": 94351.09
+        "last": 1791519991,
+        "max_gap": 1220,
+        "liquidity": 94314.23
       }
     },
     "HbPDWSqu8hpVMX6gMjwMDGe5rVgicWo3Qh3Jaojypump": {
@@ -43,18 +43,18 @@
       "entered": 1791509167,
       "cost": 100.0,
       "units": 132982.96588439494,
-      "previous_quote": 1791518772,
-      "mark": 81.96863972629392,
-      "last_quote": 1791518772,
+      "previous_quote": 1791519991,
+      "mark": 90.45105066761664,
+      "last_quote": 1791519991,
       "status": "observed",
       "controls_mark": {
         "since": 1791509167,
         "peak_net": 100.5212921171156,
         "peak_liquidity": 88776.98,
         "armed": false,
-        "last": 1791518772,
-        "max_gap": 1173,
-        "liquidity": 80515.16
+        "last": 1791519991,
+        "max_gap": 1219,
+        "liquidity": 84733.11
       }
     }
   },
@@ -184,7 +184,10 @@
     "6qY3ZCTi51o1YCJBXAdZwo37tTqnGMFhGLxA9fJkpump": 1791518565,
     "88N698f7gRN5yQzNQBzj4voUXkJG5jYmQy9iVYTRpump": 1791518565,
     "C9hY38YF9iGRkx4haxEAeVnyDpBvFWwNP1wqP9uWpump": 1791518566,
-    "8uZieiVy2AanCpYkfxR1quKSbzPKuMUaNYwQ61mrT3iu": 1791518744
+    "8uZieiVy2AanCpYkfxR1quKSbzPKuMUaNYwQ61mrT3iu": 1791518744,
+    "ALa91FwyPX2tEUpDk1fi2H14fmGtSu64bKGHyj35pump": 1791519994,
+    "DU148VhedGj3LHj7ZPDpw1q8S6ecTne33PPh7frdDkU4": 1791519994,
+    "EQxnXGr6aXXxhotH3QveKaMpo5Z1vFeRA93BhZ6upump": 1791519994
   },
   "trades": [
     {
@@ -455,8 +458,8 @@
       "observation_gap_seconds": 30
     }
   ],
-  "cycles": 81,
-  "last_run": 1791518774,
+  "cycles": 82,
+  "last_run": 1791519994,
   "errors": [],
   "history": [
     {
@@ -1511,6 +1514,19 @@
       "controls_version": "controls-1",
       "observed_equity": 727.2155616981198,
       "entries_blocked": []
+    },
+    {
+      "ts": 1791519994,
+      "cash": 551.2715535920549,
+      "realized": -248.72844640794503,
+      "fresh_estimate": 184.24836268168497,
+      "stale_estimate": 0.0,
+      "unresolved": 0,
+      "open": 2,
+      "errors": [],
+      "controls_version": "controls-1",
+      "observed_equity": 735.5199162737399,
+      "entries_blocked": []
     }
   ],
   "controls": {
@@ -2415,13 +2431,21 @@
       {
         "ts": 1791518774,
         "equity": 727.2155616981198
+      },
+      {
+        "ts": 1791519991,
+        "equity": 735.5199162737399
+      },
+      {
+        "ts": 1791519994,
+        "equity": 735.5199162737399
       }
     ],
     "pause_until": 0,
     "pauses": [],
-    "last_cycle": 1791518774,
-    "last_gap": 30,
-    "max_gap": 1206,
+    "last_cycle": 1791519994,
+    "last_gap": 1220,
+    "max_gap": 1220,
     "blocked": [],
     "costs": {
       "entry": 7.715987491252875,
@@ -2432,10 +2456,10 @@
       "slippage": 4.741736513069357
     },
     "accounted_trades": 12,
-    "valued_cycles": 81,
+    "valued_cycles": 82,
     "unresolved_cycles": 0,
     "loss_pause_enabled": false,
-    "last_value": 727.2155616981198,
+    "last_value": 735.5199162737399,
     "unresolved": 0
   },
   "upgrades": [
