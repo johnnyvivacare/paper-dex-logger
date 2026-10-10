@@ -2,27 +2,27 @@
 
 Started: 2026-10-09 00:41 UTC
 Last collection: 2026-10-10 01:05 UTC
-Cycles: 638
+Cycles: 639
 
 | Item | USD |
 |---|---:|
-| Cash | 764.46 |
+| Cash | 664.46 |
 | Realized simulated P/L | -135.54 |
-| Recent estimated position value | 106.77 |
+| Recent estimated position value | 209.27 |
 | Unresolved last marks (not cash) | 0.00 |
 
-Open positions: 1; unresolved: 0.
-Estimated equity: $871.23; estimated P/L: $-128.77.
+Open positions: 2; unresolved: 0.
+Estimated equity: $873.72; estimated P/L: $-126.28.
 
 ## Positions
 
 | Token | Entry score | Current score |
 |---|---:|---:|
-| BQAeeSowpwEx8Km8GcporcbuLKq4a7EQceH3F2qZpump | 71.79 | 29.66 |
+| BQAeeSowpwEx8Km8GcporcbuLKq4a7EQceH3F2qZpump | 71.79 | 37.18 |
+| 7q5EzCuaTYdhJrjzttUcisDH4Uk7NNEtPGvorkKkpump | 68.18 | None |
 
 ## Recent trades
 
-- 2026-10-09 05:39 UTC sell DNtZMNDZ65hAJbJXRiP9NnV98ZTrwLTEJZ78fWKCpump: $82.05 (trailing pullback)
 - 2026-10-09 16:59 UTC buy 7SsZWPvLHpMizSGD8RByEbjUA8VatHWAts4UpjB4pump: $100.00 (score 93.45)
 - 2026-10-09 17:48 UTC sell 7SsZWPvLHpMizSGD8RByEbjUA8VatHWAts4UpjB4pump: $132.52 (trailing pullback)
 - 2026-10-09 19:02 UTC buy 7SsZWPvLHpMizSGD8RByEbjUA8VatHWAts4UpjB4pump: $100.00 (score 83.54)
@@ -32,6 +32,7 @@ Estimated equity: $871.23; estimated P/L: $-128.77.
 - 2026-10-09 22:39 UTC buy AVJk6piE392EvzCnP8SXTbq158ALSfUUeY3wKEsNpump: $100.00 (score 66.52)
 - 2026-10-09 22:53 UTC sell AVJk6piE392EvzCnP8SXTbq158ALSfUUeY3wKEsNpump: $0.49 (stop loss)
 - 2026-10-10 00:37 UTC buy BQAeeSowpwEx8Km8GcporcbuLKq4a7EQceH3F2qZpump: $100.00 (score 71.79)
+- 2026-10-10 01:05 UTC buy 7q5EzCuaTYdhJrjzttUcisDH4Uk7NNEtPGvorkKkpump: $100.00 (score 68.18)
 
 Experimental score, NOT a probability of profit. Profiles/boosts are a limited promotional sample, not all new tokens or verified memes.
 Pairs aged 30 minutes–72 hours; reported liquidity >=$50k; 5m volume >=$5k; buying and positive momentum required. Missing fields or history prevent entry.
@@ -46,9 +47,9 @@ Errors: 0
 Enabled: 2026-10-09 00:41:02 UTC. Existing balance and history preserved.
 Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
-Current equity with quotes <=120s old: $871.23
+Current equity with quotes <=120s old: $873.72
 Maximum observed portfolio decline since upgrade: 18.19%
-Latest / largest saved-cycle gap: 29s / 1625s.
+Latest / largest saved-cycle gap: 31s / 1625s.
 Cycles with uncertain equity: 0.
 New entries: allowed by controls
 
@@ -56,11 +57,11 @@ New entries: allowed by controls
 
 | Component | USD |
 |---|---:|
-| Fees | 2.9021 |
-| Gas | 0.1100 |
-| Pool impact | 2.7983 |
-| Extra slippage | 4.8142 |
-| Total entry + exit drag | 10.6246 |
+| Fees | 3.2021 |
+| Gas | 0.1200 |
+| Pool impact | 3.0490 |
+| Extra slippage | 5.3114 |
+| Total entry + exit drag | 11.6825 |
 
 Costs above are assumptions already included in P/L, not extra charges or actual swap fees.
 Trailing exit: arms at +25% net, triggers on 20% pullback from the observed net peak.
@@ -71,7 +72,6 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 
 ### Latest decisions
 
-- 2026-10-09 05:39:03 UTC sell DNtZMNDZ65hAJbJXRiP9NnV98ZTrwLTEJZ78fWKCpump: $82.05; trailing pullback
 - 2026-10-09 16:59:43 UTC buy 7SsZWPvLHpMizSGD8RByEbjUA8VatHWAts4UpjB4pump: $100.00; opportunity score 93.45
 - 2026-10-09 17:48:56 UTC sell 7SsZWPvLHpMizSGD8RByEbjUA8VatHWAts4UpjB4pump: $132.52; trailing pullback
 - 2026-10-09 19:02:14 UTC buy 7SsZWPvLHpMizSGD8RByEbjUA8VatHWAts4UpjB4pump: $100.00; opportunity score 83.54
@@ -81,3 +81,4 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 - 2026-10-09 22:39:09 UTC buy AVJk6piE392EvzCnP8SXTbq158ALSfUUeY3wKEsNpump: $100.00; opportunity score 66.52
 - 2026-10-09 22:53:36 UTC sell AVJk6piE392EvzCnP8SXTbq158ALSfUUeY3wKEsNpump: $0.49; stop loss
 - 2026-10-10 00:37:44 UTC buy BQAeeSowpwEx8Km8GcporcbuLKq4a7EQceH3F2qZpump: $100.00; opportunity score 71.79
+- 2026-10-10 01:05:55 UTC buy 7q5EzCuaTYdhJrjzttUcisDH4Uk7NNEtPGvorkKkpump: $100.00; opportunity score 68.18
