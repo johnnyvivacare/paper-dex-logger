@@ -2,23 +2,23 @@
 
 Started: 2026-10-09 00:41 UTC
 Last collection: 2026-10-10 17:22 UTC
-Cycles: 1123
+Cycles: 1124
 
 | Item | USD |
 |---|---:|
 | Cash | 719.68 |
 | Realized simulated P/L | -180.32 |
-| Recent estimated position value | 92.45 |
+| Recent estimated position value | 91.57 |
 | Unresolved last marks (not cash) | 0.00 |
 
 Open positions: 1; unresolved: 0.
-Estimated equity: $812.12; estimated P/L: $-187.88.
+Estimated equity: $811.25; estimated P/L: $-188.75.
 
 ## Positions
 
 | Token | Entry score | Current score |
 |---|---:|---:|
-| 8TiMkgvsrat9tM2esko8zVTt99LZLpefUM4SnZaziXaQ | 84.44 | 31.1 |
+| 8TiMkgvsrat9tM2esko8zVTt99LZLpefUM4SnZaziXaQ | 84.44 | 14.89 |
 
 ## Recent trades
 
@@ -46,7 +46,7 @@ Errors: 0
 Enabled: 2026-10-09 00:41:02 UTC. Existing balance and history preserved.
 Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
-Current equity with quotes <=120s old: $812.12
+Current equity with quotes <=120s old: $811.25
 Maximum observed portfolio decline since upgrade: 25.49%
 Latest / largest saved-cycle gap: 30s / 1625s.
 Cycles with uncertain equity: 0.
