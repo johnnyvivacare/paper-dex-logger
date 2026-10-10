@@ -1,18 +1,18 @@
 # Solana paper test — $1,000 USD
 
 Started: 2026-10-09 00:41 UTC
-Last collection: 2026-10-10 05:21 UTC
-Cycles: 650
+Last collection: 2026-10-10 05:22 UTC
+Cycles: 651
 
 | Item | USD |
 |---|---:|
 | Paper cash | 220.40 |
 | Realised simulated P/L | -279.60 |
-| Open positions, recent estimated sale value | 434.60 |
+| Open positions, recent estimated sale value | 433.31 |
 | Unresolved positions, last estimated value ONLY | 0.00 |
 
 Open positions: 5; unresolved: 0.
-Estimated paper equity: $655.01; estimated P/L: $-344.99.
+Estimated paper equity: $653.71; estimated P/L: $-346.29.
 
 Rule: Solana profiles/boosts; reported liquidity >= $50,000; $100 per entry; at most 10 positions; one entry per token. Confirm the same pool on a later cycle before buying.
 Exit at an observed estimated +100%, -50%, or after 24 hours. Exits use the next available observation, not an assumed stop fill.
@@ -27,9 +27,9 @@ No request errors recorded in the latest cycle.
 Enabled: 2026-10-09 00:41:02 UTC. Existing balance and history preserved.
 Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
-Current equity with quotes <=120s old: $655.01
+Current equity with quotes <=120s old: $653.71
 Maximum observed portfolio decline since upgrade: 40.70%
-Latest / largest saved-cycle gap: 1061s / 1769s.
+Latest / largest saved-cycle gap: 30s / 1769s.
 Cycles with uncertain equity: 0.
 New entries: allowed by controls
 
