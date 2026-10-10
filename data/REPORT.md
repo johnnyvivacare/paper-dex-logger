@@ -2,17 +2,17 @@
 
 Started: 2026-10-09 00:41 UTC
 Last collection: 2026-10-10 11:50 UTC
-Cycles: 816
+Cycles: 817
 
 | Item | USD |
 |---|---:|
 | Paper cash | 70.29 |
 | Realised simulated P/L | -429.71 |
-| Open positions, recent estimated sale value | 455.89 |
+| Open positions, recent estimated sale value | 470.00 |
 | Unresolved positions, last estimated value ONLY | 0.00 |
 
 Open positions: 5; unresolved: 0.
-Estimated paper equity: $526.18; estimated P/L: $-473.82.
+Estimated paper equity: $540.28; estimated P/L: $-459.72.
 
 Rule: Solana profiles/boosts; reported liquidity >= $50,000; $100 per entry; at most 10 positions; one entry per token. Confirm the same pool on a later cycle before buying.
 Exit at an observed estimated +100%, -50%, or after 24 hours. Exits use the next available observation, not an assumed stop fill.
@@ -27,7 +27,7 @@ No request errors recorded in the latest cycle.
 Enabled: 2026-10-09 00:41:02 UTC. Existing balance and history preserved.
 Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
-Current equity with quotes <=120s old: $526.18
+Current equity with quotes <=120s old: $540.28
 Maximum observed portfolio decline since upgrade: 48.42%
 Latest / largest saved-cycle gap: 30s / 1769s.
 Cycles with uncertain equity: 0.
