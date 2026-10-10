@@ -2,7 +2,7 @@
 
 Started: 2026-10-09 00:41 UTC
 Last collection: 2026-10-10 15:05 UTC
-Cycles: 1050
+Cycles: 1051
 
 | Item | USD |
 |---|---:|
@@ -18,7 +18,7 @@ Estimated equity: $824.14; estimated P/L: $-175.86.
 
 | Token | Entry score | Current score |
 |---|---:|---:|
-| 8TiMkgvsrat9tM2esko8zVTt99LZLpefUM4SnZaziXaQ | 84.44 | 31.2 |
+| 8TiMkgvsrat9tM2esko8zVTt99LZLpefUM4SnZaziXaQ | 84.44 | 31.1 |
 
 ## Recent trades
 
@@ -48,7 +48,7 @@ Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
 Current equity with quotes <=120s old: $824.14
 Maximum observed portfolio decline since upgrade: 25.49%
-Latest / largest saved-cycle gap: 491s / 1625s.
+Latest / largest saved-cycle gap: 30s / 1625s.
 Cycles with uncertain equity: 0.
 New entries: allowed by controls
 
