@@ -2,28 +2,28 @@
 
 Started: 2026-10-09 00:41 UTC
 Last collection: 2026-10-10 21:55 UTC
-Cycles: 1268
+Cycles: 1269
 
 | Item | USD |
 |---|---:|
-| Cash | 724.89 |
+| Cash | 624.89 |
 | Realized simulated P/L | -75.11 |
-| Recent estimated position value | 139.87 |
+| Recent estimated position value | 241.64 |
 | Unresolved last marks (not cash) | 0.00 |
 
-Open positions: 2; unresolved: 0.
-Estimated equity: $864.77; estimated P/L: $-135.23.
+Open positions: 3; unresolved: 0.
+Estimated equity: $866.53; estimated P/L: $-133.47.
 
 ## Positions
 
 | Token | Entry score | Current score |
 |---|---:|---:|
 | 8TiMkgvsrat9tM2esko8zVTt99LZLpefUM4SnZaziXaQ | 84.44 | 16.9 |
-| HwJyyniKKDRLXxjRSzyLtpvxzqecqrhrbcSbKRm7STNK | 87.35 | 59.43 |
+| HwJyyniKKDRLXxjRSzyLtpvxzqecqrhrbcSbKRm7STNK | 87.35 | 88.2 |
+| CgU6mugt2HXkjaunbaYrauJRRW9kSKbQXcBRzT7Vpump | 65.93 | None |
 
 ## Recent trades
 
-- 2026-10-10 01:19 UTC sell 7q5EzCuaTYdhJrjzttUcisDH4Uk7NNEtPGvorkKkpump: $0.30 (stop loss)
 - 2026-10-10 03:14 UTC sell BQAeeSowpwEx8Km8GcporcbuLKq4a7EQceH3F2qZpump: $205.59 (take profit)
 - 2026-10-10 04:40 UTC buy BQAeeSowpwEx8Km8GcporcbuLKq4a7EQceH3F2qZpump: $100.00 (score 70.53)
 - 2026-10-10 05:13 UTC buy 8TiMkgvsrat9tM2esko8zVTt99LZLpefUM4SnZaziXaQ: $100.00 (score 84.44)
@@ -33,6 +33,7 @@ Estimated equity: $864.77; estimated P/L: $-135.23.
 - 2026-10-10 19:14 UTC sell 3e9CNFHjof1G5Te3NwBMBFZHdkoM8Gtef7qBEAdVpump: $41.05 (stop loss)
 - 2026-10-10 20:09 UTC buy 9LAHK5YvCqQCzX5CBw6xF5yFVUzXqoAHWtoofqk2pump: $100.00 (score 77.43)
 - 2026-10-10 20:40 UTC sell 9LAHK5YvCqQCzX5CBw6xF5yFVUzXqoAHWtoofqk2pump: $264.16 (take profit)
+- 2026-10-10 21:55 UTC buy CgU6mugt2HXkjaunbaYrauJRRW9kSKbQXcBRzT7Vpump: $100.00 (score 65.93)
 
 Experimental score, NOT a probability of profit. Profiles/boosts are a limited promotional sample, not all new tokens or verified memes.
 Pairs aged 30 minutes–72 hours; reported liquidity >=$50k; 5m volume >=$5k; buying and positive momentum required. Missing fields or history prevent entry.
@@ -47,7 +48,7 @@ Errors: 0
 Enabled: 2026-10-09 00:41:02 UTC. Existing balance and history preserved.
 Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
-Current equity with quotes <=120s old: $864.77
+Current equity with quotes <=120s old: $866.53
 Maximum observed portfolio decline since upgrade: 33.15%
 Latest / largest saved-cycle gap: 30s / 1625s.
 Cycles with uncertain equity: 0.
@@ -57,11 +58,11 @@ New entries: allowed by controls
 
 | Component | USD |
 |---|---:|
-| Fees | 6.3970 |
-| Gas | 0.2200 |
-| Pool impact | 6.1734 |
-| Extra slippage | 10.6152 |
-| Total entry + exit drag | 23.4055 |
+| Fees | 6.6969 |
+| Gas | 0.2300 |
+| Pool impact | 6.3946 |
+| Extra slippage | 11.1125 |
+| Total entry + exit drag | 24.4341 |
 
 Costs above are assumptions already included in P/L, not extra charges or actual swap fees.
 Trailing exit: arms at +25% net, triggers on 20% pullback from the observed net peak.
@@ -72,7 +73,6 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 
 ### Latest decisions
 
-- 2026-10-10 01:19:15 UTC sell 7q5EzCuaTYdhJrjzttUcisDH4Uk7NNEtPGvorkKkpump: $0.30; stop loss
 - 2026-10-10 03:14:41 UTC sell BQAeeSowpwEx8Km8GcporcbuLKq4a7EQceH3F2qZpump: $205.59; take profit
 - 2026-10-10 04:40:44 UTC buy BQAeeSowpwEx8Km8GcporcbuLKq4a7EQceH3F2qZpump: $100.00; opportunity score 70.53
 - 2026-10-10 05:13:56 UTC buy 8TiMkgvsrat9tM2esko8zVTt99LZLpefUM4SnZaziXaQ: $100.00; opportunity score 84.44
@@ -82,3 +82,4 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 - 2026-10-10 19:14:14 UTC sell 3e9CNFHjof1G5Te3NwBMBFZHdkoM8Gtef7qBEAdVpump: $41.05; stop loss
 - 2026-10-10 20:09:03 UTC buy 9LAHK5YvCqQCzX5CBw6xF5yFVUzXqoAHWtoofqk2pump: $100.00; opportunity score 77.43
 - 2026-10-10 20:40:26 UTC sell 9LAHK5YvCqQCzX5CBw6xF5yFVUzXqoAHWtoofqk2pump: $264.16; take profit
+- 2026-10-10 21:55:40 UTC buy CgU6mugt2HXkjaunbaYrauJRRW9kSKbQXcBRzT7Vpump: $100.00; opportunity score 65.93
