@@ -1,8 +1,8 @@
 # Opportunity paper experiment — $1,000 USD
 
 Started: 2026-10-09 00:41 UTC
-Last collection: 2026-10-10 10:59 UTC
-Cycles: 927
+Last collection: 2026-10-10 11:00 UTC
+Cycles: 928
 
 | Item | USD |
 |---|---:|
@@ -18,7 +18,7 @@ Estimated equity: $838.44; estimated P/L: $-161.56.
 
 | Token | Entry score | Current score |
 |---|---:|---:|
-| BQAeeSowpwEx8Km8GcporcbuLKq4a7EQceH3F2qZpump | 70.53 | 40.45 |
+| BQAeeSowpwEx8Km8GcporcbuLKq4a7EQceH3F2qZpump | 70.53 | 34.04 |
 | 8TiMkgvsrat9tM2esko8zVTt99LZLpefUM4SnZaziXaQ | 84.44 | 28.89 |
 
 ## Recent trades
