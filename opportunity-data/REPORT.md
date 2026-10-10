@@ -2,7 +2,7 @@
 
 Started: 2026-10-09 00:41 UTC
 Last collection: 2026-10-10 15:24 UTC
-Cycles: 1061
+Cycles: 1062
 
 | Item | USD |
 |---|---:|
@@ -18,7 +18,7 @@ Estimated equity: $817.00; estimated P/L: $-183.00.
 
 | Token | Entry score | Current score |
 |---|---:|---:|
-| 8TiMkgvsrat9tM2esko8zVTt99LZLpefUM4SnZaziXaQ | 84.44 | 32.2 |
+| 8TiMkgvsrat9tM2esko8zVTt99LZLpefUM4SnZaziXaQ | 84.44 | 13.09 |
 
 ## Recent trades
 
