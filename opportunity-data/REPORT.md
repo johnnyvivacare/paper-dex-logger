@@ -1,30 +1,28 @@
 # Opportunity paper experiment — $1,000 USD
 
 Started: 2026-10-09 00:41 UTC
-Last collection: 2026-10-10 23:08 UTC
-Cycles: 1313
+Last collection: 2026-10-10 23:21 UTC
+Cycles: 1314
 
 | Item | USD |
 |---|---:|
-| Cash | 566.26 |
-| Realized simulated P/L | -133.74 |
-| Recent estimated position value | 236.51 |
+| Cash | 588.96 |
+| Realized simulated P/L | -211.04 |
+| Recent estimated position value | 184.15 |
 | Unresolved last marks (not cash) | 0.00 |
 
-Open positions: 3; unresolved: 0.
-Estimated equity: $802.77; estimated P/L: $-197.23.
+Open positions: 2; unresolved: 0.
+Estimated equity: $773.11; estimated P/L: $-226.89.
 
 ## Positions
 
 | Token | Entry score | Current score |
 |---|---:|---:|
-| 8TiMkgvsrat9tM2esko8zVTt99LZLpefUM4SnZaziXaQ | 84.44 | 57.51 |
-| CgU6mugt2HXkjaunbaYrauJRRW9kSKbQXcBRzT7Vpump | 65.93 | 24.45 |
-| 9LAHK5YvCqQCzX5CBw6xF5yFVUzXqoAHWtoofqk2pump | 73.58 | 52.93 |
+| 8TiMkgvsrat9tM2esko8zVTt99LZLpefUM4SnZaziXaQ | 84.44 | 55.49 |
+| 9LAHK5YvCqQCzX5CBw6xF5yFVUzXqoAHWtoofqk2pump | 73.58 | 38.39 |
 
 ## Recent trades
 
-- 2026-10-10 05:13 UTC buy 8TiMkgvsrat9tM2esko8zVTt99LZLpefUM4SnZaziXaQ: $100.00 (score 84.44)
 - 2026-10-10 11:23 UTC sell BQAeeSowpwEx8Km8GcporcbuLKq4a7EQceH3F2qZpump: $49.33 (stop loss)
 - 2026-10-10 18:57 UTC buy 3e9CNFHjof1G5Te3NwBMBFZHdkoM8Gtef7qBEAdVpump: $100.00 (score 92.53)
 - 2026-10-10 18:59 UTC buy HwJyyniKKDRLXxjRSzyLtpvxzqecqrhrbcSbKRm7STNK: $100.00 (score 87.35)
@@ -34,6 +32,7 @@ Estimated equity: $802.77; estimated P/L: $-197.23.
 - 2026-10-10 21:55 UTC buy CgU6mugt2HXkjaunbaYrauJRRW9kSKbQXcBRzT7Vpump: $100.00 (score 65.93)
 - 2026-10-10 21:56 UTC sell HwJyyniKKDRLXxjRSzyLtpvxzqecqrhrbcSbKRm7STNK: $41.37 (stop loss)
 - 2026-10-10 21:56 UTC buy 9LAHK5YvCqQCzX5CBw6xF5yFVUzXqoAHWtoofqk2pump: $100.00 (score 73.58)
+- 2026-10-10 23:21 UTC sell CgU6mugt2HXkjaunbaYrauJRRW9kSKbQXcBRzT7Vpump: $22.70 (stop loss)
 
 Experimental score, NOT a probability of profit. Profiles/boosts are a limited promotional sample, not all new tokens or verified memes.
 Pairs aged 30 minutes–72 hours; reported liquidity >=$50k; 5m volume >=$5k; buying and positive momentum required. Missing fields or history prevent entry.
@@ -48,9 +47,9 @@ Errors: 0
 Enabled: 2026-10-09 00:41:02 UTC. Existing balance and history preserved.
 Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
-Current equity with quotes <=120s old: $802.77
+Current equity with quotes <=120s old: $773.11
 Maximum observed portfolio decline since upgrade: 33.15%
-Latest / largest saved-cycle gap: 30s / 1625s.
+Latest / largest saved-cycle gap: 788s / 1625s.
 Cycles with uncertain equity: 0.
 New entries: allowed by controls
 
@@ -58,11 +57,11 @@ New entries: allowed by controls
 
 | Component | USD |
 |---|---:|
-| Fees | 7.1220 |
-| Gas | 0.2500 |
-| Pool impact | 6.6779 |
-| Extra slippage | 11.8177 |
-| Total entry + exit drag | 25.8677 |
+| Fees | 7.1907 |
+| Gas | 0.2600 |
+| Pool impact | 6.7026 |
+| Extra slippage | 11.9318 |
+| Total entry + exit drag | 26.0851 |
 
 Costs above are assumptions already included in P/L, not extra charges or actual swap fees.
 Trailing exit: arms at +25% net, triggers on 20% pullback from the observed net peak.
@@ -73,7 +72,6 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 
 ### Latest decisions
 
-- 2026-10-10 05:13:56 UTC buy 8TiMkgvsrat9tM2esko8zVTt99LZLpefUM4SnZaziXaQ: $100.00; opportunity score 84.44
 - 2026-10-10 11:23:49 UTC sell BQAeeSowpwEx8Km8GcporcbuLKq4a7EQceH3F2qZpump: $49.33; stop loss
 - 2026-10-10 18:57:27 UTC buy 3e9CNFHjof1G5Te3NwBMBFZHdkoM8Gtef7qBEAdVpump: $100.00; opportunity score 92.53
 - 2026-10-10 18:59:27 UTC buy HwJyyniKKDRLXxjRSzyLtpvxzqecqrhrbcSbKRm7STNK: $100.00; opportunity score 87.35
@@ -83,3 +81,4 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 - 2026-10-10 21:55:40 UTC buy CgU6mugt2HXkjaunbaYrauJRRW9kSKbQXcBRzT7Vpump: $100.00; opportunity score 65.93
 - 2026-10-10 21:56:31 UTC sell HwJyyniKKDRLXxjRSzyLtpvxzqecqrhrbcSbKRm7STNK: $41.37; stop loss
 - 2026-10-10 21:56:40 UTC buy 9LAHK5YvCqQCzX5CBw6xF5yFVUzXqoAHWtoofqk2pump: $100.00; opportunity score 73.58
+- 2026-10-10 23:21:36 UTC sell CgU6mugt2HXkjaunbaYrauJRRW9kSKbQXcBRzT7Vpump: $22.70; stop loss
