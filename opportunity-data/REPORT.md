@@ -2,28 +2,26 @@
 
 Started: 2026-10-09 00:41 UTC
 Last collection: 2026-10-10 11:23 UTC
-Cycles: 938
+Cycles: 939
 
 | Item | USD |
 |---|---:|
-| Cash | 670.34 |
-| Realized simulated P/L | -129.66 |
-| Recent estimated position value | 157.79 |
+| Cash | 719.68 |
+| Realized simulated P/L | -180.32 |
+| Recent estimated position value | 109.58 |
 | Unresolved last marks (not cash) | 0.00 |
 
-Open positions: 2; unresolved: 0.
-Estimated equity: $828.13; estimated P/L: $-171.87.
+Open positions: 1; unresolved: 0.
+Estimated equity: $829.25; estimated P/L: $-170.75.
 
 ## Positions
 
 | Token | Entry score | Current score |
 |---|---:|---:|
-| BQAeeSowpwEx8Km8GcporcbuLKq4a7EQceH3F2qZpump | 70.53 | 58.13 |
-| 8TiMkgvsrat9tM2esko8zVTt99LZLpefUM4SnZaziXaQ | 84.44 | 83.74 |
+| 8TiMkgvsrat9tM2esko8zVTt99LZLpefUM4SnZaziXaQ | 84.44 | 91.0 |
 
 ## Recent trades
 
-- 2026-10-09 21:27 UTC sell 7SsZWPvLHpMizSGD8RByEbjUA8VatHWAts4UpjB4pump: $47.90 (stop loss)
 - 2026-10-09 22:17 UTC sell 5yuiTSNd32qxBM4rkuxqNd6gaSLBqCykJEaKwK4Jpump: $101.50 (trailing pullback)
 - 2026-10-09 22:39 UTC buy AVJk6piE392EvzCnP8SXTbq158ALSfUUeY3wKEsNpump: $100.00 (score 66.52)
 - 2026-10-09 22:53 UTC sell AVJk6piE392EvzCnP8SXTbq158ALSfUUeY3wKEsNpump: $0.49 (stop loss)
@@ -33,6 +31,7 @@ Estimated equity: $828.13; estimated P/L: $-171.87.
 - 2026-10-10 03:14 UTC sell BQAeeSowpwEx8Km8GcporcbuLKq4a7EQceH3F2qZpump: $205.59 (take profit)
 - 2026-10-10 04:40 UTC buy BQAeeSowpwEx8Km8GcporcbuLKq4a7EQceH3F2qZpump: $100.00 (score 70.53)
 - 2026-10-10 05:13 UTC buy 8TiMkgvsrat9tM2esko8zVTt99LZLpefUM4SnZaziXaQ: $100.00 (score 84.44)
+- 2026-10-10 11:23 UTC sell BQAeeSowpwEx8Km8GcporcbuLKq4a7EQceH3F2qZpump: $49.33 (stop loss)
 
 Experimental score, NOT a probability of profit. Profiles/boosts are a limited promotional sample, not all new tokens or verified memes.
 Pairs aged 30 minutes–72 hours; reported liquidity >=$50k; 5m volume >=$5k; buying and positive momentum required. Missing fields or history prevent entry.
@@ -47,9 +46,9 @@ Errors: 0
 Enabled: 2026-10-09 00:41:02 UTC. Existing balance and history preserved.
 Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
-Current equity with quotes <=120s old: $828.13
+Current equity with quotes <=120s old: $829.25
 Maximum observed portfolio decline since upgrade: 25.49%
-Latest / largest saved-cycle gap: 792s / 1625s.
+Latest / largest saved-cycle gap: 30s / 1625s.
 Cycles with uncertain equity: 0.
 New entries: allowed by controls
 
@@ -57,11 +56,11 @@ New entries: allowed by controls
 
 | Component | USD |
 |---|---:|
-| Fees | 4.4247 |
-| Gas | 0.1600 |
-| Pool impact | 3.5662 |
-| Extra slippage | 7.3422 |
-| Total entry + exit drag | 15.4932 |
+| Fees | 4.5740 |
+| Gas | 0.1700 |
+| Pool impact | 3.5944 |
+| Extra slippage | 7.5902 |
+| Total entry + exit drag | 15.9285 |
 
 Costs above are assumptions already included in P/L, not extra charges or actual swap fees.
 Trailing exit: arms at +25% net, triggers on 20% pullback from the observed net peak.
@@ -72,7 +71,6 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 
 ### Latest decisions
 
-- 2026-10-09 21:27:50 UTC sell 7SsZWPvLHpMizSGD8RByEbjUA8VatHWAts4UpjB4pump: $47.90; stop loss
 - 2026-10-09 22:17:23 UTC sell 5yuiTSNd32qxBM4rkuxqNd6gaSLBqCykJEaKwK4Jpump: $101.50; trailing pullback
 - 2026-10-09 22:39:09 UTC buy AVJk6piE392EvzCnP8SXTbq158ALSfUUeY3wKEsNpump: $100.00; opportunity score 66.52
 - 2026-10-09 22:53:36 UTC sell AVJk6piE392EvzCnP8SXTbq158ALSfUUeY3wKEsNpump: $0.49; stop loss
@@ -82,3 +80,4 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 - 2026-10-10 03:14:41 UTC sell BQAeeSowpwEx8Km8GcporcbuLKq4a7EQceH3F2qZpump: $205.59; take profit
 - 2026-10-10 04:40:44 UTC buy BQAeeSowpwEx8Km8GcporcbuLKq4a7EQceH3F2qZpump: $100.00; opportunity score 70.53
 - 2026-10-10 05:13:56 UTC buy 8TiMkgvsrat9tM2esko8zVTt99LZLpefUM4SnZaziXaQ: $100.00; opportunity score 84.44
+- 2026-10-10 11:23:49 UTC sell BQAeeSowpwEx8Km8GcporcbuLKq4a7EQceH3F2qZpump: $49.33; stop loss
