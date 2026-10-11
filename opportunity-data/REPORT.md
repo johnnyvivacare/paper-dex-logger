@@ -1,18 +1,18 @@
 # Opportunity paper experiment — $1,000 USD
 
 Started: 2026-10-09 00:41 UTC
-Last collection: 2026-10-11 00:54 UTC
-Cycles: 1354
+Last collection: 2026-10-11 00:55 UTC
+Cycles: 1355
 
 | Item | USD |
 |---|---:|
 | Cash | 733.71 |
 | Realized simulated P/L | -166.29 |
-| Recent estimated position value | 117.22 |
+| Recent estimated position value | 118.41 |
 | Unresolved last marks (not cash) | 0.00 |
 
 Open positions: 1; unresolved: 0.
-Estimated equity: $850.92; estimated P/L: $-149.08.
+Estimated equity: $852.11; estimated P/L: $-147.89.
 
 ## Positions
 
@@ -46,9 +46,9 @@ Errors: 0
 Enabled: 2026-10-09 00:41:02 UTC. Existing balance and history preserved.
 Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
-Current equity with quotes <=120s old: $850.92
+Current equity with quotes <=120s old: $852.11
 Maximum observed portfolio decline since upgrade: 33.15%
-Latest / largest saved-cycle gap: 1354s / 1625s.
+Latest / largest saved-cycle gap: 29s / 1625s.
 Cycles with uncertain equity: 0.
 New entries: allowed by controls
 
