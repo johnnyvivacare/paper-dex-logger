@@ -24,16 +24,16 @@
       "entered": 1791748813,
       "cost": 100.0,
       "units": 1776.0968769135031,
-      "previous_quote": 1791752347,
+      "previous_quote": 1791752377,
       "mark": 98.76621292180364,
-      "last_quote": 1791752347,
+      "last_quote": 1791752377,
       "status": "observed",
       "controls_mark": {
         "since": 1791748813,
         "peak_net": 101.14171618286304,
         "peak_liquidity": 234867.05,
         "armed": false,
-        "last": 1791752347,
+        "last": 1791752377,
         "max_gap": 1095,
         "liquidity": 232099.38
       }
@@ -2744,8 +2744,8 @@
       "observation_gap_seconds": 1095
     }
   ],
-  "cycles": 1636,
-  "last_run": 1791752350,
+  "cycles": 1637,
+  "last_run": 1791752379,
   "errors": [],
   "history": [
     {
@@ -24015,6 +24015,19 @@
       "controls_version": "controls-1",
       "observed_equity": 244.778767782368,
       "entries_blocked": []
+    },
+    {
+      "ts": 1791752379,
+      "cash": 146.01255486056434,
+      "realized": -753.9874451394356,
+      "fresh_estimate": 98.76621292180364,
+      "stale_estimate": 0.0,
+      "unresolved": 0,
+      "open": 1,
+      "errors": [],
+      "controls_version": "controls-1",
+      "observed_equity": 244.778767782368,
+      "entries_blocked": []
     }
   ],
   "controls": {
@@ -31183,12 +31196,20 @@
       {
         "ts": 1791752350,
         "equity": 244.778767782368
+      },
+      {
+        "ts": 1791752377,
+        "equity": 244.778767782368
+      },
+      {
+        "ts": 1791752379,
+        "equity": 244.778767782368
       }
     ],
     "pause_until": 0,
     "pauses": [],
-    "last_cycle": 1791752350,
-    "last_gap": 31,
+    "last_cycle": 1791752379,
+    "last_gap": 29,
     "max_gap": 1809,
     "blocked": [],
     "costs": {
@@ -31200,7 +31221,7 @@
       "slippage": 26.698897560634197
     },
     "accounted_trades": 61,
-    "valued_cycles": 1636,
+    "valued_cycles": 1637,
     "unresolved_cycles": 0,
     "loss_pause_enabled": false,
     "last_value": 244.778767782368,
