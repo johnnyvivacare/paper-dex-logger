@@ -1,29 +1,27 @@
 # Opportunity paper experiment — $1,000 USD
 
 Started: 2026-10-09 00:41 UTC
-Last collection: 2026-10-12 18:30 UTC
-Cycles: 2433
+Last collection: 2026-10-12 18:51 UTC
+Cycles: 2434
 
 | Item | USD |
 |---|---:|
-| Cash | 495.99 |
-| Realized simulated P/L | -304.01 |
-| Recent estimated position value | 235.16 |
+| Cash | 541.21 |
+| Realized simulated P/L | -358.79 |
+| Recent estimated position value | 170.28 |
 | Unresolved last marks (not cash) | 0.00 |
 
-Open positions: 2; unresolved: 0.
-Estimated equity: $731.15; estimated P/L: $-268.85.
+Open positions: 1; unresolved: 0.
+Estimated equity: $711.48; estimated P/L: $-288.52.
 
 ## Positions
 
 | Token | Entry score | Current score |
 |---|---:|---:|
-| 4hsJNmPComjTsbrDtoLjDMmsyZ1g2T1xy1xHnEE2pump | 67.97 | 41.67 |
-| Fak3rJEBfR4Vb8DoFpecf6yoxbkkr1gGUH5tdj2rpump | 67.65 | 44.33 |
+| 4hsJNmPComjTsbrDtoLjDMmsyZ1g2T1xy1xHnEE2pump | 67.97 | None |
 
 ## Recent trades
 
-- 2026-10-11 10:05 UTC sell 9LAHK5YvCqQCzX5CBw6xF5yFVUzXqoAHWtoofqk2pump: $106.95 (trailing pullback)
 - 2026-10-11 13:07 UTC sell BBZ3sgY66QVsxcXXBVpuQfDzH2b5Ub8qmfKNQJjBpump: $49.49 (stop loss)
 - 2026-10-12 00:29 UTC buy 7qb9SHKCD6rFEso3xHWjARbrLgxg6MZF6wZZMAGqpump: $100.00 (score 69.06)
 - 2026-10-12 01:40 UTC sell 7qb9SHKCD6rFEso3xHWjARbrLgxg6MZF6wZZMAGqpump: $97.45 (trailing pullback)
@@ -33,6 +31,7 @@ Estimated equity: $731.15; estimated P/L: $-268.85.
 - 2026-10-12 14:33 UTC sell RDg9LE377mNhUVNi5Enc9e9imcWWvgro2xwLZn5pump: $0.14 (stop loss)
 - 2026-10-12 17:38 UTC buy 4hsJNmPComjTsbrDtoLjDMmsyZ1g2T1xy1xHnEE2pump: $100.00 (score 67.97)
 - 2026-10-12 18:29 UTC buy Fak3rJEBfR4Vb8DoFpecf6yoxbkkr1gGUH5tdj2rpump: $100.00 (score 67.65)
+- 2026-10-12 18:51 UTC sell Fak3rJEBfR4Vb8DoFpecf6yoxbkkr1gGUH5tdj2rpump: $45.21 (stop loss)
 
 Experimental score, NOT a probability of profit. Profiles/boosts are a limited promotional sample, not all new tokens or verified memes.
 Pairs aged 30 minutes–72 hours; reported liquidity >=$50k; 5m volume >=$5k; buying and positive momentum required. Missing fields or history prevent entry.
@@ -47,9 +46,9 @@ Errors: 0
 Enabled: 2026-10-09 00:41:02 UTC. Existing balance and history preserved.
 Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
-Current equity with quotes <=120s old: $731.15
+Current equity with quotes <=120s old: $711.48
 Maximum observed portfolio decline since upgrade: 34.20%
-Latest / largest saved-cycle gap: 30s / 2506s.
+Latest / largest saved-cycle gap: 1259s / 2506s.
 Cycles with uncertain equity: 0.
 New entries: allowed by controls
 
@@ -57,11 +56,11 @@ New entries: allowed by controls
 
 | Component | USD |
 |---|---:|
-| Fees | 12.3313 |
-| Gas | 0.4400 |
-| Pool impact | 10.8267 |
-| Extra slippage | 20.4633 |
-| Total entry + exit drag | 44.0613 |
+| Fees | 12.4681 |
+| Gas | 0.4500 |
+| Pool impact | 10.9053 |
+| Extra slippage | 20.6906 |
+| Total entry + exit drag | 44.5139 |
 
 Costs above are assumptions already included in P/L, not extra charges or actual swap fees.
 Trailing exit: arms at +25% net, triggers on 20% pullback from the observed net peak.
@@ -72,7 +71,6 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 
 ### Latest decisions
 
-- 2026-10-11 10:05:18 UTC sell 9LAHK5YvCqQCzX5CBw6xF5yFVUzXqoAHWtoofqk2pump: $106.95; trailing pullback
 - 2026-10-11 13:07:04 UTC sell BBZ3sgY66QVsxcXXBVpuQfDzH2b5Ub8qmfKNQJjBpump: $49.49; stop loss
 - 2026-10-12 00:29:22 UTC buy 7qb9SHKCD6rFEso3xHWjARbrLgxg6MZF6wZZMAGqpump: $100.00; opportunity score 69.06
 - 2026-10-12 01:40:56 UTC sell 7qb9SHKCD6rFEso3xHWjARbrLgxg6MZF6wZZMAGqpump: $97.45; trailing pullback
@@ -82,3 +80,4 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 - 2026-10-12 14:33:35 UTC sell RDg9LE377mNhUVNi5Enc9e9imcWWvgro2xwLZn5pump: $0.14; stop loss
 - 2026-10-12 17:38:29 UTC buy 4hsJNmPComjTsbrDtoLjDMmsyZ1g2T1xy1xHnEE2pump: $100.00; opportunity score 67.97
 - 2026-10-12 18:29:11 UTC buy Fak3rJEBfR4Vb8DoFpecf6yoxbkkr1gGUH5tdj2rpump: $100.00; opportunity score 67.65
+- 2026-10-12 18:51:31 UTC sell Fak3rJEBfR4Vb8DoFpecf6yoxbkkr1gGUH5tdj2rpump: $45.21; stop loss
