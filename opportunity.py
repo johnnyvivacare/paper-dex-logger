@@ -226,33 +226,57 @@ def close_position(state, token, q, now, reason):
     state["trades"].append(dict(side="sell", token=token, ts=now, usd=value,
                                pnl=value-p["cost"], reason=reason, pool=p["pool"],
                                quote=q, controls_version=ctrl_VERSION,
+                               policy_version=OPPORTUNITY_POLICY["version"],
+                               observation_gap_seconds=p.get("last_observation_gap"),
+                               entry_ts=p["entered"],entry_policy=p.get("entry_policy","legacy"),
                                cost_estimate=ctrl_sell_costs(p["units"],value,q,CONFIG)))
 
 def open_position(state, token, q, score, now):
-    cost = CONFIG["size"]
+    cost = entry_budget(state,now)
+    if (cost <= 0 or state["cash"] < cost
+            or len(state["positions"]) >= OPPORTUNITY_POLICY["max_positions"]
+            or any(t["side"]=="buy" and t["token"]==token for t in state["trades"])):
+        raise ValueError("Entry does not satisfy the position budget or repeat-entry policy")
     p = dict(pool=q["pool"], entered=now, cost=cost, units=entry_units(cost, q),
-             previous_quote=now, entry_score=score)
+             previous_quote=now, entry_score=score,
+             entry_policy=OPPORTUNITY_POLICY["version"])
     mark(p, q, now)
     state["positions"][token] = p
     state["cash"] -= cost
     state["trades"].append(dict(side="buy", token=token, ts=now, usd=cost,
                                score=score, pool=q["pool"], quote=q,
+                               policy_version=OPPORTUNITY_POLICY["version"],
+                               confirmation=confirmation(q,state["samples"].get(token,[]))[1],
                                controls_version=ctrl_VERSION,
                                cost_estimate=ctrl_buy_costs(cost,p["units"],q,CONFIG)))
 
+
 def allocate(state, observations, ranked, now, errors):
-    # Never sell because of absent data or finance an entry from an unpriced holding.
+    # Exits are managed before this function. Data problems still block purchases.
     if not ctrl_entries_allowed(state, now, errors):
         return
+    purchased = {t["token"] for t in state["trades"] if t["side"]=="buy"}
     for score, token in sorted(ranked, reverse=True):
         if not ctrl_entries_allowed(state, now, errors):
             break
-        if token not in observations or not 0 <= now-observations[token]["ts"] <= 60:
+        if token in purchased or token in state["positions"]:
             continue
-        if token in state["positions"] or now-state["sold"].get(token, 0) < 3600:
+        q = observations.get(token)
+        if q is None or not 0 <= now-q["ts"] <= 60:
             continue
-        if len(state["positions"]) < CONFIG["slots"] and state["cash"] >= CONFIG["size"]:
-            open_position(state, token, observations[token], score, now)
+        ready, _ = confirmation(q,state["samples"].get(token,[]))
+        if not ready:
+            continue
+        cost = entry_budget(state,now)
+        if cost <= 0:
+            break
+        count = len(state["positions"])
+        if count < OPPORTUNITY_POLICY["max_positions"] and state["cash"] >= cost:
+            open_position(state,token,q,score,now)
+            purchased.add(token)
+            continue
+        # Never grow an inherited portfolio that exceeds the new slot cap.
+        if count > OPPORTUNITY_POLICY["max_positions"]:
             continue
         if now-state["last_rotation"] < CONFIG["rotation_cooldown"]:
             continue
@@ -260,18 +284,21 @@ def allocate(state, observations, ranked, now, errors):
                 if t in observations and 0 <= now-observations[t]["ts"] <= 60
                 and p.get("score") is not None
                 and now-p["entered"] >= CONFIG["min_hold"]
-                and state["cash"]+sale_value(p["units"], observations[t]) >= CONFIG["size"]]
+                and state["cash"]+sale_value(p["units"],observations[t]) >= cost]
         if not weak:
             continue
         weakest, old = min(weak)
-        if score < weakest + CONFIG["rotation_gap"]:
+        if score < weakest+CONFIG["rotation_gap"]:
             continue
-        close_position(state, old, observations[old], now, "rotation: stronger score")
-        open_position(state, token, observations[token], score, now)
+        close_position(state,old,observations[old],now,"rotation: stronger score")
+        open_position(state,token,q,score,now)
+        purchased.add(token)
         state["last_rotation"] = now
+
 
 def cycle(state):
     ctrl_begin(state, int(time.time()))
+    policy_begin(state,int(time.time()))
     errors, observations, ranked = [], {}, []
     # Fixed pools for open positions; fetch them before candidate discovery.
     for token,p in list(state["positions"].items()):
@@ -289,6 +316,7 @@ def cycle(state):
             p["status"] = "unresolved: no usable pool quote"
             continue
         observations[token] = current
+        p["last_observation_gap"] = max(0,current["ts"]-p.get("last_quote",p["entered"]))
         mark(p, current, current["ts"])
         reason = exit_reason(p, current["ts"])
         if reason:
@@ -323,19 +351,35 @@ def cycle(state):
             observations[token] = max(choices, key=lambda q:q["liquidity"])
         time.sleep(.25)
     now = int(time.time())
+    decisions, rejected = [], {}
+    purchased = {t["token"] for t in state["trades"] if t["side"]=="buy"}
     for token,q in observations.items():
         samples = state["samples"].get(token, [])
         score, eligible = rating(q, samples, q["ts"])
         if token in state["positions"]:
             state["positions"][token]["score"] = score
-        # Quotes gathered early in a slow cycle cannot fund a rotation.
-        if now-q["ts"] > 60:
+        ready, context = confirmation(q,samples)
+        reasons = []
+        if not 0 <= now-q["ts"] <= 60:
+            reasons.append("old quote")
             if token in state["positions"]:
                 state["positions"][token]["score"] = None
-            continue
-        if eligible:
-            ranked.append((score, token))
+        if not eligible:
+            reasons.append("entry signal did not qualify")
+        if not ready:
+            reasons.append("collecting fresh confirmation")
+        if token in purchased or token in state["positions"]:
+            reasons.append("token already purchased")
+        if not reasons:
+            ranked.append((score,token))
+        for reason in reasons:
+            rejected[reason] = rejected.get(reason,0)+1
+        decisions.append(dict(token=token,quote=q,score=score,
+                              confirmation=context,eligible=not reasons,reasons=reasons))
         state["samples"][token] = (samples+[q])[-40:]
+    state["last_decisions"] = decisions
+    policy = policy_begin(state,now)
+    policy["blocked_last"], policy["eligible_last"] = rejected,len(ranked)
     allocate(state, observations, ranked, now, errors)
     state["samples"] = {t:s for t,s in state["samples"].items() if s and now-s[-1]["ts"] < 3600}
     state["scanned"] = {t:ts for t,ts in state["scanned"].items() if now-ts < 86400}
@@ -374,11 +418,11 @@ def report(state, now):
                       tr.get("reason","score "+str(tr.get("score")))))
     lines += ["", "Experimental score, NOT a probability of profit. Profiles/boosts are a limited promotional sample, not all new tokens or verified memes.",
               "Pairs aged 30 minutes–72 hours; reported liquidity >=$50k; 5m volume >=$5k; buying and positive momentum required. Missing fields or history prevent entry.",
-              "$100 entries, 10 slots maximum. Hold cash if no candidates qualify. Exit at observed +100%, -50%, or 24 hours. Rotate only after 30 minutes held, a 20-point score advantage, and a 30-minute rotation cooldown. One-hour token reentry cooldown.",
+              "Opportunity v2 entries: fixed $100 per qualifying position, with at most 10 positions. Hold cash if no candidates qualify or less than $100 is available. Exit at observed +100%, -50%, or 24 hours. Rotation requires 30 minutes held, a 20-point score advantage and a 30-minute cooldown. No repeat token entries.",
               "Paper only; no wallet, signing, or transactions. Same approximate pool-impact and cost model as the baseline: 0.3% fee, $0.01 gas, 0.5% extra slippage each side. No executable swap quotes, sellability checks, or rug prediction.",
               "Unavailable prices remain unresolved, not assumed sales. GitHub scheduling and API delays create monitoring gaps. Compare returns from matching timestamps, not different start balances/dates.", ""]
     lines += ["Errors: "+str(len(state["errors"]))] + ["- "+e for e in state["errors"]]
-    return "\n".join(lines)+"\n"+ctrl_report(state,now)
+    return "\n".join(lines)+"\n"+ctrl_report(state,now)+policy_report(state,now)
 
 # Embedded controls: keep this file standalone for GitHub uploads.
 """Shared paper-only controls. Independent implementation; no transaction APIs."""
@@ -584,6 +628,113 @@ def ctrl_report(state, now):
     return "\n".join(lines)+"\n"
 
 
+
+# Ledger CONFIG stays unchanged for compatibility; this policy is versioned separately.
+OPPORTUNITY_POLICY = dict(version="opportunity-v2", trade_usd=100., max_positions=10,
+                          confirmation_count=3, confirmation_span=60,
+                          confirmation_gap=90, confirmation_window=180,
+                          repeat_entries=False)
+
+def policy_begin(state, now):
+    if "opportunity_policy" not in state:
+        equity, _ = ctrl_valuation(state, now)
+        state["opportunity_policy"] = dict(
+            rules=dict(OPPORTUNITY_POLICY), enabled_at=now,
+            initial_equity=equity, initial_cash=state["cash"],
+            trade_index=len(state["trades"]), cycles_before=state["cycles"],
+            blocked_last={}, eligible_last=0)
+        state.setdefault("upgrades", []).append(dict(
+            version=OPPORTUNITY_POLICY["version"], ts=now,
+            rules=dict(OPPORTUNITY_POLICY), cash=state["cash"],
+            positions=len(state["positions"]), previous_trades=len(state["trades"])))
+    policy = state["opportunity_policy"]
+    if policy["rules"] != OPPORTUNITY_POLICY:
+        raise ValueError("Opportunity policy mismatch; explicit migration required")
+    if policy["initial_equity"] is None:
+        equity, _ = ctrl_valuation(state, now)
+        if equity is not None:
+            policy["initial_equity"] = equity
+    return policy
+
+def entry_budget(state, now):
+    equity, unresolved = ctrl_valuation(state, now)
+    if unresolved or equity is None:
+        return 0.
+    # Return the fixed target even if a funded rotation is needed to free cash.
+    # allocate/open_position separately require enough cash; never shrink a stake.
+    value = OPPORTUNITY_POLICY["trade_usd"]
+    return value if equity >= value else 0.
+
+def confirmation(current, samples):
+    now = current["ts"]
+    # Keep a contiguous suffix on one pool; exclude observations from the future.
+    times = {q["ts"]:q for q in samples+[current]
+             if 0 <= now-q["ts"] <= OPPORTUNITY_POLICY["confirmation_window"]}
+    suffix = []
+    latest = now
+    for ts in sorted(times, reverse=True):
+        q = times[ts]
+        if q["pool"] != current["pool"] or latest-ts > OPPORTUNITY_POLICY["confirmation_gap"]:
+            break
+        suffix.append(q)
+        latest = ts
+    span = suffix[0]["ts"]-suffix[-1]["ts"] if suffix else 0
+    ok = (len(suffix) >= OPPORTUNITY_POLICY["confirmation_count"]
+          and span >= OPPORTUNITY_POLICY["confirmation_span"])
+    return ok, dict(observations=len(suffix), span_seconds=span,
+                   earliest=suffix[-1] if suffix else None)
+
+def policy_report(state, now):
+    p = state.get("opportunity_policy")
+    if p is None:
+        return "\nOpportunity v2 activates on the next collection.\n"
+    equity, unresolved = ctrl_valuation(state, now)
+    initial = p["initial_equity"]
+    trades = state["trades"][p["trade_index"]:]
+    closed = [t for t in trades if t["side"]=="sell"]
+    lines = ["", "## Opportunity v2", "",
+             "Enabled: "+ctrl_utc(p["enabled_at"]),
+             "Balance at first complete phase valuation: "+
+             ("uncertain" if initial is None else "$%.2f" % initial),
+             "Change during this phase: "+
+             ("uncertain" if initial is None or equity is None else
+              "$%+.2f" % (equity-initial)),
+             "Phase closed-trade P/L: $%+.2f (%d closes; includes any legacy holdings sold)." %
+             (sum(t["pnl"] for t in closed),len(closed)),
+             "Next entry budget: $%.2f, subject to cash, slots and candidate qualification." % entry_budget(state,now),
+             "Trade sizing: fixed $100 per qualifying position, up to 10 open positions, subject to available cash. No automatic increase after wins or losses and no forced trade each cycle.",
+             "Existing holdings keep their original units, cost basis and exit rules.",
+             "One purchase per token for this experiment, including trades from before this upgrade.",
+             "New entries require 3 observations on the same pool spanning at least 60 seconds, with no gap above 90 seconds, within the last 180 seconds.",
+             "Confirmation records API observations, not independent trades or proof that provider prices changed. Later GitHub gaps remain possible.",
+             "Entry scores and exit thresholds are unchanged; higher scores are not validated profit probabilities.",
+             "Eligible candidates in latest check: %d." % p["eligible_last"],
+             "Latest candidate rejection counts: "+json.dumps(p["blocked_last"],sort_keys=True),
+             "Candidate observations and rejection reasons are saved to decisions_v2.jsonl for future evaluation.",
+             "The $100 stake and 10-position limit are retained from the existing experiment. Selection changes are experimental and have not demonstrated profitability.", ""]
+    gaps = [t.get("observation_gap_seconds") for t in closed
+            if t.get("observation_gap_seconds") is not None]
+    if gaps:
+        lines.append("Largest recorded quote gap preceding a phase exit: %ss." % max(gaps))
+    return "\n".join(lines)+"\n"
+
+def archive_before_policy(directory, path, state):
+    if "opportunity_policy" in state:
+        return
+    for old, archive in ((path,directory/"state_before_opportunity_v2.json"),
+                         (directory/"REPORT.md",directory/"REPORT_before_opportunity_v2.md")):
+        if old.exists() and not archive.exists():
+            with archive.open("xb") as handle:
+                handle.write(old.read_bytes())
+
+def append_decisions(directory, state):
+    with (directory/"decisions_v2.jsonl").open("a") as handle:
+        json.dump(dict(phase=OPPORTUNITY_POLICY["version"],cycle=state["cycles"],
+                       ts=state["last_run"],candidates=state.get("last_decisions",[]),
+                       entry_blocks=state["controls"]["blocked"]),handle,allow_nan=False)
+        handle.write("\n")
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--data", default="opportunity-data")
@@ -596,8 +747,10 @@ def main():
     state = load(path,int(time.time()))
     for key,default in (("samples",{}),("scanned",{}),("sold",{}),("last_rotation",0)):
         state.setdefault(key,default)
+    archive_before_policy(directory,path,state)
     cycle(state)
     save(path,state)
+    append_decisions(directory,state)
     output = report(state,int(time.time()))
     (directory/"REPORT.md").write_text(output)
     print(output)
