@@ -1,8 +1,8 @@
 # Solana paper test — $1,000 USD
 
 Started: 2026-10-09 00:41 UTC
-Last collection: 2026-10-12 16:52 UTC
-Cycles: 2026
+Last collection: 2026-10-12 16:53 UTC
+Cycles: 2027
 
 | Item | USD |
 |---|---:|
