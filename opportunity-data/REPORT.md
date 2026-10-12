@@ -1,8 +1,8 @@
 # Opportunity paper experiment — $1,000 USD
 
 Started: 2026-10-09 00:41 UTC
-Last collection: 2026-10-12 22:11 UTC
-Cycles: 2527
+Last collection: 2026-10-12 22:12 UTC
+Cycles: 2528
 
 | Item | USD |
 |---|---:|
@@ -34,7 +34,7 @@ Estimated equity: $648.42; estimated P/L: $-351.58.
 
 Experimental score, NOT a probability of profit. Profiles/boosts are a limited promotional sample, not all new tokens or verified memes.
 Pairs aged 30 minutes–72 hours; reported liquidity >=$50k; 5m volume >=$5k; buying and positive momentum required. Missing fields or history prevent entry.
-$100 entries, 10 slots maximum. Hold cash if no candidates qualify. Exit at observed +100%, -50%, or 24 hours. Rotate only after 30 minutes held, a 20-point score advantage, and a 30-minute rotation cooldown. One-hour token reentry cooldown.
+Opportunity v2 entries: fixed $100 per qualifying position, with at most 10 positions. Hold cash if no candidates qualify or less than $100 is available. Exit at observed +100%, -50%, or 24 hours. Rotation requires 30 minutes held, a 20-point score advantage and a 30-minute cooldown. No repeat token entries.
 Paper only; no wallet, signing, or transactions. Same approximate pool-impact and cost model as the baseline: 0.3% fee, $0.01 gas, 0.5% extra slippage each side. No executable swap quotes, sellability checks, or rug prediction.
 Unavailable prices remain unresolved, not assumed sales. GitHub scheduling and API delays create monitoring gaps. Compare returns from matching timestamps, not different start balances/dates.
 
@@ -80,3 +80,22 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 - 2026-10-12 19:48:09 UTC buy 6v1PL7iK2E8pGqG5ADcwMGmVrpkfefYB7xbB16qCpump: $100.00; opportunity score 69.58
 - 2026-10-12 20:20:30 UTC sell 6v1PL7iK2E8pGqG5ADcwMGmVrpkfefYB7xbB16qCpump: $10.21; stop loss
 - 2026-10-12 20:59:46 UTC sell gogxD5VKgKFy5e3nFLyJQFSMntdYs6U64WYWwZ6pump: $35.64; stop loss
+
+## Opportunity v2
+
+Enabled: 2026-10-12 22:11:52 UTC
+Balance at first complete phase valuation: $648.42
+Change during this phase: $+0.00
+Phase closed-trade P/L: $+0.00 (0 closes; includes any legacy holdings sold).
+Next entry budget: $100.00, subject to cash, slots and candidate qualification.
+Trade sizing: fixed $100 per qualifying position, up to 10 open positions, subject to available cash. No automatic increase after wins or losses and no forced trade each cycle.
+Existing holdings keep their original units, cost basis and exit rules.
+One purchase per token for this experiment, including trades from before this upgrade.
+New entries require 3 observations on the same pool spanning at least 60 seconds, with no gap above 90 seconds, within the last 180 seconds.
+Confirmation records API observations, not independent trades or proof that provider prices changed. Later GitHub gaps remain possible.
+Entry scores and exit thresholds are unchanged; higher scores are not validated profit probabilities.
+Eligible candidates in latest check: 0.
+Latest candidate rejection counts: {"entry signal did not qualify": 1}
+Candidate observations and rejection reasons are saved to decisions_v2.jsonl for future evaluation.
+The $100 stake and 10-position limit are retained from the existing experiment. Selection changes are experimental and have not demonstrated profitability.
+
