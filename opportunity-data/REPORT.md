@@ -1,28 +1,28 @@
 # Opportunity paper experiment — $1,000 USD
 
 Started: 2026-10-09 00:41 UTC
-Last collection: 2026-10-12 19:47 UTC
-Cycles: 2464
+Last collection: 2026-10-12 19:48 UTC
+Cycles: 2465
 
 | Item | USD |
 |---|---:|
-| Cash | 702.58 |
+| Cash | 602.58 |
 | Realized simulated P/L | -197.42 |
-| Recent estimated position value | 93.33 |
+| Recent estimated position value | 196.27 |
 | Unresolved last marks (not cash) | 0.00 |
 
-Open positions: 1; unresolved: 0.
-Estimated equity: $795.91; estimated P/L: $-204.09.
+Open positions: 2; unresolved: 0.
+Estimated equity: $798.85; estimated P/L: $-201.15.
 
 ## Positions
 
 | Token | Entry score | Current score |
 |---|---:|---:|
-| gogxD5VKgKFy5e3nFLyJQFSMntdYs6U64WYWwZ6pump | 70.43 | 54.62 |
+| gogxD5VKgKFy5e3nFLyJQFSMntdYs6U64WYWwZ6pump | 70.43 | 69.22 |
+| 6v1PL7iK2E8pGqG5ADcwMGmVrpkfefYB7xbB16qCpump | 69.58 | None |
 
 ## Recent trades
 
-- 2026-10-12 01:40 UTC sell 7qb9SHKCD6rFEso3xHWjARbrLgxg6MZF6wZZMAGqpump: $97.45 (trailing pullback)
 - 2026-10-12 02:58 UTC buy 8PGyHCKvSUjezHkV7KLwMacnmSJLe1YbRM1zvDVApump: $100.00 (score 88.41)
 - 2026-10-12 05:03 UTC sell 8PGyHCKvSUjezHkV7KLwMacnmSJLe1YbRM1zvDVApump: $108.87 (trailing pullback)
 - 2026-10-12 14:08 UTC buy RDg9LE377mNhUVNi5Enc9e9imcWWvgro2xwLZn5pump: $100.00 (score 66.65)
@@ -32,6 +32,7 @@ Estimated equity: $795.91; estimated P/L: $-204.09.
 - 2026-10-12 18:51 UTC sell Fak3rJEBfR4Vb8DoFpecf6yoxbkkr1gGUH5tdj2rpump: $45.21 (stop loss)
 - 2026-10-12 19:06 UTC sell 4hsJNmPComjTsbrDtoLjDMmsyZ1g2T1xy1xHnEE2pump: $261.37 (take profit)
 - 2026-10-12 19:46 UTC buy gogxD5VKgKFy5e3nFLyJQFSMntdYs6U64WYWwZ6pump: $100.00 (score 70.43)
+- 2026-10-12 19:48 UTC buy 6v1PL7iK2E8pGqG5ADcwMGmVrpkfefYB7xbB16qCpump: $100.00 (score 69.58)
 
 Experimental score, NOT a probability of profit. Profiles/boosts are a limited promotional sample, not all new tokens or verified memes.
 Pairs aged 30 minutes–72 hours; reported liquidity >=$50k; 5m volume >=$5k; buying and positive momentum required. Missing fields or history prevent entry.
@@ -46,9 +47,9 @@ Errors: 0
 Enabled: 2026-10-09 00:41:02 UTC. Existing balance and history preserved.
 Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
-Current equity with quotes <=120s old: $795.91
+Current equity with quotes <=120s old: $798.85
 Maximum observed portfolio decline since upgrade: 34.20%
-Latest / largest saved-cycle gap: 31s / 2506s.
+Latest / largest saved-cycle gap: 29s / 2506s.
 Cycles with uncertain equity: 0.
 New entries: allowed by controls
 
@@ -56,11 +57,11 @@ New entries: allowed by controls
 
 | Component | USD |
 |---|---:|
-| Fees | 13.5585 |
-| Gas | 0.4700 |
-| Pool impact | 12.6034 |
-| Extra slippage | 22.5007 |
-| Total entry + exit drag | 49.1326 |
+| Fees | 13.8584 |
+| Gas | 0.4800 |
+| Pool impact | 12.7675 |
+| Extra slippage | 22.9984 |
+| Total entry + exit drag | 50.1043 |
 
 Costs above are assumptions already included in P/L, not extra charges or actual swap fees.
 Trailing exit: arms at +25% net, triggers on 20% pullback from the observed net peak.
@@ -71,7 +72,6 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 
 ### Latest decisions
 
-- 2026-10-12 01:40:56 UTC sell 7qb9SHKCD6rFEso3xHWjARbrLgxg6MZF6wZZMAGqpump: $97.45; trailing pullback
 - 2026-10-12 02:58:18 UTC buy 8PGyHCKvSUjezHkV7KLwMacnmSJLe1YbRM1zvDVApump: $100.00; opportunity score 88.41
 - 2026-10-12 05:03:32 UTC sell 8PGyHCKvSUjezHkV7KLwMacnmSJLe1YbRM1zvDVApump: $108.87; trailing pullback
 - 2026-10-12 14:08:22 UTC buy RDg9LE377mNhUVNi5Enc9e9imcWWvgro2xwLZn5pump: $100.00; opportunity score 66.65
@@ -81,3 +81,4 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 - 2026-10-12 18:51:31 UTC sell Fak3rJEBfR4Vb8DoFpecf6yoxbkkr1gGUH5tdj2rpump: $45.21; stop loss
 - 2026-10-12 19:06:18 UTC sell 4hsJNmPComjTsbrDtoLjDMmsyZ1g2T1xy1xHnEE2pump: $261.37; take profit
 - 2026-10-12 19:46:39 UTC buy gogxD5VKgKFy5e3nFLyJQFSMntdYs6U64WYWwZ6pump: $100.00; opportunity score 70.43
+- 2026-10-12 19:48:09 UTC buy 6v1PL7iK2E8pGqG5ADcwMGmVrpkfefYB7xbB16qCpump: $100.00; opportunity score 69.58
