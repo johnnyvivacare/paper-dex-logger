@@ -2,7 +2,7 @@
 
 Started: 2026-10-09 00:41 UTC
 Last collection: 2026-10-12 20:22 UTC
-Cycles: 2477
+Cycles: 2478
 
 | Item | USD |
 |---|---:|
@@ -18,7 +18,7 @@ Estimated equity: $690.14; estimated P/L: $-309.86.
 
 | Token | Entry score | Current score |
 |---|---:|---:|
-| gogxD5VKgKFy5e3nFLyJQFSMntdYs6U64WYWwZ6pump | 70.43 | 53.66 |
+| gogxD5VKgKFy5e3nFLyJQFSMntdYs6U64WYWwZ6pump | 70.43 | 60.03 |
 
 ## Recent trades
 
