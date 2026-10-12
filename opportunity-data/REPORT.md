@@ -1,8 +1,8 @@
 # Opportunity paper experiment — $1,000 USD
 
 Started: 2026-10-12 22:52 UTC
-Last collection: 2026-10-12 23:01 UTC
-Cycles: 6
+Last collection: 2026-10-12 23:02 UTC
+Cycles: 7
 
 | Item | USD |
 |---|---:|
