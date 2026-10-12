@@ -1,28 +1,26 @@
 # Opportunity paper experiment — $1,000 USD
 
 Started: 2026-10-09 00:41 UTC
-Last collection: 2026-10-12 14:09 UTC
-Cycles: 2329
+Last collection: 2026-10-12 14:33 UTC
+Cycles: 2330
 
 | Item | USD |
 |---|---:|
-| Cash | 695.86 |
-| Realized simulated P/L | -204.14 |
-| Recent estimated position value | 99.33 |
+| Cash | 695.99 |
+| Realized simulated P/L | -304.01 |
+| Recent estimated position value | 0.00 |
 | Unresolved last marks (not cash) | 0.00 |
 
-Open positions: 1; unresolved: 0.
-Estimated equity: $795.18; estimated P/L: $-204.82.
+Open positions: 0; unresolved: 0.
+Estimated equity: $695.99; estimated P/L: $-304.01.
 
 ## Positions
 
 | Token | Entry score | Current score |
 |---|---:|---:|
-| RDg9LE377mNhUVNi5Enc9e9imcWWvgro2xwLZn5pump | 66.65 | 66.54 |
 
 ## Recent trades
 
-- 2026-10-11 03:08 UTC buy 9LAHK5YvCqQCzX5CBw6xF5yFVUzXqoAHWtoofqk2pump: $100.00 (score 78.45)
 - 2026-10-11 03:25 UTC sell 3Y9QZ7TR3WUD1ZDsrjWe2uNAdXESZEBo2XacPw7Vpump: $91.41 (trailing pullback)
 - 2026-10-11 09:36 UTC buy BBZ3sgY66QVsxcXXBVpuQfDzH2b5Ub8qmfKNQJjBpump: $100.00 (score 81.08)
 - 2026-10-11 10:05 UTC sell 9LAHK5YvCqQCzX5CBw6xF5yFVUzXqoAHWtoofqk2pump: $106.95 (trailing pullback)
@@ -32,6 +30,7 @@ Estimated equity: $795.18; estimated P/L: $-204.82.
 - 2026-10-12 02:58 UTC buy 8PGyHCKvSUjezHkV7KLwMacnmSJLe1YbRM1zvDVApump: $100.00 (score 88.41)
 - 2026-10-12 05:03 UTC sell 8PGyHCKvSUjezHkV7KLwMacnmSJLe1YbRM1zvDVApump: $108.87 (trailing pullback)
 - 2026-10-12 14:08 UTC buy RDg9LE377mNhUVNi5Enc9e9imcWWvgro2xwLZn5pump: $100.00 (score 66.65)
+- 2026-10-12 14:33 UTC sell RDg9LE377mNhUVNi5Enc9e9imcWWvgro2xwLZn5pump: $0.14 (stop loss)
 
 Experimental score, NOT a probability of profit. Profiles/boosts are a limited promotional sample, not all new tokens or verified memes.
 Pairs aged 30 minutes–72 hours; reported liquidity >=$50k; 5m volume >=$5k; buying and positive momentum required. Missing fields or history prevent entry.
@@ -46,9 +45,9 @@ Errors: 0
 Enabled: 2026-10-09 00:41:02 UTC. Existing balance and history preserved.
 Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
-Current equity with quotes <=120s old: $795.18
-Maximum observed portfolio decline since upgrade: 33.15%
-Latest / largest saved-cycle gap: 30s / 2506s.
+Current equity with quotes <=120s old: $695.99
+Maximum observed portfolio decline since upgrade: 33.99%
+Latest / largest saved-cycle gap: 1461s / 2506s.
 Cycles with uncertain equity: 0.
 New entries: allowed by controls
 
@@ -56,11 +55,11 @@ New entries: allowed by controls
 
 | Component | USD |
 |---|---:|
-| Fees | 11.7309 |
-| Gas | 0.4100 |
+| Fees | 11.7314 |
+| Gas | 0.4200 |
 | Pool impact | 10.2509 |
-| Extra slippage | 19.4686 |
-| Total entry + exit drag | 41.8604 |
+| Extra slippage | 19.4693 |
+| Total entry + exit drag | 41.8716 |
 
 Costs above are assumptions already included in P/L, not extra charges or actual swap fees.
 Trailing exit: arms at +25% net, triggers on 20% pullback from the observed net peak.
@@ -71,7 +70,6 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 
 ### Latest decisions
 
-- 2026-10-11 03:08:25 UTC buy 9LAHK5YvCqQCzX5CBw6xF5yFVUzXqoAHWtoofqk2pump: $100.00; opportunity score 78.45
 - 2026-10-11 03:25:50 UTC sell 3Y9QZ7TR3WUD1ZDsrjWe2uNAdXESZEBo2XacPw7Vpump: $91.41; trailing pullback
 - 2026-10-11 09:36:02 UTC buy BBZ3sgY66QVsxcXXBVpuQfDzH2b5Ub8qmfKNQJjBpump: $100.00; opportunity score 81.08
 - 2026-10-11 10:05:18 UTC sell 9LAHK5YvCqQCzX5CBw6xF5yFVUzXqoAHWtoofqk2pump: $106.95; trailing pullback
@@ -81,3 +79,4 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 - 2026-10-12 02:58:18 UTC buy 8PGyHCKvSUjezHkV7KLwMacnmSJLe1YbRM1zvDVApump: $100.00; opportunity score 88.41
 - 2026-10-12 05:03:32 UTC sell 8PGyHCKvSUjezHkV7KLwMacnmSJLe1YbRM1zvDVApump: $108.87; trailing pullback
 - 2026-10-12 14:08:22 UTC buy RDg9LE377mNhUVNi5Enc9e9imcWWvgro2xwLZn5pump: $100.00; opportunity score 66.65
+- 2026-10-12 14:33:35 UTC sell RDg9LE377mNhUVNi5Enc9e9imcWWvgro2xwLZn5pump: $0.14; stop loss
