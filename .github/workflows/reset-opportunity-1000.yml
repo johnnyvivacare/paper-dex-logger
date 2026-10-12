@@ -1,0 +1,162 @@
+name: Reset opportunity to $1,000 (once)
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: logger
+  cancel-in-progress: false
+jobs:
+  reset-opportunity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Configure report commits
+        run: |
+          git config user.name "paper-logger"
+          git config user.email "paper-logger@users.noreply.github.com"
+      - name: Archive prior results and start this test once
+        shell: python
+        run: |
+          """One-time opportunity-only paper reset; no network calls or real trades."""
+          import hashlib
+          import json
+          from pathlib import Path
+          import shutil
+          import sys
+          import time
+
+          sys.path.insert(0, str(Path.cwd()))
+          import opportunity as bot
+
+          RESET_ID = "opportunity-v2-1000-run1"
+          MARKER_NAME = "reset-" + RESET_ID + ".json"
+
+
+          def reset(directory, now):
+              directory = Path(directory)
+              marker = directory / MARKER_NAME
+              if marker.exists():
+                  receipt = json.loads(marker.read_text())
+                  if receipt.get("reset_id") != RESET_ID:
+                      raise ValueError("Unexpected reset receipt; no balances changed")
+                  print("This $1,000 test has already started. Its balance and history are preserved.")
+                  return False
+
+              policy = getattr(bot, "OPPORTUNITY_POLICY", {})
+              expected = dict(version="opportunity-v2", trade_usd=100., max_positions=10,
+                              confirmation_count=3, confirmation_span=60,
+                              confirmation_gap=90, confirmation_window=180,
+                              repeat_entries=False)
+              if (policy != expected or bot.CONFIG["budget"] != 1000
+                      or bot.ctrl_LOSS_PAUSE_ENABLED):
+                  raise ValueError("Upload the approved $100-entry opportunity v2 file first")
+
+              state_path = directory / bot.STATE_NAME
+              if not state_path.is_file():
+                  raise ValueError("Existing opportunity ledger not found; no reset performed")
+              old = bot.load(state_path, now)
+              if old.get("paper_reset", {}).get("reset_id") == RESET_ID:
+                  raise ValueError("Reset state already exists but its receipt is missing; no reset performed")
+
+              archive = directory / "archives" / ("before-" + RESET_ID)
+              if archive.exists():
+                  raise ValueError("Archive already exists; refusing to overwrite any prior results")
+
+              # Snapshot all non-archive files before creating a directory within this tree.
+              files = []
+              for path in directory.rglob("*"):
+                  relative = path.relative_to(directory)
+                  if relative.parts[0] == "archives":
+                      continue
+                  if path.is_symlink():
+                      raise ValueError("Unexpected data symlink; no reset performed")
+                  if path.is_file():
+                      files.append((path, relative))
+              if (directory / "archives").is_symlink():
+                  raise ValueError("Unexpected archive symlink; no reset performed")
+
+              receipt = dict(
+                  reset_id=RESET_ID, started=now, starting_cash=1000.,
+                  archive=str(archive.relative_to(directory)),
+                  prior_started=old["started"], prior_cash=old["cash"],
+                  prior_realized=old["realized"], prior_trades=len(old["trades"]),
+                  prior_positions=len(old["positions"]), prior_cycles=old["cycles"],
+                  archived_files={str(relative): hashlib.sha256(path.read_bytes()).hexdigest()
+                                  for path, relative in files},
+                  note="New independent paper test. Old positions are archived, not treated as sales. "
+                       "The compatibility experiment_id is retained; reset_id and started identify this run.",
+              )
+              fresh = bot.new_state(now)
+              fresh.update(samples={}, scanned={}, sold={}, last_rotation=0,
+                           paper_reset=dict(reset_id=RESET_ID, started=now,
+                                            starting_cash=1000., archive=receipt["archive"]))
+              bot.ctrl_begin(fresh, now)
+              bot.policy_begin(fresh, now)
+              bot.ctrl_checkpoint(fresh, now)
+              report = bot.report(fresh, now)
+
+              # No active results change until all old data has been copied and checked.
+              archive.mkdir(parents=True, exist_ok=False)
+              for path, relative in files:
+                  destination = archive / relative
+                  destination.parent.mkdir(parents=True, exist_ok=True)
+                  shutil.copy2(path, destination)
+                  if hashlib.sha256(destination.read_bytes()).hexdigest() != receipt["archived_files"][str(relative)]:
+                      raise ValueError("Archive verification failed; old ledger has not been reset")
+
+              bot.save(state_path, fresh)
+              (directory / "REPORT.md").write_text(report)
+              # The old decision history is in the verified archive. New decisions start empty.
+              (directory / "decisions_v2.jsonl").write_text("")
+              bot.save(marker, receipt)
+              print("Started a fresh $1,000 opportunity paper test with $100 entries.")
+              print("Previous results archived at " + str(archive))
+              return True
+
+
+          if __name__ == "__main__":
+              reset(Path("opportunity-data"), int(time.time()))
+
+
+          import subprocess
+
+          def command(*args):
+              subprocess.run(args, check=True, timeout=120)
+
+          def publish():
+              command("git", "add", "opportunity-data")
+              difference = subprocess.run(["git", "diff", "--cached", "--quiet"], timeout=30)
+              if difference.returncode == 1:
+                  command("git", "commit", "-m", "Start or update fresh $1000 opportunity paper test")
+                  command("git", "pull", "--rebase", "origin", "main")
+                  command("git", "push", "origin", "HEAD:main")
+              elif difference.returncode != 0:
+                  raise RuntimeError("Could not check saved paper changes")
+
+          publish()
+      - name: Collect first observations and save the report
+        shell: python
+        run: |
+
+          import subprocess
+
+          def command(*args):
+              subprocess.run(args, check=True, timeout=120)
+
+          def publish():
+              command("git", "add", "opportunity-data")
+              difference = subprocess.run(["git", "diff", "--cached", "--quiet"], timeout=30)
+              if difference.returncode == 1:
+                  command("git", "commit", "-m", "Start or update fresh $1000 opportunity paper test")
+                  command("git", "pull", "--rebase", "origin", "main")
+                  command("git", "push", "origin", "HEAD:main")
+              elif difference.returncode != 0:
+                  raise RuntimeError("Could not check saved paper changes")
+
+          command("python3", "opportunity.py")
+          publish()
