@@ -27,12 +27,54 @@
   "pending": {},
   "seen": {},
   "trades": [],
-  "cycles": 0,
-  "last_run": null,
+  "cycles": 1,
+  "last_run": 1791845564,
   "errors": [],
-  "history": [],
+  "history": [
+    {
+      "ts": 1791845564,
+      "cash": 1000.0,
+      "fresh_estimate": 0.0,
+      "stale_estimate": 0.0,
+      "unresolved": 0,
+      "controls_version": "controls-1",
+      "observed_equity": 1000.0,
+      "entries_blocked": []
+    }
+  ],
   "samples": {},
-  "scanned": {},
+  "scanned": {
+    "2jcvq8QcJ8TzEYJKYMCjR61kXVSzib4mEkz89tQxpump": 1791845555,
+    "2u1WM7EapSAzwzGBmFxroj751e3jFcF8aGKcbsbqDmgr": 1791845555,
+    "317FCQ6W6UUyVUGUc1oNFFR7GxyM3aFZ2P8s77nCpump": 1791845555,
+    "3BnAuhFGJpH5xLVbfEiamdjcdrgm1yYXntCgkttepump": 1791845555,
+    "433zwms1C5xLyJ8ZKeT49RH7HVxarn9XvT15apCwpump": 1791845556,
+    "49VZNZqvkcsGajJ8k9xrEzDZTLRDV5rZn9YYthg53czn": 1791845556,
+    "4LKS9yUYaBEZyzsaExmFXcWbG9pDBX7AWhseigVYpump": 1791845556,
+    "4fY6zrbXi2nHuDtUneMtwZnJS42rBVJH4XuB7h7Apump": 1791845557,
+    "56bJFv7qKkcifnyUW9MXBPBU3Ycxrqh5Frh8LGjUpump": 1791845557,
+    "5Hj1TFxkRqJySCscifWesBN5YrA1HZvG57i9Ev69pump": 1791845557,
+    "5HoFG3HjULmB9jGsGF5DZdP3M7AuDQqzUfsyJJCrrGHb": 1791845558,
+    "5LCgzEJLQtH4tH2HSfw12y1zG9uoJ1cmCjDdMcb4pump": 1791845558,
+    "5YfWmPmrpz7Td4kNhEqw1sK8RCLnBXWLCsnNeaRDpump": 1791845558,
+    "5sarqEo32KeSxPHFuTiwSk7doGabU4j8hZBcPuhRpump": 1791845559,
+    "69GcabKAhQrxo6vJPAjsFgbEQjzQgx1vNPbfULiNpump": 1791845559,
+    "6ZxhMcNs4GGx3gKSRDUTSiNz315s4c7zbWdNf91zpump": 1791845559,
+    "7dtEA9kBeFV3SViDKGCvPGYu96bfc1tZUC1eYq2Th3Up": 1791845559,
+    "7tecn1nGFHaswTUFhivdwcj23XyxE9cnDoNjh3N1pump": 1791845560,
+    "8DXqVUopcdviLvujTcpwEqkKzB43Arp6E1axzsEE5Btq": 1791845560,
+    "8KKHDdWRX3NY9gTgnxCPp2b9nMCofwzxdYzZrXwrpump": 1791845560,
+    "8Tq4hpxkc4Syv9p2dWb7yqn4idciSJhpZQMFNnE6pump": 1791845561,
+    "8gkVdgdApzfFKpU8ijqqhCXVL4FdWp8jsmCPbhuGpump": 1791845561,
+    "9VKfarEDscEjg6N9NDPm3eqUgG3b61ReAArymRtpump": 1791845561,
+    "9XxtEBjxj2Z7DZ775foA1iq2zeZdYMKXD6fq8qCNpump": 1791845562,
+    "ABCDE99XNGUEWpHMoVhP5Ycy2QMXPBDqhM1LPycocMA6": 1791845562,
+    "AMnWawRzUs7dEXvKjxvCTgiHRowsfE3Skh89BAefpump": 1791845562,
+    "AVZL6g7Qw7958poF4yPFtURyqnRAbag46gs4AttRpump": 1791845562,
+    "B4rXJv2pRQvTfEsgtYfxqAsA6sUC8iVGEN1pN865pump": 1791845563,
+    "BW4oQngRVLWSwfA76Xhm28boPE3rbqomTGMV34Bnpump": 1791845563,
+    "CVxmNU5pseYjegY1D8GBk6J1y3cRj7JrCZDyd2z1pump": 1791845563
+  },
   "sold": {},
   "last_rotation": 0,
   "paper_reset": {
@@ -63,11 +105,19 @@
       {
         "ts": 1791845552,
         "equity": 1000.0
+      },
+      {
+        "ts": 1791845564,
+        "equity": 1000.0
+      },
+      {
+        "ts": 1791845564,
+        "equity": 1000.0
       }
     ],
     "pause_until": 0,
     "pauses": [],
-    "last_cycle": null,
+    "last_cycle": 1791845564,
     "last_gap": 0,
     "max_gap": 0,
     "blocked": [],
@@ -80,9 +130,11 @@
       "slippage": 0.0
     },
     "accounted_trades": 0,
-    "valued_cycles": 0,
+    "valued_cycles": 1,
     "unresolved_cycles": 0,
-    "loss_pause_enabled": false
+    "loss_pause_enabled": false,
+    "last_value": 1000.0,
+    "unresolved": 0
   },
   "upgrades": [
     {
@@ -147,5 +199,7 @@
     "cycles_before": 0,
     "blocked_last": {},
     "eligible_last": 0
-  }
+  },
+  "last_decisions": [],
+  "ranked": []
 }
