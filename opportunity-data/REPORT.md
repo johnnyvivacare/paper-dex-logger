@@ -1,28 +1,26 @@
 # Opportunity paper experiment — $1,000 USD
 
 Started: 2026-10-09 00:41 UTC
-Last collection: 2026-10-12 20:44 UTC
-Cycles: 2489
+Last collection: 2026-10-12 20:59 UTC
+Cycles: 2490
 
 | Item | USD |
 |---|---:|
-| Cash | 612.79 |
-| Realized simulated P/L | -287.21 |
-| Recent estimated position value | 65.46 |
+| Cash | 648.42 |
+| Realized simulated P/L | -351.58 |
+| Recent estimated position value | 0.00 |
 | Unresolved last marks (not cash) | 0.00 |
 
-Open positions: 1; unresolved: 0.
-Estimated equity: $678.24; estimated P/L: $-321.76.
+Open positions: 0; unresolved: 0.
+Estimated equity: $648.42; estimated P/L: $-351.58.
 
 ## Positions
 
 | Token | Entry score | Current score |
 |---|---:|---:|
-| gogxD5VKgKFy5e3nFLyJQFSMntdYs6U64WYWwZ6pump | 70.43 | 42.09 |
 
 ## Recent trades
 
-- 2026-10-12 05:03 UTC sell 8PGyHCKvSUjezHkV7KLwMacnmSJLe1YbRM1zvDVApump: $108.87 (trailing pullback)
 - 2026-10-12 14:08 UTC buy RDg9LE377mNhUVNi5Enc9e9imcWWvgro2xwLZn5pump: $100.00 (score 66.65)
 - 2026-10-12 14:33 UTC sell RDg9LE377mNhUVNi5Enc9e9imcWWvgro2xwLZn5pump: $0.14 (stop loss)
 - 2026-10-12 17:38 UTC buy 4hsJNmPComjTsbrDtoLjDMmsyZ1g2T1xy1xHnEE2pump: $100.00 (score 67.97)
@@ -32,6 +30,7 @@ Estimated equity: $678.24; estimated P/L: $-321.76.
 - 2026-10-12 19:46 UTC buy gogxD5VKgKFy5e3nFLyJQFSMntdYs6U64WYWwZ6pump: $100.00 (score 70.43)
 - 2026-10-12 19:48 UTC buy 6v1PL7iK2E8pGqG5ADcwMGmVrpkfefYB7xbB16qCpump: $100.00 (score 69.58)
 - 2026-10-12 20:20 UTC sell 6v1PL7iK2E8pGqG5ADcwMGmVrpkfefYB7xbB16qCpump: $10.21 (stop loss)
+- 2026-10-12 20:59 UTC sell gogxD5VKgKFy5e3nFLyJQFSMntdYs6U64WYWwZ6pump: $35.64 (stop loss)
 
 Experimental score, NOT a probability of profit. Profiles/boosts are a limited promotional sample, not all new tokens or verified memes.
 Pairs aged 30 minutes–72 hours; reported liquidity >=$50k; 5m volume >=$5k; buying and positive momentum required. Missing fields or history prevent entry.
@@ -46,9 +45,9 @@ Errors: 0
 Enabled: 2026-10-09 00:41:02 UTC. Existing balance and history preserved.
 Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
-Current equity with quotes <=120s old: $678.24
-Maximum observed portfolio decline since upgrade: 36.18%
-Latest / largest saved-cycle gap: 30s / 2506s.
+Current equity with quotes <=120s old: $648.42
+Maximum observed portfolio decline since upgrade: 38.50%
+Latest / largest saved-cycle gap: 924s / 2506s.
 Cycles with uncertain equity: 0.
 New entries: allowed by controls
 
@@ -56,11 +55,11 @@ New entries: allowed by controls
 
 | Component | USD |
 |---|---:|
-| Fees | 13.8894 |
-| Gas | 0.4900 |
-| Pool impact | 12.7729 |
-| Extra slippage | 23.0497 |
-| Total entry + exit drag | 50.2020 |
+| Fees | 13.9972 |
+| Gas | 0.5000 |
+| Pool impact | 12.8493 |
+| Extra slippage | 23.2289 |
+| Total entry + exit drag | 50.5753 |
 
 Costs above are assumptions already included in P/L, not extra charges or actual swap fees.
 Trailing exit: arms at +25% net, triggers on 20% pullback from the observed net peak.
@@ -71,7 +70,6 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 
 ### Latest decisions
 
-- 2026-10-12 05:03:32 UTC sell 8PGyHCKvSUjezHkV7KLwMacnmSJLe1YbRM1zvDVApump: $108.87; trailing pullback
 - 2026-10-12 14:08:22 UTC buy RDg9LE377mNhUVNi5Enc9e9imcWWvgro2xwLZn5pump: $100.00; opportunity score 66.65
 - 2026-10-12 14:33:35 UTC sell RDg9LE377mNhUVNi5Enc9e9imcWWvgro2xwLZn5pump: $0.14; stop loss
 - 2026-10-12 17:38:29 UTC buy 4hsJNmPComjTsbrDtoLjDMmsyZ1g2T1xy1xHnEE2pump: $100.00; opportunity score 67.97
@@ -81,3 +79,4 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 - 2026-10-12 19:46:39 UTC buy gogxD5VKgKFy5e3nFLyJQFSMntdYs6U64WYWwZ6pump: $100.00; opportunity score 70.43
 - 2026-10-12 19:48:09 UTC buy 6v1PL7iK2E8pGqG5ADcwMGmVrpkfefYB7xbB16qCpump: $100.00; opportunity score 69.58
 - 2026-10-12 20:20:30 UTC sell 6v1PL7iK2E8pGqG5ADcwMGmVrpkfefYB7xbB16qCpump: $10.21; stop loss
+- 2026-10-12 20:59:46 UTC sell gogxD5VKgKFy5e3nFLyJQFSMntdYs6U64WYWwZ6pump: $35.64; stop loss
