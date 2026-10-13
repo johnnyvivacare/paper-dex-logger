@@ -24,18 +24,18 @@
       "entered": 1791842885,
       "cost": 100.0,
       "units": 22206.941339810324,
-      "previous_quote": 1791852054,
-      "mark": 195.05986789023902,
-      "last_quote": 1791852054,
+      "previous_quote": 1791852084,
+      "mark": 189.60851931415218,
+      "last_quote": 1791852084,
       "status": "observed",
       "controls_mark": {
         "since": 1791842885,
         "peak_net": 196.22485073228634,
         "peak_liquidity": 266838.99,
         "armed": true,
-        "last": 1791852054,
+        "last": 1791852084,
         "max_gap": 1949,
-        "liquidity": 266040.96
+        "liquidity": 262269.26
       }
     }
   },
@@ -3547,8 +3547,8 @@
       }
     }
   ],
-  "cycles": 2203,
-  "last_run": 1791852057,
+  "cycles": 2204,
+  "last_run": 1791852087,
   "errors": [],
   "history": [
     {
@@ -32189,6 +32189,19 @@
       "controls_version": "controls-1",
       "observed_equity": 278.3928027848094,
       "entries_blocked": []
+    },
+    {
+      "ts": 1791852087,
+      "cash": 83.33293489457043,
+      "realized": -816.6670651054296,
+      "fresh_estimate": 189.60851931415218,
+      "stale_estimate": 0.0,
+      "unresolved": 0,
+      "open": 1,
+      "errors": [],
+      "controls_version": "controls-1",
+      "observed_equity": 272.9414542087226,
+      "entries_blocked": []
     }
   ],
   "controls": {
@@ -39505,11 +39518,23 @@
       {
         "ts": 1791852057,
         "equity": 278.3928027848094
+      },
+      {
+        "ts": 1791852084,
+        "equity": 272.9414542087226
+      },
+      {
+        "ts": 1791852084,
+        "equity": 272.9414542087226
+      },
+      {
+        "ts": 1791852087,
+        "equity": 272.9414542087226
       }
     ],
     "pause_until": 0,
     "pauses": [],
-    "last_cycle": 1791852057,
+    "last_cycle": 1791852087,
     "last_gap": 30,
     "max_gap": 2331,
     "blocked": [],
@@ -39522,10 +39547,10 @@
       "slippage": 30.38456312833378
     },
     "accounted_trades": 69,
-    "valued_cycles": 2203,
+    "valued_cycles": 2204,
     "unresolved_cycles": 0,
     "loss_pause_enabled": false,
-    "last_value": 278.3928027848094,
+    "last_value": 272.9414542087226,
     "unresolved": 0
   },
   "upgrades": [
