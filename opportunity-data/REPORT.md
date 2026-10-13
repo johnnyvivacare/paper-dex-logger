@@ -1,8 +1,8 @@
 # Opportunity paper experiment — $1,000 USD
 
 Started: 2026-10-12 22:52 UTC
-Last collection: 2026-10-13 13:05 UTC
-Cycles: 322
+Last collection: 2026-10-13 13:06 UTC
+Cycles: 323
 
 | Item | USD |
 |---|---:|
@@ -39,7 +39,7 @@ Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
 Current equity with quotes <=120s old: $1022.01
 Maximum observed portfolio decline since upgrade: 3.32%
-Latest / largest saved-cycle gap: 1492s / 1786s.
+Latest / largest saved-cycle gap: 30s / 1786s.
 Cycles with uncertain equity: 0.
 New entries: allowed by controls
 
