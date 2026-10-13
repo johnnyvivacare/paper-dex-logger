@@ -2,7 +2,7 @@
 
 Started: 2026-10-12 22:52 UTC
 Last collection: 2026-10-13 17:31 UTC
-Cycles: 420
+Cycles: 421
 
 | Item | USD |
 |---|---:|
@@ -41,7 +41,7 @@ Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
 Current equity with quotes <=120s old: $999.56
 Maximum observed portfolio decline since upgrade: 5.52%
-Latest / largest saved-cycle gap: 31s / 1786s.
+Latest / largest saved-cycle gap: 29s / 1786s.
 Cycles with uncertain equity: 0.
 New entries: allowed by controls
 
@@ -82,7 +82,7 @@ New entries require 3 observations on the same pool spanning at least 60 seconds
 Confirmation records API observations, not independent trades or proof that provider prices changed. Later GitHub gaps remain possible.
 Entry scores and exit thresholds are unchanged; higher scores are not validated profit probabilities.
 Eligible candidates in latest check: 0.
-Latest candidate rejection counts: {"collecting fresh confirmation": 5, "entry signal did not qualify": 6, "token already purchased": 1}
+Latest candidate rejection counts: {"entry signal did not qualify": 7, "token already purchased": 1}
 Candidate observations and rejection reasons are saved to decisions_v2.jsonl for future evaluation.
 The $100 stake and 10-position limit are retained from the existing experiment. Selection changes are experimental and have not demonstrated profitability.
 
