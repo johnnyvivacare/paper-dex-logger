@@ -2,7 +2,7 @@
 
 Started: 2026-10-12 22:52 UTC
 Last collection: 2026-10-13 16:33 UTC
-Cycles: 400
+Cycles: 401
 
 | Item | USD |
 |---|---:|
@@ -18,7 +18,7 @@ Estimated equity: $1014.68; estimated P/L: $+14.68.
 
 | Token | Entry score | Current score |
 |---|---:|---:|
-| Ccp6isbtxCknynmGKyky9xJav68UpRqeMoX76KxYpump | 67.41 | 4.1 |
+| Ccp6isbtxCknynmGKyky9xJav68UpRqeMoX76KxYpump | 67.41 | 24.1 |
 
 ## Recent trades
 
@@ -41,7 +41,7 @@ Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
 Current equity with quotes <=120s old: $1014.68
 Maximum observed portfolio decline since upgrade: 5.17%
-Latest / largest saved-cycle gap: 31s / 1786s.
+Latest / largest saved-cycle gap: 30s / 1786s.
 Cycles with uncertain equity: 0.
 New entries: allowed by controls
 
