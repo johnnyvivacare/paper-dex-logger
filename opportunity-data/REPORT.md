@@ -2,25 +2,25 @@
 
 Started: 2026-10-12 22:52 UTC
 Last collection: 2026-10-13 18:06 UTC
-Cycles: 438
+Cycles: 439
 
 | Item | USD |
 |---|---:|
 | Cash | 722.01 |
 | Realized simulated P/L | +22.01 |
-| Recent estimated position value | 243.13 |
+| Recent estimated position value | 239.61 |
 | Unresolved last marks (not cash) | 0.00 |
 
 Open positions: 3; unresolved: 0.
-Estimated equity: $965.14; estimated P/L: $-34.86.
+Estimated equity: $961.63; estimated P/L: $-38.37.
 
 ## Positions
 
 | Token | Entry score | Current score |
 |---|---:|---:|
-| Ccp6isbtxCknynmGKyky9xJav68UpRqeMoX76KxYpump | 67.41 | 38.9 |
-| 4hsJNmPComjTsbrDtoLjDMmsyZ1g2T1xy1xHnEE2pump | 67.63 | 32.49 |
-| 3zKe2553BfmRzb89zTzb7qD9Nz7VeyXqGXnTKxBFpump | 66.68 | 47.79 |
+| Ccp6isbtxCknynmGKyky9xJav68UpRqeMoX76KxYpump | 67.41 | 58.99 |
+| 4hsJNmPComjTsbrDtoLjDMmsyZ1g2T1xy1xHnEE2pump | 67.63 | 32.72 |
+| 3zKe2553BfmRzb89zTzb7qD9Nz7VeyXqGXnTKxBFpump | 66.68 | 49.43 |
 
 ## Recent trades
 
@@ -43,8 +43,8 @@ Errors: 0
 Enabled: 2026-10-12 22:52:32 UTC. Existing balance and history preserved.
 Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
-Current equity with quotes <=120s old: $965.14
-Maximum observed portfolio decline since upgrade: 8.70%
+Current equity with quotes <=120s old: $961.63
+Maximum observed portfolio decline since upgrade: 9.03%
 Latest / largest saved-cycle gap: 30s / 1786s.
 Cycles with uncertain equity: 0.
 New entries: allowed by controls
@@ -78,7 +78,7 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 
 Enabled: 2026-10-12 22:52:32 UTC
 Balance at first complete phase valuation: $1000.00
-Change during this phase: $-34.86
+Change during this phase: $-38.37
 Phase closed-trade P/L: $+22.01 (1 closes; includes any legacy holdings sold).
 Next entry budget: $100.00, subject to cash, slots and candidate qualification.
 Trade sizing: fixed $100 per qualifying position, up to 10 open positions, subject to available cash. No automatic increase after wins or losses and no forced trade each cycle.
