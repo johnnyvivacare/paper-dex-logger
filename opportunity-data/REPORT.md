@@ -1,8 +1,8 @@
 # Opportunity paper experiment — $1,000 USD
 
 Started: 2026-10-12 22:52 UTC
-Last collection: 2026-10-13 22:59 UTC
-Cycles: 515
+Last collection: 2026-10-13 23:00 UTC
+Cycles: 516
 
 | Item | USD |
 |---|---:|
@@ -18,8 +18,8 @@ Estimated equity: $910.80; estimated P/L: $-89.20.
 
 | Token | Entry score | Current score |
 |---|---:|---:|
-| Ccp6isbtxCknynmGKyky9xJav68UpRqeMoX76KxYpump | 67.41 | None |
-| 3zKe2553BfmRzb89zTzb7qD9Nz7VeyXqGXnTKxBFpump | 66.68 | None |
+| Ccp6isbtxCknynmGKyky9xJav68UpRqeMoX76KxYpump | 67.41 | 4.33 |
+| 3zKe2553BfmRzb89zTzb7qD9Nz7VeyXqGXnTKxBFpump | 66.68 | 32.43 |
 
 ## Recent trades
 
@@ -89,7 +89,7 @@ New entries require 3 observations on the same pool spanning at least 60 seconds
 Confirmation records API observations, not independent trades or proof that provider prices changed. Later GitHub gaps remain possible.
 Entry scores and exit thresholds are unchanged; higher scores are not validated profit probabilities.
 Eligible candidates in latest check: 0.
-Latest candidate rejection counts: {"collecting fresh confirmation": 4, "entry signal did not qualify": 4, "token already purchased": 2}
+Latest candidate rejection counts: {"collecting fresh confirmation": 1, "entry signal did not qualify": 3, "token already purchased": 2}
 Candidate observations and rejection reasons are saved to decisions_v2.jsonl for future evaluation.
 The $100 stake and 10-position limit are retained from the existing experiment. Selection changes are experimental and have not demonstrated profitability.
 
