@@ -1,25 +1,24 @@
 # Opportunity paper experiment — $1,000 USD
 
 Started: 2026-10-12 22:52 UTC
-Last collection: 2026-10-14 02:12 UTC
-Cycles: 570
+Last collection: 2026-10-14 02:13 UTC
+Cycles: 571
 
 | Item | USD |
 |---|---:|
-| Cash | 730.12 |
-| Realized simulated P/L | -69.88 |
-| Recent estimated position value | 124.15 |
+| Cash | 779.81 |
+| Realized simulated P/L | -120.19 |
+| Recent estimated position value | 70.57 |
 | Unresolved last marks (not cash) | 0.00 |
 
-Open positions: 2; unresolved: 0.
-Estimated equity: $854.27; estimated P/L: $-145.73.
+Open positions: 1; unresolved: 0.
+Estimated equity: $850.37; estimated P/L: $-149.63.
 
 ## Positions
 
 | Token | Entry score | Current score |
 |---|---:|---:|
 | Ccp6isbtxCknynmGKyky9xJav68UpRqeMoX76KxYpump | 67.41 | None |
-| 3zKe2553BfmRzb89zTzb7qD9Nz7VeyXqGXnTKxBFpump | 66.68 | None |
 
 ## Recent trades
 
@@ -29,6 +28,7 @@ Estimated equity: $854.27; estimated P/L: $-145.73.
 - 2026-10-13 17:51 UTC buy 4hsJNmPComjTsbrDtoLjDMmsyZ1g2T1xy1xHnEE2pump: $100.00 (score 67.63)
 - 2026-10-13 18:05 UTC buy 3zKe2553BfmRzb89zTzb7qD9Nz7VeyXqGXnTKxBFpump: $100.00 (score 66.68)
 - 2026-10-13 18:30 UTC sell 4hsJNmPComjTsbrDtoLjDMmsyZ1g2T1xy1xHnEE2pump: $8.11 (stop loss)
+- 2026-10-14 02:12 UTC sell 3zKe2553BfmRzb89zTzb7qD9Nz7VeyXqGXnTKxBFpump: $49.69 (stop loss)
 
 Experimental score, NOT a probability of profit. Profiles/boosts are a limited promotional sample, not all new tokens or verified memes.
 Pairs aged 30 minutes–72 hours; reported liquidity >=$50k; 5m volume >=$5k; buying and positive momentum required. Missing fields or history prevent entry.
@@ -43,9 +43,9 @@ Errors: 0
 Enabled: 2026-10-12 22:52:32 UTC. Existing balance and history preserved.
 Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
-Current equity with quotes <=120s old: $854.27
-Maximum observed portfolio decline since upgrade: 19.19%
-Latest / largest saved-cycle gap: 1095s / 2241s.
+Current equity with quotes <=120s old: $850.37
+Maximum observed portfolio decline since upgrade: 19.56%
+Latest / largest saved-cycle gap: 30s / 2241s.
 Cycles with uncertain equity: 0.
 New entries: allowed by controls
 
@@ -53,11 +53,11 @@ New entries: allowed by controls
 
 | Component | USD |
 |---|---:|
-| Fees | 1.5934 |
-| Gas | 0.0600 |
-| Pool impact | 0.9208 |
-| Extra slippage | 2.6440 |
-| Total entry + exit drag | 5.2183 |
+| Fees | 1.7437 |
+| Gas | 0.0700 |
+| Pool impact | 0.9933 |
+| Extra slippage | 2.8937 |
+| Total entry + exit drag | 5.7007 |
 
 Costs above are assumptions already included in P/L, not extra charges or actual swap fees.
 Trailing exit: arms at +25% net, triggers on 20% pullback from the observed net peak.
@@ -74,13 +74,14 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 - 2026-10-13 17:51:05 UTC buy 4hsJNmPComjTsbrDtoLjDMmsyZ1g2T1xy1xHnEE2pump: $100.00; opportunity score 67.63
 - 2026-10-13 18:05:35 UTC buy 3zKe2553BfmRzb89zTzb7qD9Nz7VeyXqGXnTKxBFpump: $100.00; opportunity score 66.68
 - 2026-10-13 18:30:20 UTC sell 4hsJNmPComjTsbrDtoLjDMmsyZ1g2T1xy1xHnEE2pump: $8.11; stop loss
+- 2026-10-14 02:12:56 UTC sell 3zKe2553BfmRzb89zTzb7qD9Nz7VeyXqGXnTKxBFpump: $49.69; stop loss
 
 ## Opportunity v2
 
 Enabled: 2026-10-12 22:52:32 UTC
 Balance at first complete phase valuation: $1000.00
-Change during this phase: $-145.73
-Phase closed-trade P/L: $-69.88 (2 closes; includes any legacy holdings sold).
+Change during this phase: $-149.63
+Phase closed-trade P/L: $-120.19 (3 closes; includes any legacy holdings sold).
 Next entry budget: $100.00, subject to cash, slots and candidate qualification.
 Trade sizing: fixed $100 per qualifying position, up to 10 open positions, subject to available cash. No automatic increase after wins or losses and no forced trade each cycle.
 Existing holdings keep their original units, cost basis and exit rules.
