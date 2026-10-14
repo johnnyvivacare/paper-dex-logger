@@ -2,7 +2,7 @@
 
 Started: 2026-10-12 22:52 UTC
 Last collection: 2026-10-14 00:08 UTC
-Cycles: 541
+Cycles: 542
 
 | Item | USD |
 |---|---:|
@@ -18,8 +18,8 @@ Estimated equity: $913.44; estimated P/L: $-86.56.
 
 | Token | Entry score | Current score |
 |---|---:|---:|
-| Ccp6isbtxCknynmGKyky9xJav68UpRqeMoX76KxYpump | 67.41 | 4.39 |
-| 3zKe2553BfmRzb89zTzb7qD9Nz7VeyXqGXnTKxBFpump | 66.68 | 7.83 |
+| Ccp6isbtxCknynmGKyky9xJav68UpRqeMoX76KxYpump | 67.41 | 27.62 |
+| 3zKe2553BfmRzb89zTzb7qD9Nz7VeyXqGXnTKxBFpump | 66.68 | 23.13 |
 
 ## Recent trades
 
@@ -45,7 +45,7 @@ Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
 Current equity with quotes <=120s old: $913.44
 Maximum observed portfolio decline since upgrade: 17.16%
-Latest / largest saved-cycle gap: 30s / 1786s.
+Latest / largest saved-cycle gap: 31s / 1786s.
 Cycles with uncertain equity: 0.
 New entries: allowed by controls
 
@@ -89,7 +89,7 @@ New entries require 3 observations on the same pool spanning at least 60 seconds
 Confirmation records API observations, not independent trades or proof that provider prices changed. Later GitHub gaps remain possible.
 Entry scores and exit thresholds are unchanged; higher scores are not validated profit probabilities.
 Eligible candidates in latest check: 0.
-Latest candidate rejection counts: {"entry signal did not qualify": 3, "token already purchased": 2}
+Latest candidate rejection counts: {"entry signal did not qualify": 4, "token already purchased": 2}
 Candidate observations and rejection reasons are saved to decisions_v2.jsonl for future evaluation.
 The $100 stake and 10-position limit are retained from the existing experiment. Selection changes are experimental and have not demonstrated profitability.
 
