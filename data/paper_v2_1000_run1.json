@@ -24,18 +24,18 @@
       "entered": 1791975632,
       "cost": 100.0,
       "units": 41145.21955249147,
-      "previous_quote": 1791982376,
-      "mark": 98.12311261018084,
-      "last_quote": 1791982376,
+      "previous_quote": 1791982406,
+      "mark": 95.27080418660424,
+      "last_quote": 1791982406,
       "status": "observed",
       "controls_mark": {
         "since": 1791975632,
         "peak_net": 101.17969638679256,
         "peak_liquidity": 176206.99,
         "armed": false,
-        "last": 1791982376,
+        "last": 1791982406,
         "max_gap": 2446,
-        "liquidity": 172587.72
+        "liquidity": 170033.64
       }
     }
   },
@@ -4464,8 +4464,8 @@
       "observation_gap_seconds": 2446
     }
   ],
-  "cycles": 2807,
-  "last_run": 1791982379,
+  "cycles": 2808,
+  "last_run": 1791982409,
   "errors": [],
   "history": [
     {
@@ -40958,6 +40958,19 @@
       "controls_version": "controls-1",
       "observed_equity": 234.6227437967769,
       "entries_blocked": []
+    },
+    {
+      "ts": 1791982409,
+      "cash": 136.49963118659605,
+      "realized": -763.500368813404,
+      "fresh_estimate": 95.27080418660424,
+      "stale_estimate": 0.0,
+      "unresolved": 0,
+      "open": 1,
+      "errors": [],
+      "controls_version": "controls-1",
+      "observed_equity": 231.77043537320029,
+      "entries_blocked": []
     }
   ],
   "controls": {
@@ -40979,14 +40992,6 @@
     "equity_peak": 1000.0,
     "max_drawdown": 0.8192533824538715,
     "points": [
-      {
-        "ts": 1791896004,
-        "equity": 338.1619592789795
-      },
-      {
-        "ts": 1791896006,
-        "equity": 338.1619592789795
-      },
       {
         "ts": 1791896034,
         "equity": 336.89371258367765
@@ -46218,12 +46223,24 @@
       {
         "ts": 1791982379,
         "equity": 234.6227437967769
+      },
+      {
+        "ts": 1791982406,
+        "equity": 231.77043537320029
+      },
+      {
+        "ts": 1791982406,
+        "equity": 231.77043537320029
+      },
+      {
+        "ts": 1791982409,
+        "equity": 231.77043537320029
       }
     ],
     "pause_until": 0,
     "pauses": [],
-    "last_cycle": 1791982379,
-    "last_gap": 27,
+    "last_cycle": 1791982409,
+    "last_gap": 30,
     "max_gap": 2697,
     "blocked": [],
     "costs": {
@@ -46235,10 +46252,10 @@
       "slippage": 36.65199692276818
     },
     "accounted_trades": 81,
-    "valued_cycles": 2807,
+    "valued_cycles": 2808,
     "unresolved_cycles": 0,
     "loss_pause_enabled": false,
-    "last_value": 234.6227437967769,
+    "last_value": 231.77043537320029,
     "unresolved": 0
   },
   "upgrades": [
