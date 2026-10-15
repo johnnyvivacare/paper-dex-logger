@@ -24,18 +24,18 @@
       "entered": 1791975632,
       "cost": 100.0,
       "units": 41145.21955249147,
-      "previous_quote": 1792053264,
-      "mark": 115.96774739778651,
-      "last_quote": 1792053264,
+      "previous_quote": 1792053294,
+      "mark": 115.1122123551788,
+      "last_quote": 1792053294,
       "status": "observed",
       "controls_mark": {
         "since": 1791975632,
         "peak_net": 120.89681765126696,
         "peak_liquidity": 190118.13,
         "armed": false,
-        "last": 1792053264,
+        "last": 1792053294,
         "max_gap": 2872,
-        "liquidity": 186366.53
+        "liquidity": 185684.74
       }
     }
   },
@@ -4912,8 +4912,8 @@
       "observation_gap_seconds": 30
     }
   ],
-  "cycles": 3084,
-  "last_run": 1792053266,
+  "cycles": 3085,
+  "last_run": 1792053296,
   "errors": [],
   "history": [
     {
@@ -45007,6 +45007,19 @@
       "controls_version": "controls-1",
       "observed_equity": 214.29643291599945,
       "entries_blocked": []
+    },
+    {
+      "ts": 1792053296,
+      "cash": 98.32868551821295,
+      "realized": -801.671314481787,
+      "fresh_estimate": 115.1122123551788,
+      "stale_estimate": 0.0,
+      "unresolved": 0,
+      "open": 1,
+      "errors": [],
+      "controls_version": "controls-1",
+      "observed_equity": 213.44089787339175,
+      "entries_blocked": []
     }
   ],
   "controls": {
@@ -49815,11 +49828,27 @@
       {
         "ts": 1792053266,
         "equity": 214.29643291599945
+      },
+      {
+        "ts": 1792053294,
+        "equity": 213.44089787339175
+      },
+      {
+        "ts": 1792053294,
+        "equity": 213.44089787339175
+      },
+      {
+        "ts": 1792053294,
+        "equity": 213.44089787339175
+      },
+      {
+        "ts": 1792053296,
+        "equity": 213.44089787339175
       }
     ],
     "pause_until": 0,
     "pauses": [],
-    "last_cycle": 1792053266,
+    "last_cycle": 1792053296,
     "last_gap": 30,
     "max_gap": 2874,
     "blocked": [],
@@ -49832,10 +49861,10 @@
       "slippage": 37.45940873501732
     },
     "accounted_trades": 83,
-    "valued_cycles": 3084,
+    "valued_cycles": 3085,
     "unresolved_cycles": 0,
     "loss_pause_enabled": false,
-    "last_value": 214.29643291599945,
+    "last_value": 213.44089787339175,
     "unresolved": 0
   },
   "upgrades": [
