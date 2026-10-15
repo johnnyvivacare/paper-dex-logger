@@ -24,26 +24,22 @@
       "entered": 1792063595,
       "cost": 100.0,
       "units": 220329.26179032234,
-      "previous_quote": 1792086913,
+      "previous_quote": 1792088243,
       "mark": 100.44076892532605,
-      "last_quote": 1792086913,
+      "last_quote": 1792088243,
       "status": "observed",
       "controls_mark": {
         "since": 1792063595,
         "peak_net": 100.44076892532605,
         "peak_liquidity": 91615.15,
         "armed": false,
-        "last": 1792086913,
+        "last": 1792088243,
         "max_gap": 2518,
         "liquidity": 91615.15
       }
     }
   },
   "pending": {
-    "ocjMSsFzMf4anB91fVdHv1MDWoqZjkM48rGsx75pump": {
-      "pool": "3H1kDaJpr7twTSG2nWeSzcpa2FApAkN5DQkTuNB3bNxS",
-      "discovered": 1792080095
-    },
     "Diy4Q5aiNEcdn7CWhuwYtuoHtHD9rKBTHCa9hi4qpump": {
       "pool": "91TcJ2v9wFs11pkvyZkNTswC35cB1tUJXpkUgsGnRJcQ",
       "discovered": 1792082198
@@ -59,6 +55,10 @@
     "XZvc6ZSREV8zSt3Y9qq4BedEnApr26BXwwTWHvnpump": {
       "pool": "CLCwuWcJhXwidP7sTWXoNvhF8kCh7zYo4ESkhd8V7d5R",
       "discovered": 1792086710
+    },
+    "BfoqQL1Sm5PpCkn9yKsGQhYMkBkZSdzsBMdLodBTpump": {
+      "pool": "HEqZDUbBHtaVWxedCfCNZmHzSjTgLoqhuJ2r9m5yti4i",
+      "discovered": 1792088246
     }
   },
   "seen": {
@@ -3207,7 +3207,16 @@
     "J1YGgjRWs3oHk769kxiPZnR6JxjP2ZJh6k9K5YDYpump": 1792086710,
     "JLNrQiydCj9mt5Re1H2yp7zi7rYu87nqLiAybF1pump": 1792086710,
     "XZvc6ZSREV8zSt3Y9qq4BedEnApr26BXwwTWHvnpump": 1792086710,
-    "FaMphki1WHXUyHCzJwPNrmycinixHmPmPv7UdmLCpump": 1792086825
+    "FaMphki1WHXUyHCzJwPNrmycinixHmPmPv7UdmLCpump": 1792086825,
+    "3h4poyYGABrfoRBMzD11sF5fuLq1hvGZpNdtoeQfpump": 1792088246,
+    "BfoqQL1Sm5PpCkn9yKsGQhYMkBkZSdzsBMdLodBTpump": 1792088246,
+    "Bwd4r4dRphpQv4Ys2C15avbGY5L1Pmhnfb9Ne3vapump": 1792088246,
+    "CM54aeZaVCUokycv4Ypq77mBYB3GpC17R7CAHS4zpump": 1792088247,
+    "EAJ1auhSGyoFBpugVindEjWNHnSrqbzczfmNBZbCpump": 1792088247,
+    "EZvDXGwfHyRWnAnJo1WHjVUhxpTn2V4kMWmWjh8ypump": 1792088247,
+    "GUDb9XpvotbogVH9V58QtnmUDV1SD6UByxy59T9Ppump": 1792088248,
+    "Nkby598ZnM2T3HUgR18GQtANJnBnUqZJDLTttvtpump": 1792088248,
+    "SDJ7Qncp9ztv2uPEqWAzc2YDCY32Vf8S6xtBjQepump": 1792088248
   },
   "trades": [
     {
@@ -5167,8 +5176,8 @@
       "observation_gap_seconds": 30
     }
   ],
-  "cycles": 3205,
-  "last_run": 1792086915,
+  "cycles": 3206,
+  "last_run": 1792088248,
   "errors": [],
   "history": [
     {
@@ -46835,6 +46844,19 @@
       "controls_version": "controls-1",
       "observed_equity": 162.65575305939126,
       "entries_blocked": []
+    },
+    {
+      "ts": 1792088248,
+      "cash": 62.2149841340652,
+      "realized": -837.7850158659347,
+      "fresh_estimate": 100.44076892532605,
+      "stale_estimate": 0.0,
+      "unresolved": 0,
+      "open": 1,
+      "errors": [],
+      "controls_version": "controls-1",
+      "observed_equity": 162.65575305939126,
+      "entries_blocked": []
     }
   ],
   "controls": {
@@ -52551,12 +52573,36 @@
       {
         "ts": 1792086915,
         "equity": 162.65575305939126
+      },
+      {
+        "ts": 1792088244,
+        "equity": 162.65575305939126
+      },
+      {
+        "ts": 1792088244,
+        "equity": 162.65575305939126
+      },
+      {
+        "ts": 1792088244,
+        "equity": 162.65575305939126
+      },
+      {
+        "ts": 1792088244,
+        "equity": 162.65575305939126
+      },
+      {
+        "ts": 1792088244,
+        "equity": 162.65575305939126
+      },
+      {
+        "ts": 1792088248,
+        "equity": 162.65575305939126
       }
     ],
     "pause_until": 0,
     "pauses": [],
-    "last_cycle": 1792086915,
-    "last_gap": 30,
+    "last_cycle": 1792088248,
+    "last_gap": 1333,
     "max_gap": 2874,
     "blocked": [],
     "costs": {
@@ -52568,7 +52614,7 @@
       "slippage": 39.2774148172934
     },
     "accounted_trades": 87,
-    "valued_cycles": 3205,
+    "valued_cycles": 3206,
     "unresolved_cycles": 0,
     "loss_pause_enabled": false,
     "last_value": 162.65575305939126,
