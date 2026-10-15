@@ -2,7 +2,7 @@
 
 Started: 2026-10-09 00:41 UTC
 Last collection: 2026-10-15 05:51 UTC
-Cycles: 3046
+Cycles: 3047
 
 | Item | USD |
 |---|---:|
@@ -29,7 +29,7 @@ Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
 Current equity with quotes <=120s old: $214.66
 Maximum observed portfolio decline since upgrade: 81.93%
-Latest / largest saved-cycle gap: 1903s / 2697s.
+Latest / largest saved-cycle gap: 28s / 2697s.
 Cycles with uncertain equity: 0.
 New entries: allowed by controls
 
