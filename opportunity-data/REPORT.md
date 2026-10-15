@@ -2,24 +2,24 @@
 
 Started: 2026-10-12 22:52 UTC
 Last collection: 2026-10-15 00:33 UTC
-Cycles: 912
+Cycles: 913
 
 | Item | USD |
 |---|---:|
 | Cash | 810.70 |
 | Realized simulated P/L | +10.70 |
-| Recent estimated position value | 276.00 |
+| Recent estimated position value | 282.02 |
 | Unresolved last marks (not cash) | 0.00 |
 
 Open positions: 2; unresolved: 0.
-Estimated equity: $1086.70; estimated P/L: $+86.70.
+Estimated equity: $1092.72; estimated P/L: $+92.72.
 
 ## Positions
 
 | Token | Entry score | Current score |
 |---|---:|---:|
-| 7fumw7GYTHZJJxkKJ8sSh1CqTdHmB234vX3xsKjepump | 70.19 | 23.68 |
-| 9a98oQHtxfqmr4EyzsP6wfw69uYAK3JbUeVEuNW1pump | 95.12 | 53.14 |
+| 7fumw7GYTHZJJxkKJ8sSh1CqTdHmB234vX3xsKjepump | 70.19 | 18.84 |
+| 9a98oQHtxfqmr4EyzsP6wfw69uYAK3JbUeVEuNW1pump | 95.12 | 63.44 |
 
 ## Recent trades
 
@@ -47,7 +47,7 @@ Errors: 0
 Enabled: 2026-10-12 22:52:32 UTC. Existing balance and history preserved.
 Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
-Current equity with quotes <=120s old: $1086.70
+Current equity with quotes <=120s old: $1092.72
 Maximum observed portfolio decline since upgrade: 21.99%
 Latest / largest saved-cycle gap: 30s / 2516s.
 Cycles with uncertain equity: 0.
@@ -87,7 +87,7 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 
 Enabled: 2026-10-12 22:52:32 UTC
 Balance at first complete phase valuation: $1000.00
-Change during this phase: $+86.70
+Change during this phase: $+92.72
 Phase closed-trade P/L: $+10.70 (5 closes; includes any legacy holdings sold).
 Next entry budget: $100.00, subject to cash, slots and candidate qualification.
 Trade sizing: fixed $100 per qualifying position, up to 10 open positions, subject to available cash. No automatic increase after wins or losses and no forced trade each cycle.
