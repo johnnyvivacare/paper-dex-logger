@@ -1,25 +1,25 @@
 # Opportunity paper experiment — $1,000 USD
 
 Started: 2026-10-12 22:52 UTC
-Last collection: 2026-10-15 22:18 UTC
-Cycles: 1230
+Last collection: 2026-10-15 22:19 UTC
+Cycles: 1231
 
 | Item | USD |
 |---|---:|
 | Cash | 401.67 |
 | Realized simulated P/L | -398.33 |
-| Recent estimated position value | 167.87 |
+| Recent estimated position value | 167.24 |
 | Unresolved last marks (not cash) | 0.00 |
 
 Open positions: 2; unresolved: 0.
-Estimated equity: $569.54; estimated P/L: $-430.46.
+Estimated equity: $568.92; estimated P/L: $-431.08.
 
 ## Positions
 
 | Token | Entry score | Current score |
 |---|---:|---:|
-| A2yA6AFtfKkfVkfsnGpvsKoUV5kQPpMYboZsBPvmkA9T | 65.21 | 25.51 |
-| D61pTaTqR93axxVvu7AX5TW6c3a4vhffPPMfCnsYpump | 67.78 | 42.64 |
+| A2yA6AFtfKkfVkfsnGpvsKoUV5kQPpMYboZsBPvmkA9T | 65.21 | 25.59 |
+| D61pTaTqR93axxVvu7AX5TW6c3a4vhffPPMfCnsYpump | 67.78 | 36.94 |
 
 ## Recent trades
 
@@ -47,8 +47,8 @@ Errors: 0
 Enabled: 2026-10-12 22:52:32 UTC. Existing balance and history preserved.
 Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
-Current equity with quotes <=120s old: $569.54
-Maximum observed portfolio decline since upgrade: 47.92%
+Current equity with quotes <=120s old: $568.92
+Maximum observed portfolio decline since upgrade: 47.97%
 Latest / largest saved-cycle gap: 30s / 2665s.
 Cycles with uncertain equity: 0.
 New entries: allowed by controls
@@ -87,7 +87,7 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 
 Enabled: 2026-10-12 22:52:32 UTC
 Balance at first complete phase valuation: $1000.00
-Change during this phase: $-430.46
+Change during this phase: $-431.08
 Phase closed-trade P/L: $-398.33 (12 closes; includes any legacy holdings sold).
 Next entry budget: $100.00, subject to cash, slots and candidate qualification.
 Trade sizing: fixed $100 per qualifying position, up to 10 open positions, subject to available cash. No automatic increase after wins or losses and no forced trade each cycle.
