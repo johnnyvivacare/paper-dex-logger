@@ -24,16 +24,16 @@
       "entered": 1791975632,
       "cost": 100.0,
       "units": 41145.21955249147,
-      "previous_quote": 1792039766,
+      "previous_quote": 1792039796,
       "mark": 119.7977987821842,
-      "last_quote": 1792039766,
+      "last_quote": 1792039796,
       "status": "observed",
       "controls_mark": {
         "since": 1791975632,
         "peak_net": 120.89681765126696,
         "peak_liquidity": 190118.13,
         "armed": false,
-        "last": 1792039766,
+        "last": 1792039796,
         "max_gap": 2532,
         "liquidity": 190118.13
       }
@@ -4881,8 +4881,8 @@
       "observation_gap_seconds": 30
     }
   ],
-  "cycles": 3031,
-  "last_run": 1792039769,
+  "cycles": 3032,
+  "last_run": 1792039799,
   "errors": [],
   "history": [
     {
@@ -44287,6 +44287,19 @@
       "controls_version": "controls-1",
       "observed_equity": 218.12648430039715,
       "entries_blocked": []
+    },
+    {
+      "ts": 1792039799,
+      "cash": 98.32868551821295,
+      "realized": -801.671314481787,
+      "fresh_estimate": 119.7977987821842,
+      "stale_estimate": 0.0,
+      "unresolved": 0,
+      "open": 1,
+      "errors": [],
+      "controls_version": "controls-1",
+      "observed_equity": 218.12648430039715,
+      "entries_blocked": []
     }
   ],
   "controls": {
@@ -48803,12 +48816,32 @@
       {
         "ts": 1792039769,
         "equity": 218.12648430039715
+      },
+      {
+        "ts": 1792039796,
+        "equity": 218.12648430039715
+      },
+      {
+        "ts": 1792039796,
+        "equity": 218.12648430039715
+      },
+      {
+        "ts": 1792039796,
+        "equity": 218.12648430039715
+      },
+      {
+        "ts": 1792039796,
+        "equity": 218.12648430039715
+      },
+      {
+        "ts": 1792039799,
+        "equity": 218.12648430039715
       }
     ],
     "pause_until": 0,
     "pauses": [],
-    "last_cycle": 1792039769,
-    "last_gap": 27,
+    "last_cycle": 1792039799,
+    "last_gap": 30,
     "max_gap": 2697,
     "blocked": [],
     "costs": {
@@ -48820,7 +48853,7 @@
       "slippage": 37.45940873501732
     },
     "accounted_trades": 83,
-    "valued_cycles": 3031,
+    "valued_cycles": 3032,
     "unresolved_cycles": 0,
     "loss_pause_enabled": false,
     "last_value": 218.12648430039715,
