@@ -1,27 +1,27 @@
 # Opportunity paper experiment — $1,000 USD
 
 Started: 2026-10-12 22:52 UTC
-Last collection: 2026-10-15 15:37 UTC
-Cycles: 1124
+Last collection: 2026-10-15 15:38 UTC
+Cycles: 1125
 
 | Item | USD |
 |---|---:|
-| Cash | 950.69 |
+| Cash | 850.69 |
 | Realized simulated P/L | -49.31 |
-| Recent estimated position value | 0.00 |
+| Recent estimated position value | 97.65 |
 | Unresolved last marks (not cash) | 0.00 |
 
-Open positions: 0; unresolved: 0.
-Estimated equity: $950.69; estimated P/L: $-49.31.
+Open positions: 1; unresolved: 0.
+Estimated equity: $948.35; estimated P/L: $-51.65.
 
 ## Positions
 
 | Token | Entry score | Current score |
 |---|---:|---:|
+| A3PmWz6pTmCcosqnA8XQAghtjGtwLrbcodboMYoqpump | 73.91 | None |
 
 ## Recent trades
 
-- 2026-10-14 02:12 UTC sell 3zKe2553BfmRzb89zTzb7qD9Nz7VeyXqGXnTKxBFpump: $49.69 (stop loss)
 - 2026-10-14 03:13 UTC sell Ccp6isbtxCknynmGKyky9xJav68UpRqeMoX76KxYpump: $49.26 (stop loss)
 - 2026-10-14 10:21 UTC buy E5SzGqbAaXQwwtkRYsrL4NrcvJfcSFjm8aSwyMhCpump: $100.00 (score 74.91)
 - 2026-10-14 11:56 UTC sell E5SzGqbAaXQwwtkRYsrL4NrcvJfcSFjm8aSwyMhCpump: $281.64 (take profit)
@@ -31,6 +31,7 @@ Estimated equity: $950.69; estimated P/L: $-49.31.
 - 2026-10-15 01:12 UTC sell 9a98oQHtxfqmr4EyzsP6wfw69uYAK3JbUeVEuNW1pump: $104.04 (trailing pullback)
 - 2026-10-15 13:57 UTC buy 3EC7gRDGKgqPHc9ipJxxChoeyseE2xAbQHZUSSTfpump: $100.00 (score 68.52)
 - 2026-10-15 14:27 UTC sell 3EC7gRDGKgqPHc9ipJxxChoeyseE2xAbQHZUSSTfpump: $41.49 (stop loss)
+- 2026-10-15 15:38 UTC buy A3PmWz6pTmCcosqnA8XQAghtjGtwLrbcodboMYoqpump: $100.00 (score 73.91)
 
 Experimental score, NOT a probability of profit. Profiles/boosts are a limited promotional sample, not all new tokens or verified memes.
 Pairs aged 30 minutes–72 hours; reported liquidity >=$50k; 5m volume >=$5k; buying and positive momentum required. Missing fields or history prevent entry.
@@ -45,7 +46,7 @@ Errors: 0
 Enabled: 2026-10-12 22:52:32 UTC. Existing balance and history preserved.
 Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
-Current equity with quotes <=120s old: $950.69
+Current equity with quotes <=120s old: $948.35
 Maximum observed portfolio decline since upgrade: 21.99%
 Latest / largest saved-cycle gap: 30s / 2665s.
 Cycles with uncertain equity: 0.
@@ -55,11 +56,11 @@ New entries: allowed by controls
 
 | Component | USD |
 |---|---:|
-| Fees | 4.6702 |
-| Gas | 0.1600 |
-| Pool impact | 4.5170 |
-| Extra slippage | 7.7509 |
-| Total entry + exit drag | 17.0980 |
+| Fees | 4.9702 |
+| Gas | 0.1700 |
+| Pool impact | 4.8917 |
+| Extra slippage | 8.2474 |
+| Total entry + exit drag | 18.2793 |
 
 Costs above are assumptions already included in P/L, not extra charges or actual swap fees.
 Trailing exit: arms at +25% net, triggers on 20% pullback from the observed net peak.
@@ -70,7 +71,6 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 
 ### Latest decisions
 
-- 2026-10-14 02:12:56 UTC sell 3zKe2553BfmRzb89zTzb7qD9Nz7VeyXqGXnTKxBFpump: $49.69; stop loss
 - 2026-10-14 03:13:47 UTC sell Ccp6isbtxCknynmGKyky9xJav68UpRqeMoX76KxYpump: $49.26; stop loss
 - 2026-10-14 10:21:18 UTC buy E5SzGqbAaXQwwtkRYsrL4NrcvJfcSFjm8aSwyMhCpump: $100.00; opportunity score 74.91
 - 2026-10-14 11:56:55 UTC sell E5SzGqbAaXQwwtkRYsrL4NrcvJfcSFjm8aSwyMhCpump: $281.64; take profit
@@ -80,12 +80,13 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 - 2026-10-15 01:12:00 UTC sell 9a98oQHtxfqmr4EyzsP6wfw69uYAK3JbUeVEuNW1pump: $104.04; trailing pullback
 - 2026-10-15 13:57:49 UTC buy 3EC7gRDGKgqPHc9ipJxxChoeyseE2xAbQHZUSSTfpump: $100.00; opportunity score 68.52
 - 2026-10-15 14:27:33 UTC sell 3EC7gRDGKgqPHc9ipJxxChoeyseE2xAbQHZUSSTfpump: $41.49; stop loss
+- 2026-10-15 15:38:03 UTC buy A3PmWz6pTmCcosqnA8XQAghtjGtwLrbcodboMYoqpump: $100.00; opportunity score 73.91
 
 ## Opportunity v2
 
 Enabled: 2026-10-12 22:52:32 UTC
 Balance at first complete phase valuation: $1000.00
-Change during this phase: $-49.31
+Change during this phase: $-51.65
 Phase closed-trade P/L: $-49.31 (8 closes; includes any legacy holdings sold).
 Next entry budget: $100.00, subject to cash, slots and candidate qualification.
 Trade sizing: fixed $100 per qualifying position, up to 10 open positions, subject to available cash. No automatic increase after wins or losses and no forced trade each cycle.
@@ -94,8 +95,8 @@ One purchase per token for this experiment, including trades from before this up
 New entries require 3 observations on the same pool spanning at least 60 seconds, with no gap above 90 seconds, within the last 180 seconds.
 Confirmation records API observations, not independent trades or proof that provider prices changed. Later GitHub gaps remain possible.
 Entry scores and exit thresholds are unchanged; higher scores are not validated profit probabilities.
-Eligible candidates in latest check: 0.
-Latest candidate rejection counts: {"collecting fresh confirmation": 5, "entry signal did not qualify": 6, "token already purchased": 1}
+Eligible candidates in latest check: 1.
+Latest candidate rejection counts: {"entry signal did not qualify": 5, "token already purchased": 1}
 Candidate observations and rejection reasons are saved to decisions_v2.jsonl for future evaluation.
 The $100 stake and 10-position limit are retained from the existing experiment. Selection changes are experimental and have not demonstrated profitability.
 
