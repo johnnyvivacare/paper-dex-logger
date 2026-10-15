@@ -1,26 +1,26 @@
 # Opportunity paper experiment — $1,000 USD
 
 Started: 2026-10-12 22:52 UTC
-Last collection: 2026-10-15 23:55 UTC
-Cycles: 1262
+Last collection: 2026-10-15 23:56 UTC
+Cycles: 1263
 
 | Item | USD |
 |---|---:|
 | Cash | 301.67 |
 | Realized simulated P/L | -398.33 |
-| Recent estimated position value | 216.53 |
+| Recent estimated position value | 214.70 |
 | Unresolved last marks (not cash) | 0.00 |
 
 Open positions: 3; unresolved: 0.
-Estimated equity: $518.21; estimated P/L: $-481.79.
+Estimated equity: $516.37; estimated P/L: $-483.63.
 
 ## Positions
 
 | Token | Entry score | Current score |
 |---|---:|---:|
-| A2yA6AFtfKkfVkfsnGpvsKoUV5kQPpMYboZsBPvmkA9T | 65.21 | 34.6 |
-| D61pTaTqR93axxVvu7AX5TW6c3a4vhffPPMfCnsYpump | 67.78 | 42.42 |
-| H2pkmDKUio79yzzj5cRF6fqf6Xeq6AmpTsVVGG9wpump | 74.19 | 72.89 |
+| A2yA6AFtfKkfVkfsnGpvsKoUV5kQPpMYboZsBPvmkA9T | 65.21 | 22.63 |
+| D61pTaTqR93axxVvu7AX5TW6c3a4vhffPPMfCnsYpump | 67.78 | 43.32 |
+| H2pkmDKUio79yzzj5cRF6fqf6Xeq6AmpTsVVGG9wpump | 74.19 | 60.16 |
 
 ## Recent trades
 
@@ -48,9 +48,9 @@ Errors: 0
 Enabled: 2026-10-12 22:52:32 UTC. Existing balance and history preserved.
 Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
-Current equity with quotes <=120s old: $518.21
+Current equity with quotes <=120s old: $516.37
 Maximum observed portfolio decline since upgrade: 52.89%
-Latest / largest saved-cycle gap: 29s / 2665s.
+Latest / largest saved-cycle gap: 31s / 2665s.
 Cycles with uncertain equity: 0.
 New entries: allowed by controls
 
@@ -88,7 +88,7 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 
 Enabled: 2026-10-12 22:52:32 UTC
 Balance at first complete phase valuation: $1000.00
-Change during this phase: $-481.79
+Change during this phase: $-483.63
 Phase closed-trade P/L: $-398.33 (12 closes; includes any legacy holdings sold).
 Next entry budget: $100.00, subject to cash, slots and candidate qualification.
 Trade sizing: fixed $100 per qualifying position, up to 10 open positions, subject to available cash. No automatic increase after wins or losses and no forced trade each cycle.
