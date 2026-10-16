@@ -2,23 +2,23 @@
 
 Started: 2026-10-12 22:52 UTC
 Last collection: 2026-10-16 22:58 UTC
-Cycles: 1612
+Cycles: 1613
 
 | Item | USD |
 |---|---:|
 | Cash | 226.53 |
 | Realized simulated P/L | -673.47 |
-| Recent estimated position value | 96.23 |
+| Recent estimated position value | 102.46 |
 | Unresolved last marks (not cash) | 0.00 |
 
 Open positions: 1; unresolved: 0.
-Estimated equity: $322.76; estimated P/L: $-677.24.
+Estimated equity: $328.99; estimated P/L: $-671.01.
 
 ## Positions
 
 | Token | Entry score | Current score |
 |---|---:|---:|
-| 2e3zQiA8JWeDjjVeuqzv9X1Q3aqRRaPqL8UYEbxVpump | 73.66 | 50.55 |
+| 2e3zQiA8JWeDjjVeuqzv9X1Q3aqRRaPqL8UYEbxVpump | 73.66 | 54.49 |
 
 ## Recent trades
 
@@ -46,7 +46,7 @@ Errors: 0
 Enabled: 2026-10-12 22:52:32 UTC. Existing balance and history preserved.
 Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
-Current equity with quotes <=120s old: $322.76
+Current equity with quotes <=120s old: $328.99
 Maximum observed portfolio decline since upgrade: 70.49%
 Latest / largest saved-cycle gap: 30s / 2665s.
 Cycles with uncertain equity: 0.
@@ -86,7 +86,7 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 
 Enabled: 2026-10-12 22:52:32 UTC
 Balance at first complete phase valuation: $1000.00
-Change during this phase: $-677.24
+Change during this phase: $-671.01
 Phase closed-trade P/L: $-673.47 (19 closes; includes any legacy holdings sold).
 Next entry budget: $100.00, subject to cash, slots and candidate qualification.
 Trade sizing: fixed $100 per qualifying position, up to 10 open positions, subject to available cash. No automatic increase after wins or losses and no forced trade each cycle.
@@ -96,7 +96,7 @@ New entries require 3 observations on the same pool spanning at least 60 seconds
 Confirmation records API observations, not independent trades or proof that provider prices changed. Later GitHub gaps remain possible.
 Entry scores and exit thresholds are unchanged; higher scores are not validated profit probabilities.
 Eligible candidates in latest check: 0.
-Latest candidate rejection counts: {"collecting fresh confirmation": 3, "entry signal did not qualify": 4, "token already purchased": 1}
+Latest candidate rejection counts: {"entry signal did not qualify": 3, "token already purchased": 1}
 Candidate observations and rejection reasons are saved to decisions_v2.jsonl for future evaluation.
 The $100 stake and 10-position limit are retained from the existing experiment. Selection changes are experimental and have not demonstrated profitability.
 
