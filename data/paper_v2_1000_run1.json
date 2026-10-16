@@ -24,16 +24,16 @@
       "entered": 1792063595,
       "cost": 100.0,
       "units": 220329.26179032234,
-      "previous_quote": 1792138699,
+      "previous_quote": 1792138729,
       "mark": 102.75244903703538,
-      "last_quote": 1792138699,
+      "last_quote": 1792138729,
       "status": "observed",
       "controls_mark": {
         "since": 1792063595,
         "peak_net": 102.75244903703538,
         "peak_liquidity": 93707.15,
         "armed": false,
-        "last": 1792138699,
+        "last": 1792138729,
         "max_gap": 2963,
         "liquidity": 93707.15
       }
@@ -5449,8 +5449,8 @@
       "observation_gap_seconds": 30
     }
   ],
-  "cycles": 3411,
-  "last_run": 1792138701,
+  "cycles": 3412,
+  "last_run": 1792138731,
   "errors": [],
   "history": [
     {
@@ -49795,6 +49795,19 @@
       "controls_version": "controls-1",
       "observed_equity": 164.96743317110057,
       "entries_blocked": []
+    },
+    {
+      "ts": 1792138731,
+      "cash": 62.2149841340652,
+      "realized": -837.7850158659347,
+      "fresh_estimate": 102.75244903703538,
+      "stale_estimate": 0.0,
+      "unresolved": 0,
+      "open": 1,
+      "errors": [],
+      "controls_version": "controls-1",
+      "observed_equity": 164.96743317110057,
+      "entries_blocked": []
     }
   ],
   "controls": {
@@ -56155,11 +56168,23 @@
       {
         "ts": 1792138701,
         "equity": 164.96743317110057
+      },
+      {
+        "ts": 1792138729,
+        "equity": 164.96743317110057
+      },
+      {
+        "ts": 1792138729,
+        "equity": 164.96743317110057
+      },
+      {
+        "ts": 1792138731,
+        "equity": 164.96743317110057
       }
     ],
     "pause_until": 0,
     "pauses": [],
-    "last_cycle": 1792138701,
+    "last_cycle": 1792138731,
     "last_gap": 30,
     "max_gap": 2966,
     "blocked": [],
@@ -56172,7 +56197,7 @@
       "slippage": 39.2774148172934
     },
     "accounted_trades": 87,
-    "valued_cycles": 3411,
+    "valued_cycles": 3412,
     "unresolved_cycles": 0,
     "loss_pause_enabled": false,
     "last_value": 164.96743317110057,
