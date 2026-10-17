@@ -2,7 +2,7 @@
 
 Started: 2026-10-12 22:52 UTC
 Last collection: 2026-10-17 09:22 UTC
-Cycles: 1792
+Cycles: 1793
 
 | Item | USD |
 |---|---:|
@@ -18,7 +18,7 @@ Estimated equity: $291.46; estimated P/L: $-708.54.
 
 | Token | Entry score | Current score |
 |---|---:|---:|
-| B2GESkSErPjuCq6n4LcaJP5v2z1kJnw3xHVZnop2sZx | 70.55 | 17.23 |
+| B2GESkSErPjuCq6n4LcaJP5v2z1kJnw3xHVZnop2sZx | 70.55 | 18.67 |
 
 ## Recent trades
 
