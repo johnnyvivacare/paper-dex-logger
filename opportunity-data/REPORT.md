@@ -1,26 +1,26 @@
 # Opportunity paper experiment — $1,000 USD
 
 Started: 2026-10-12 22:52 UTC
-Last collection: 2026-10-17 23:11 UTC
-Cycles: 2062
+Last collection: 2026-10-17 23:12 UTC
+Cycles: 2063
 
 | Item | USD |
 |---|---:|
 | Cash | 37.04 |
 | Realized simulated P/L | -662.96 |
-| Recent estimated position value | 373.82 |
+| Recent estimated position value | 379.43 |
 | Unresolved last marks (not cash) | 0.00 |
 
 Open positions: 3; unresolved: 0.
-Estimated equity: $410.85; estimated P/L: $-589.15.
+Estimated equity: $416.46; estimated P/L: $-583.54.
 
 ## Positions
 
 | Token | Entry score | Current score |
 |---|---:|---:|
-| DrLF1dG1K4U6ggx5BZ6bSwzGcPNVrQwYoTJzRDyZpump | 83.13 | 57.91 |
-| 3NxfWMHmfQg8NJFW5AG1ti2xACdczWz24e9SKyk1pump | 66.44 | 76.53 |
-| BG1YuUDov3i5ZhjEuR3ERxH8cz6qzhLXGrxGf7XDpump | 72.22 | 55.55 |
+| DrLF1dG1K4U6ggx5BZ6bSwzGcPNVrQwYoTJzRDyZpump | 83.13 | 74.7 |
+| 3NxfWMHmfQg8NJFW5AG1ti2xACdczWz24e9SKyk1pump | 66.44 | 66.63 |
+| BG1YuUDov3i5ZhjEuR3ERxH8cz6qzhLXGrxGf7XDpump | 72.22 | 36.43 |
 
 ## Recent trades
 
@@ -48,7 +48,7 @@ Errors: 0
 Enabled: 2026-10-12 22:52:32 UTC. Existing balance and history preserved.
 Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
-Current equity with quotes <=120s old: $410.85
+Current equity with quotes <=120s old: $416.46
 Maximum observed portfolio decline since upgrade: 75.29%
 Latest / largest saved-cycle gap: 30s / 2665s.
 Cycles with uncertain equity: 0.
@@ -88,7 +88,7 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 
 Enabled: 2026-10-12 22:52:32 UTC
 Balance at first complete phase valuation: $1000.00
-Change during this phase: $-589.15
+Change during this phase: $-583.54
 Phase closed-trade P/L: $-662.96 (23 closes; includes any legacy holdings sold).
 Next entry budget: $100.00, subject to cash, slots and candidate qualification.
 Trade sizing: fixed $100 per qualifying position, up to 10 open positions, subject to available cash. No automatic increase after wins or losses and no forced trade each cycle.
