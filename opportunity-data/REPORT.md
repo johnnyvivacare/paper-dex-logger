@@ -1,24 +1,24 @@
 # Opportunity paper experiment — $1,000 USD
 
 Started: 2026-10-12 22:52 UTC
-Last collection: 2026-10-17 08:02 UTC
-Cycles: 1763
+Last collection: 2026-10-17 08:03 UTC
+Cycles: 1764
 
 | Item | USD |
 |---|---:|
 | Cash | 191.32 |
 | Realized simulated P/L | -708.68 |
-| Recent estimated position value | 86.45 |
+| Recent estimated position value | 84.11 |
 | Unresolved last marks (not cash) | 0.00 |
 
 Open positions: 1; unresolved: 0.
-Estimated equity: $277.76; estimated P/L: $-722.24.
+Estimated equity: $275.43; estimated P/L: $-724.57.
 
 ## Positions
 
 | Token | Entry score | Current score |
 |---|---:|---:|
-| B2GESkSErPjuCq6n4LcaJP5v2z1kJnw3xHVZnop2sZx | 70.55 | None |
+| B2GESkSErPjuCq6n4LcaJP5v2z1kJnw3xHVZnop2sZx | 70.55 | 53.46 |
 
 ## Recent trades
 
@@ -46,9 +46,9 @@ Errors: 0
 Enabled: 2026-10-12 22:52:32 UTC. Existing balance and history preserved.
 Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
-Current equity with quotes <=120s old: $277.76
-Maximum observed portfolio decline since upgrade: 74.60%
-Latest / largest saved-cycle gap: 29s / 2665s.
+Current equity with quotes <=120s old: $275.43
+Maximum observed portfolio decline since upgrade: 74.81%
+Latest / largest saved-cycle gap: 30s / 2665s.
 Cycles with uncertain equity: 0.
 New entries: allowed by controls
 
@@ -86,7 +86,7 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 
 Enabled: 2026-10-12 22:52:32 UTC
 Balance at first complete phase valuation: $1000.00
-Change during this phase: $-722.24
+Change during this phase: $-724.57
 Phase closed-trade P/L: $-708.68 (21 closes; includes any legacy holdings sold).
 Next entry budget: $100.00, subject to cash, slots and candidate qualification.
 Trade sizing: fixed $100 per qualifying position, up to 10 open positions, subject to available cash. No automatic increase after wins or losses and no forced trade each cycle.
@@ -96,7 +96,7 @@ New entries require 3 observations on the same pool spanning at least 60 seconds
 Confirmation records API observations, not independent trades or proof that provider prices changed. Later GitHub gaps remain possible.
 Entry scores and exit thresholds are unchanged; higher scores are not validated profit probabilities.
 Eligible candidates in latest check: 0.
-Latest candidate rejection counts: {"collecting fresh confirmation": 3, "entry signal did not qualify": 3, "token already purchased": 1}
+Latest candidate rejection counts: {"collecting fresh confirmation": 3, "entry signal did not qualify": 4, "token already purchased": 1}
 Candidate observations and rejection reasons are saved to decisions_v2.jsonl for future evaluation.
 The $100 stake and 10-position limit are retained from the existing experiment. Selection changes are experimental and have not demonstrated profitability.
 
