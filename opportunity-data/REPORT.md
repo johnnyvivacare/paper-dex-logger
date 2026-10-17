@@ -2,7 +2,7 @@
 
 Started: 2026-10-12 22:52 UTC
 Last collection: 2026-10-17 12:14 UTC
-Cycles: 1848
+Cycles: 1849
 
 | Item | USD |
 |---|---:|
@@ -18,7 +18,7 @@ Estimated equity: $285.44; estimated P/L: $-714.56.
 
 | Token | Entry score | Current score |
 |---|---:|---:|
-| B2GESkSErPjuCq6n4LcaJP5v2z1kJnw3xHVZnop2sZx | 70.55 | 56.33 |
+| B2GESkSErPjuCq6n4LcaJP5v2z1kJnw3xHVZnop2sZx | 70.55 | 60.84 |
 
 ## Recent trades
 
@@ -96,7 +96,7 @@ New entries require 3 observations on the same pool spanning at least 60 seconds
 Confirmation records API observations, not independent trades or proof that provider prices changed. Later GitHub gaps remain possible.
 Entry scores and exit thresholds are unchanged; higher scores are not validated profit probabilities.
 Eligible candidates in latest check: 0.
-Latest candidate rejection counts: {"entry signal did not qualify": 3, "token already purchased": 1}
+Latest candidate rejection counts: {"entry signal did not qualify": 2, "token already purchased": 1}
 Candidate observations and rejection reasons are saved to decisions_v2.jsonl for future evaluation.
 The $100 stake and 10-position limit are retained from the existing experiment. Selection changes are experimental and have not demonstrated profitability.
 
