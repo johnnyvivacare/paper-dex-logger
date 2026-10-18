@@ -4509,7 +4509,8 @@
     "AKoEWZWMNnzEjLeWYSHdv2StYJz23qmfz52cU4SXpump": 1792352502,
     "DuJQ7ZSYiAm1p9hYw4i3iUZStdxPHs3yv9zC6qH2pump": 1792352502,
     "EQMKr5mrUxqPzCjB1s3fxy3C9KcpiVLE2sTKzanTpump": 1792352503,
-    "G3w5H4Rim4CnxMWw7PVvD8QgXHmgxwUrABGUW6EMoPjm": 1792352503
+    "G3w5H4Rim4CnxMWw7PVvD8QgXHmgxwUrABGUW6EMoPjm": 1792352503,
+    "D6sL8kiufUzShPsrUCDQR1c47Z5TDQJRAqDoCA3fxdEF": 1792352562
   },
   "trades": [
     {
@@ -6538,8 +6539,8 @@
       "observation_gap_seconds": 2791
     }
   ],
-  "cycles": 4350,
-  "last_run": 1792352531,
+  "cycles": 4351,
+  "last_run": 1792352562,
   "errors": [],
   "history": [
     {
@@ -63091,6 +63092,19 @@
       "controls_version": "controls-1",
       "observed_equity": 64.7326748314294,
       "entries_blocked": []
+    },
+    {
+      "ts": 1792352562,
+      "cash": 64.7326748314294,
+      "realized": -935.2673251685706,
+      "fresh_estimate": 0.0,
+      "stale_estimate": 0.0,
+      "unresolved": 0,
+      "open": 0,
+      "errors": [],
+      "controls_version": "controls-1",
+      "observed_equity": 64.7326748314294,
+      "entries_blocked": []
     }
   ],
   "controls": {
@@ -68079,12 +68093,28 @@
       {
         "ts": 1792352531,
         "equity": 64.7326748314294
+      },
+      {
+        "ts": 1792352559,
+        "equity": 64.7326748314294
+      },
+      {
+        "ts": 1792352559,
+        "equity": 64.7326748314294
+      },
+      {
+        "ts": 1792352559,
+        "equity": 64.7326748314294
+      },
+      {
+        "ts": 1792352562,
+        "equity": 64.7326748314294
       }
     ],
     "pause_until": 0,
     "pauses": [],
-    "last_cycle": 1792352531,
-    "last_gap": 28,
+    "last_cycle": 1792352562,
+    "last_gap": 31,
     "max_gap": 2966,
     "blocked": [],
     "costs": {
@@ -68096,7 +68126,7 @@
       "slippage": 40.290130898878395
     },
     "accounted_trades": 90,
-    "valued_cycles": 4350,
+    "valued_cycles": 4351,
     "unresolved_cycles": 0,
     "loss_pause_enabled": false,
     "last_value": 64.7326748314294,
