@@ -1,27 +1,27 @@
 # Opportunity paper experiment — $1,000 USD
 
 Started: 2026-10-12 22:52 UTC
-Last collection: 2026-10-18 02:49 UTC
-Cycles: 2124
+Last collection: 2026-10-18 02:50 UTC
+Cycles: 2125
 
 | Item | USD |
 |---|---:|
 | Cash | 49.40 |
 | Realized simulated P/L | -550.60 |
-| Recent estimated position value | 440.93 |
+| Recent estimated position value | 452.00 |
 | Unresolved last marks (not cash) | 0.00 |
 
 Open positions: 4; unresolved: 0.
-Estimated equity: $490.33; estimated P/L: $-509.67.
+Estimated equity: $501.40; estimated P/L: $-498.60.
 
 ## Positions
 
 | Token | Entry score | Current score |
 |---|---:|---:|
-| 3NxfWMHmfQg8NJFW5AG1ti2xACdczWz24e9SKyk1pump | 66.44 | 28.49 |
-| 6o2oeMWR9GeEm5acoi793f1XUQp4uoCcMBrw2mZopump | 73.46 | 75.51 |
-| CY27QvCQBCmLBuz3V7c8snEeD4z67iyoSTkwo35Ypump | 69.74 | 80.52 |
-| AcV6CcpMGFrA1dhRFiCKNiVNje8QE6ZXR9ep9jh7pump | 66.79 | 43.82 |
+| 3NxfWMHmfQg8NJFW5AG1ti2xACdczWz24e9SKyk1pump | 66.44 | 49.19 |
+| 6o2oeMWR9GeEm5acoi793f1XUQp4uoCcMBrw2mZopump | 73.46 | 75.52 |
+| CY27QvCQBCmLBuz3V7c8snEeD4z67iyoSTkwo35Ypump | 69.74 | 55.41 |
+| AcV6CcpMGFrA1dhRFiCKNiVNje8QE6ZXR9ep9jh7pump | 66.79 | 47.59 |
 
 ## Recent trades
 
@@ -49,9 +49,9 @@ Errors: 0
 Enabled: 2026-10-12 22:52:32 UTC. Existing balance and history preserved.
 Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
-Current equity with quotes <=120s old: $490.33
+Current equity with quotes <=120s old: $501.40
 Maximum observed portfolio decline since upgrade: 75.29%
-Latest / largest saved-cycle gap: 29s / 2665s.
+Latest / largest saved-cycle gap: 30s / 2665s.
 Cycles with uncertain equity: 0.
 New entries: allowed by controls
 
@@ -89,7 +89,7 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 
 Enabled: 2026-10-12 22:52:32 UTC
 Balance at first complete phase valuation: $1000.00
-Change during this phase: $-509.67
+Change during this phase: $-498.60
 Phase closed-trade P/L: $-550.60 (25 closes; includes any legacy holdings sold).
 Next entry budget: $100.00, subject to cash, slots and candidate qualification.
 Trade sizing: fixed $100 per qualifying position, up to 10 open positions, subject to available cash. No automatic increase after wins or losses and no forced trade each cycle.
@@ -99,7 +99,7 @@ New entries require 3 observations on the same pool spanning at least 60 seconds
 Confirmation records API observations, not independent trades or proof that provider prices changed. Later GitHub gaps remain possible.
 Entry scores and exit thresholds are unchanged; higher scores are not validated profit probabilities.
 Eligible candidates in latest check: 0.
-Latest candidate rejection counts: {"collecting fresh confirmation": 4, "entry signal did not qualify": 7, "token already purchased": 5}
+Latest candidate rejection counts: {"collecting fresh confirmation": 1, "entry signal did not qualify": 7, "token already purchased": 4}
 Candidate observations and rejection reasons are saved to decisions_v2.jsonl for future evaluation.
 The $100 stake and 10-position limit are retained from the existing experiment. Selection changes are experimental and have not demonstrated profitability.
 
