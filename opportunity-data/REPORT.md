@@ -2,26 +2,26 @@
 
 Started: 2026-10-12 22:52 UTC
 Last collection: 2026-10-18 02:50 UTC
-Cycles: 2125
+Cycles: 2126
 
 | Item | USD |
 |---|---:|
 | Cash | 49.40 |
 | Realized simulated P/L | -550.60 |
-| Recent estimated position value | 452.00 |
+| Recent estimated position value | 464.02 |
 | Unresolved last marks (not cash) | 0.00 |
 
 Open positions: 4; unresolved: 0.
-Estimated equity: $501.40; estimated P/L: $-498.60.
+Estimated equity: $513.42; estimated P/L: $-486.58.
 
 ## Positions
 
 | Token | Entry score | Current score |
 |---|---:|---:|
-| 3NxfWMHmfQg8NJFW5AG1ti2xACdczWz24e9SKyk1pump | 66.44 | 49.19 |
-| 6o2oeMWR9GeEm5acoi793f1XUQp4uoCcMBrw2mZopump | 73.46 | 75.52 |
-| CY27QvCQBCmLBuz3V7c8snEeD4z67iyoSTkwo35Ypump | 69.74 | 55.41 |
-| AcV6CcpMGFrA1dhRFiCKNiVNje8QE6ZXR9ep9jh7pump | 66.79 | 47.59 |
+| 3NxfWMHmfQg8NJFW5AG1ti2xACdczWz24e9SKyk1pump | 66.44 | 38.89 |
+| 6o2oeMWR9GeEm5acoi793f1XUQp4uoCcMBrw2mZopump | 73.46 | 82.88 |
+| CY27QvCQBCmLBuz3V7c8snEeD4z67iyoSTkwo35Ypump | 69.74 | 83.04 |
+| AcV6CcpMGFrA1dhRFiCKNiVNje8QE6ZXR9ep9jh7pump | 66.79 | 54.56 |
 
 ## Recent trades
 
@@ -49,7 +49,7 @@ Errors: 0
 Enabled: 2026-10-12 22:52:32 UTC. Existing balance and history preserved.
 Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
-Current equity with quotes <=120s old: $501.40
+Current equity with quotes <=120s old: $513.42
 Maximum observed portfolio decline since upgrade: 75.29%
 Latest / largest saved-cycle gap: 30s / 2665s.
 Cycles with uncertain equity: 0.
@@ -89,7 +89,7 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 
 Enabled: 2026-10-12 22:52:32 UTC
 Balance at first complete phase valuation: $1000.00
-Change during this phase: $-498.60
+Change during this phase: $-486.58
 Phase closed-trade P/L: $-550.60 (25 closes; includes any legacy holdings sold).
 Next entry budget: $100.00, subject to cash, slots and candidate qualification.
 Trade sizing: fixed $100 per qualifying position, up to 10 open positions, subject to available cash. No automatic increase after wins or losses and no forced trade each cycle.
@@ -99,7 +99,7 @@ New entries require 3 observations on the same pool spanning at least 60 seconds
 Confirmation records API observations, not independent trades or proof that provider prices changed. Later GitHub gaps remain possible.
 Entry scores and exit thresholds are unchanged; higher scores are not validated profit probabilities.
 Eligible candidates in latest check: 0.
-Latest candidate rejection counts: {"collecting fresh confirmation": 1, "entry signal did not qualify": 7, "token already purchased": 4}
+Latest candidate rejection counts: {"entry signal did not qualify": 7, "token already purchased": 5}
 Candidate observations and rejection reasons are saved to decisions_v2.jsonl for future evaluation.
 The $100 stake and 10-position limit are retained from the existing experiment. Selection changes are experimental and have not demonstrated profitability.
 
