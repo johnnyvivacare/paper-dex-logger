@@ -5650,7 +5650,8 @@
     "BUXVXhzf8K4mK6x1KUHyp1TqZDaTD4ajXnbosshfgFyd": 1792555032,
     "CQa9wYG4zgC5Yr1HHfDQxiFWR3D3Ui9L7BK6wsbcpump": 1792555032,
     "ED2SHkc2MQG4X5R8Ds9Bp6adjLrKkdZ5r8eUK7kmpump": 1792555032,
-    "FegYTsqy4DZssmqd2VzncCiHnjPQ8PfEUcdSkQaKpump": 1792555032
+    "FegYTsqy4DZssmqd2VzncCiHnjPQ8PfEUcdSkQaKpump": 1792555032,
+    "BCKHaDtYCM4yzCLRorXzD9H92TeeWpBJ9onozVVt7PUP": 1792555090
   },
   "trades": [
     {
@@ -7679,8 +7680,8 @@
       "observation_gap_seconds": 2791
     }
   ],
-  "cycles": 5110,
-  "last_run": 1792555060,
+  "cycles": 5111,
+  "last_run": 1792555091,
   "errors": [],
   "history": [
     {
@@ -74112,6 +74113,19 @@
       "controls_version": "controls-1",
       "observed_equity": 64.7326748314294,
       "entries_blocked": []
+    },
+    {
+      "ts": 1792555091,
+      "cash": 64.7326748314294,
+      "realized": -935.2673251685706,
+      "fresh_estimate": 0.0,
+      "stale_estimate": 0.0,
+      "unresolved": 0,
+      "open": 0,
+      "errors": [],
+      "controls_version": "controls-1",
+      "observed_equity": 64.7326748314294,
+      "entries_blocked": []
     }
   ],
   "controls": {
@@ -74133,22 +74147,6 @@
     "equity_peak": 1000.0,
     "max_drawdown": 0.9352673251685706,
     "points": [
-      {
-        "ts": 1792468679,
-        "equity": 64.7326748314294
-      },
-      {
-        "ts": 1792468679,
-        "equity": 64.7326748314294
-      },
-      {
-        "ts": 1792468679,
-        "equity": 64.7326748314294
-      },
-      {
-        "ts": 1792468681,
-        "equity": 64.7326748314294
-      },
       {
         "ts": 1792468709,
         "equity": 64.7326748314294
@@ -79684,12 +79682,24 @@
       {
         "ts": 1792555060,
         "equity": 64.7326748314294
+      },
+      {
+        "ts": 1792555088,
+        "equity": 64.7326748314294
+      },
+      {
+        "ts": 1792555088,
+        "equity": 64.7326748314294
+      },
+      {
+        "ts": 1792555091,
+        "equity": 64.7326748314294
       }
     ],
     "pause_until": 0,
     "pauses": [],
-    "last_cycle": 1792555060,
-    "last_gap": 27,
+    "last_cycle": 1792555091,
+    "last_gap": 31,
     "max_gap": 2966,
     "blocked": [],
     "costs": {
@@ -79701,7 +79711,7 @@
       "slippage": 40.290130898878395
     },
     "accounted_trades": 90,
-    "valued_cycles": 5110,
+    "valued_cycles": 5111,
     "unresolved_cycles": 0,
     "loss_pause_enabled": false,
     "last_value": 64.7326748314294,
