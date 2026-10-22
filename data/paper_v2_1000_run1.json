@@ -6303,7 +6303,8 @@
     "G8CMwNsTFQ53hDRdAUDZRxJrtezZ8oRH2zx922hHpump": 1792692023,
     "GCnULgLuFH8Xy2xFbhsjhdvmaAm18t4xMccdHd6Bpump": 1792692023,
     "GL51FXf1Qqt9DHHoCRSmNGUH8qnuCPjRRRqnx9Wxpump": 1792692024,
-    "kUKmJCHDUf79uVfXceZ8GJXF4iKuS9YXarQLYd5USDQ": 1792692024
+    "kUKmJCHDUf79uVfXceZ8GJXF4iKuS9YXarQLYd5USDQ": 1792692024,
+    "7vjGa9dGQuwC7aEemVvYTDVFdNbMAWrSoBZ7uf92pump": 1792692230
   },
   "trades": [
     {
@@ -8332,8 +8333,8 @@
       "observation_gap_seconds": 2791
     }
   ],
-  "cycles": 5603,
-  "last_run": 1792692200,
+  "cycles": 5604,
+  "last_run": 1792692230,
   "errors": [],
   "history": [
     {
@@ -81174,6 +81175,19 @@
       "controls_version": "controls-1",
       "observed_equity": 64.7326748314294,
       "entries_blocked": []
+    },
+    {
+      "ts": 1792692230,
+      "cash": 64.7326748314294,
+      "realized": -935.2673251685706,
+      "fresh_estimate": 0.0,
+      "stale_estimate": 0.0,
+      "unresolved": 0,
+      "open": 0,
+      "errors": [],
+      "controls_version": "controls-1",
+      "observed_equity": 64.7326748314294,
+      "entries_blocked": []
     }
   ],
   "controls": {
@@ -86566,11 +86580,31 @@
       {
         "ts": 1792692200,
         "equity": 64.7326748314294
+      },
+      {
+        "ts": 1792692228,
+        "equity": 64.7326748314294
+      },
+      {
+        "ts": 1792692228,
+        "equity": 64.7326748314294
+      },
+      {
+        "ts": 1792692228,
+        "equity": 64.7326748314294
+      },
+      {
+        "ts": 1792692228,
+        "equity": 64.7326748314294
+      },
+      {
+        "ts": 1792692230,
+        "equity": 64.7326748314294
       }
     ],
     "pause_until": 0,
     "pauses": [],
-    "last_cycle": 1792692200,
+    "last_cycle": 1792692230,
     "last_gap": 30,
     "max_gap": 3072,
     "blocked": [],
@@ -86583,7 +86617,7 @@
       "slippage": 40.290130898878395
     },
     "accounted_trades": 90,
-    "valued_cycles": 5603,
+    "valued_cycles": 5604,
     "unresolved_cycles": 0,
     "loss_pause_enabled": false,
     "last_value": 64.7326748314294,
