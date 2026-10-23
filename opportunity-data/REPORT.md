@@ -2,28 +2,26 @@
 
 Started: 2026-10-12 22:52 UTC
 Last collection: 2026-10-23 15:58 UTC
-Cycles: 4108
+Cycles: 4109
 
 | Item | USD |
 |---|---:|
-| Cash | 71.08 |
-| Realized simulated P/L | -828.92 |
-| Recent estimated position value | 76.88 |
+| Cash | 47.94 |
+| Realized simulated P/L | -852.06 |
+| Recent estimated position value | 97.79 |
 | Unresolved last marks (not cash) | 0.00 |
 
 Open positions: 1; unresolved: 0.
-Estimated equity: $147.96; estimated P/L: $-852.04.
+Estimated equity: $145.73; estimated P/L: $-854.27.
 
 ## Positions
 
 | Token | Entry score | Current score |
 |---|---:|---:|
-| 6LGGCwCUHDvcipZNtqWrb4MRtsPygNGbUx1df7LYpump | 70.17 | 29.02 |
+| HYLhzvLHmC4gqckEyACvy2jDMoCizE2hS1qcJ1Q7pump | 73.24 | None |
 
 ## Recent trades
 
-- 2026-10-22 16:56 UTC buy 4krFcF31xNiRQseavbJ579r9fYfaqmbycXEZi49gpump: $100.00 (score 69.19)
-- 2026-10-22 17:18 UTC sell Baw61KXAJk4MMnNJPBa87S8F77oNhMy7gQ63S8SLpump: $91.60 (trailing pullback)
 - 2026-10-22 17:51 UTC sell 4krFcF31xNiRQseavbJ579r9fYfaqmbycXEZi49gpump: $216.32 (take profit)
 - 2026-10-23 00:43 UTC buy HKh5uh37FyRhRbDPcmPCoTcfByRLdY65RFZj9AvZpump: $100.00 (score 79.17)
 - 2026-10-23 01:21 UTC sell HKh5uh37FyRhRbDPcmPCoTcfByRLdY65RFZj9AvZpump: $7.91 (stop loss)
@@ -32,6 +30,8 @@ Estimated equity: $147.96; estimated P/L: $-852.04.
 - 2026-10-23 14:06 UTC buy Cy7qKnoNQEsUUafCvSYWroqrHD4vu7jrCoeurXyxpump: $100.00 (score 90.19)
 - 2026-10-23 14:41 UTC sell Cy7qKnoNQEsUUafCvSYWroqrHD4vu7jrCoeurXyxpump: $48.05 (stop loss)
 - 2026-10-23 15:20 UTC buy 6LGGCwCUHDvcipZNtqWrb4MRtsPygNGbUx1df7LYpump: $100.00 (score 70.17)
+- 2026-10-23 15:58 UTC sell 6LGGCwCUHDvcipZNtqWrb4MRtsPygNGbUx1df7LYpump: $76.86 (rotation: stronger score)
+- 2026-10-23 15:58 UTC buy HYLhzvLHmC4gqckEyACvy2jDMoCizE2hS1qcJ1Q7pump: $100.00 (score 73.24)
 
 Experimental score, NOT a probability of profit. Profiles/boosts are a limited promotional sample, not all new tokens or verified memes.
 Pairs aged 30 minutes–72 hours; reported liquidity >=$50k; 5m volume >=$5k; buying and positive momentum required. Missing fields or history prevent entry.
@@ -46,8 +46,8 @@ Errors: 0
 Enabled: 2026-10-12 22:52:32 UTC. Existing balance and history preserved.
 Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
-Current equity with quotes <=120s old: $147.96
-Maximum observed portfolio decline since upgrade: 86.47%
+Current equity with quotes <=120s old: $145.73
+Maximum observed portfolio decline since upgrade: 86.67%
 Latest / largest saved-cycle gap: 30s / 2818s.
 Cycles with uncertain equity: 0.
 New entries: allowed by controls
@@ -56,11 +56,11 @@ New entries: allowed by controls
 
 | Component | USD |
 |---|---:|
-| Fees | 32.1308 |
-| Gas | 1.1404 |
-| Pool impact | 29.1738 |
-| Extra slippage | 53.3211 |
-| Total entry + exit drag | 115.7661 |
+| Fees | 32.6632 |
+| Gas | 1.1604 |
+| Pool impact | 29.5527 |
+| Extra slippage | 54.2042 |
+| Total entry + exit drag | 117.5806 |
 
 Costs above are assumptions already included in P/L, not extra charges or actual swap fees.
 Trailing exit: arms at +25% net, triggers on 20% pullback from the observed net peak.
@@ -71,8 +71,6 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 
 ### Latest decisions
 
-- 2026-10-22 16:56:05 UTC buy 4krFcF31xNiRQseavbJ579r9fYfaqmbycXEZi49gpump: $100.00; opportunity score 69.19
-- 2026-10-22 17:18:48 UTC sell Baw61KXAJk4MMnNJPBa87S8F77oNhMy7gQ63S8SLpump: $91.60; trailing pullback
 - 2026-10-22 17:51:24 UTC sell 4krFcF31xNiRQseavbJ579r9fYfaqmbycXEZi49gpump: $216.32; take profit
 - 2026-10-23 00:43:34 UTC buy HKh5uh37FyRhRbDPcmPCoTcfByRLdY65RFZj9AvZpump: $100.00; opportunity score 79.17
 - 2026-10-23 01:21:16 UTC sell HKh5uh37FyRhRbDPcmPCoTcfByRLdY65RFZj9AvZpump: $7.91; stop loss
@@ -81,13 +79,15 @@ Observed peaks, drawdown and costs start at upgrade time. Gaps can hide larger l
 - 2026-10-23 14:06:15 UTC buy Cy7qKnoNQEsUUafCvSYWroqrHD4vu7jrCoeurXyxpump: $100.00; opportunity score 90.19
 - 2026-10-23 14:41:54 UTC sell Cy7qKnoNQEsUUafCvSYWroqrHD4vu7jrCoeurXyxpump: $48.05; stop loss
 - 2026-10-23 15:20:23 UTC buy 6LGGCwCUHDvcipZNtqWrb4MRtsPygNGbUx1df7LYpump: $100.00; opportunity score 70.17
+- 2026-10-23 15:58:55 UTC sell 6LGGCwCUHDvcipZNtqWrb4MRtsPygNGbUx1df7LYpump: $76.86; rotation: stronger score
+- 2026-10-23 15:58:55 UTC buy HYLhzvLHmC4gqckEyACvy2jDMoCizE2hS1qcJ1Q7pump: $100.00; opportunity score 73.24
 
 ## Opportunity v2
 
 Enabled: 2026-10-12 22:52:32 UTC
 Balance at first complete phase valuation: $1000.00
-Change during this phase: $-852.04
-Phase closed-trade P/L: $-828.92 (57 closes; includes any legacy holdings sold).
+Change during this phase: $-854.27
+Phase closed-trade P/L: $-852.06 (58 closes; includes any legacy holdings sold).
 Next entry budget: $100.00, subject to cash, slots and candidate qualification.
 Trade sizing: fixed $100 per qualifying position, up to 10 open positions, subject to available cash. No automatic increase after wins or losses and no forced trade each cycle.
 Existing holdings keep their original units, cost basis and exit rules.
@@ -95,8 +95,8 @@ One purchase per token for this experiment, including trades from before this up
 New entries require 3 observations on the same pool spanning at least 60 seconds, with no gap above 90 seconds, within the last 180 seconds.
 Confirmation records API observations, not independent trades or proof that provider prices changed. Later GitHub gaps remain possible.
 Entry scores and exit thresholds are unchanged; higher scores are not validated profit probabilities.
-Eligible candidates in latest check: 0.
-Latest candidate rejection counts: {"collecting fresh confirmation": 5, "entry signal did not qualify": 6, "token already purchased": 2}
+Eligible candidates in latest check: 1.
+Latest candidate rejection counts: {"entry signal did not qualify": 5, "token already purchased": 2}
 Candidate observations and rejection reasons are saved to decisions_v2.jsonl for future evaluation.
 The $100 stake and 10-position limit are retained from the existing experiment. Selection changes are experimental and have not demonstrated profitability.
 
