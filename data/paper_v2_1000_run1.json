@@ -7103,7 +7103,9 @@
     "CPqtK8nt4Ky4MMrNvU4485zNTDBKgQN1m9FE42VJpump": 1792893380,
     "GBZcCHK8ny1vdFzTW6oqmaMAz2rHzs6f84cHPRQbpump": 1792893380,
     "GNqpjm2KHRcAit86B1ierwUZWJZVyeh5FyXhTakTpump": 1792893380,
-    "H3TDdVXLQFL6H7U1nEF6p8CdECa8ZPp6Tmi5oFh6pump": 1792893381
+    "H3TDdVXLQFL6H7U1nEF6p8CdECa8ZPp6Tmi5oFh6pump": 1792893381,
+    "EAbQiWL2v2PPHJv3zBkM1aV1QQhE8bKaV2xYgjYxpump": 1792893468,
+    "Hu7rBHqUrH17iJcQxBg4c3nu5BgBR88mKn7bDuc7pump": 1792893469
   },
   "trades": [
     {
@@ -9132,8 +9134,8 @@
       "observation_gap_seconds": 2791
     }
   ],
-  "cycles": 6391,
-  "last_run": 1792893438,
+  "cycles": 6392,
+  "last_run": 1792893469,
   "errors": [],
   "history": [
     {
@@ -92218,6 +92220,19 @@
       "controls_version": "controls-1",
       "observed_equity": 64.7326748314294,
       "entries_blocked": []
+    },
+    {
+      "ts": 1792893469,
+      "cash": 64.7326748314294,
+      "realized": -935.2673251685706,
+      "fresh_estimate": 0.0,
+      "stale_estimate": 0.0,
+      "unresolved": 0,
+      "open": 0,
+      "errors": [],
+      "controls_version": "controls-1",
+      "observed_equity": 64.7326748314294,
+      "entries_blocked": []
     }
   ],
   "controls": {
@@ -98246,12 +98261,24 @@
       {
         "ts": 1792893438,
         "equity": 64.7326748314294
+      },
+      {
+        "ts": 1792893466,
+        "equity": 64.7326748314294
+      },
+      {
+        "ts": 1792893466,
+        "equity": 64.7326748314294
+      },
+      {
+        "ts": 1792893469,
+        "equity": 64.7326748314294
       }
     ],
     "pause_until": 0,
     "pauses": [],
-    "last_cycle": 1792893438,
-    "last_gap": 30,
+    "last_cycle": 1792893469,
+    "last_gap": 31,
     "max_gap": 3072,
     "blocked": [],
     "costs": {
@@ -98263,7 +98290,7 @@
       "slippage": 40.290130898878395
     },
     "accounted_trades": 90,
-    "valued_cycles": 6391,
+    "valued_cycles": 6392,
     "unresolved_cycles": 0,
     "loss_pause_enabled": false,
     "last_value": 64.7326748314294,
