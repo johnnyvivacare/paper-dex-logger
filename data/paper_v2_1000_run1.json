@@ -7273,7 +7273,9 @@
     "DuevtVS81NvZhXswCcJqhk74PpxJyX42kpCvjN4Cpump": 1792945909,
     "ggPmyEEJy1uxgqxpUcCwh9iuxh2Ef7zEZbsQCYcpump": 1792945909,
     "m4i1g2cP4zaD2XaqLpwKNoCptU7iYW3598Pekyopump": 1792945909,
-    "rpwLA852D36ViCekWjERr3Dtngp3rBsMhHganCGpump": 1792945910
+    "rpwLA852D36ViCekWjERr3Dtngp3rBsMhHganCGpump": 1792945910,
+    "BEwbKaTiEcqLVhVCVQmnYEnA7mMVfnMVXChzV4NGsAtS": 1792945937,
+    "GXdraDayqrYDqKRybxGTzhx4V51pPDwaTft3RExPpump": 1792945938
   },
   "trades": [
     {
@@ -9302,8 +9304,8 @@
       "observation_gap_seconds": 2791
     }
   ],
-  "cycles": 6605,
-  "last_run": 1792945910,
+  "cycles": 6606,
+  "last_run": 1792945938,
   "errors": [],
   "history": [
     {
@@ -95170,6 +95172,19 @@
       "controls_version": "controls-1",
       "observed_equity": 64.7326748314294,
       "entries_blocked": []
+    },
+    {
+      "ts": 1792945938,
+      "cash": 64.7326748314294,
+      "realized": -935.2673251685706,
+      "fresh_estimate": 0.0,
+      "stale_estimate": 0.0,
+      "unresolved": 0,
+      "open": 0,
+      "errors": [],
+      "controls_version": "controls-1",
+      "observed_equity": 64.7326748314294,
+      "entries_blocked": []
     }
   ],
   "controls": {
@@ -100510,12 +100525,24 @@
       {
         "ts": 1792945910,
         "equity": 64.7326748314294
+      },
+      {
+        "ts": 1792945935,
+        "equity": 64.7326748314294
+      },
+      {
+        "ts": 1792945935,
+        "equity": 64.7326748314294
+      },
+      {
+        "ts": 1792945938,
+        "equity": 64.7326748314294
       }
     ],
     "pause_until": 0,
     "pauses": [],
-    "last_cycle": 1792945910,
-    "last_gap": 1644,
+    "last_cycle": 1792945938,
+    "last_gap": 28,
     "max_gap": 3072,
     "blocked": [],
     "costs": {
@@ -100527,7 +100554,7 @@
       "slippage": 40.290130898878395
     },
     "accounted_trades": 90,
-    "valued_cycles": 6605,
+    "valued_cycles": 6606,
     "unresolved_cycles": 0,
     "loss_pause_enabled": false,
     "last_value": 64.7326748314294,
