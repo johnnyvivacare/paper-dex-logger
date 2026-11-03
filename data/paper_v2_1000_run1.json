@@ -10223,7 +10223,9 @@
     "CkCyVMw8xXf8HqFK3ppJVqsCSrpaBeaPuVQ37Tc96666": 1793716643,
     "DvVru1oZTnwxakgyhw71Gj678QVi56L5B22oDmWSpump": 1793716643,
     "FPWVDCLkYSTHayfzv7f8EqgrW91qA2yXZinJCbphpump": 1793716643,
-    "JAFQtEgsG9ezrbA2LJVv6oYZeo1svoa2VaoaZsN2pump": 1793716643
+    "JAFQtEgsG9ezrbA2LJVv6oYZeo1svoa2VaoaZsN2pump": 1793716643,
+    "8sx9DT49qpBHZ8TuWmR69jGd1TuyP9kxSYxdawdfpump": 1793716850,
+    "HjkX6rLUAsiKYZ1hwkD4TV1bsEoXgkSjVTF4gHSmpump": 1793716851
   },
   "trades": [
     {
@@ -12252,8 +12254,8 @@
       "observation_gap_seconds": 2791
     }
   ],
-  "cycles": 8843,
-  "last_run": 1793716820,
+  "cycles": 8844,
+  "last_run": 1793716851,
   "errors": [],
   "history": [
     {
@@ -127214,6 +127216,19 @@
       "controls_version": "controls-1",
       "observed_equity": 64.7326748314294,
       "entries_blocked": []
+    },
+    {
+      "ts": 1793716851,
+      "cash": 64.7326748314294,
+      "realized": -935.2673251685706,
+      "fresh_estimate": 0.0,
+      "stale_estimate": 0.0,
+      "unresolved": 0,
+      "open": 0,
+      "errors": [],
+      "controls_version": "controls-1",
+      "observed_equity": 64.7326748314294,
+      "entries_blocked": []
     }
   ],
   "controls": {
@@ -129926,12 +129941,24 @@
       {
         "ts": 1793716820,
         "equity": 64.7326748314294
+      },
+      {
+        "ts": 1793716848,
+        "equity": 64.7326748314294
+      },
+      {
+        "ts": 1793716848,
+        "equity": 64.7326748314294
+      },
+      {
+        "ts": 1793716851,
+        "equity": 64.7326748314294
       }
     ],
     "pause_until": 0,
     "pauses": [],
-    "last_cycle": 1793716820,
-    "last_gap": 30,
+    "last_cycle": 1793716851,
+    "last_gap": 31,
     "max_gap": 8482,
     "blocked": [],
     "costs": {
@@ -129943,7 +129970,7 @@
       "slippage": 40.290130898878395
     },
     "accounted_trades": 90,
-    "valued_cycles": 8843,
+    "valued_cycles": 8844,
     "unresolved_cycles": 0,
     "loss_pause_enabled": false,
     "last_value": 64.7326748314294,
