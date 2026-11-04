@@ -10665,7 +10665,8 @@
     "HgxUveqC7TzuV98JkuygPTakN3ojTVpKGEjqtiY3pump": 1793817002,
     "JDaram8Jt8qVVKuWTBN9dYk69xmpKFHj6RrzVGgXpump": 1793817002,
     "LWSYx94hV8NaFujStsqRZNsd1V8PkasADLTfiWjbfix": 1793817003,
-    "wEgV5yQpVCUmKZYugqSzPR1uTyEWN1F6bFTQeiVpump": 1793817003
+    "wEgV5yQpVCUmKZYugqSzPR1uTyEWN1F6bFTQeiVpump": 1793817003,
+    "GMzGxFt4tUBKuoinLkbhGLjbzgLmG3B8Q423w9ycpump": 1793817057
   },
   "trades": [
     {
@@ -12694,8 +12695,8 @@
       "observation_gap_seconds": 2791
     }
   ],
-  "cycles": 9063,
-  "last_run": 1793817027,
+  "cycles": 9064,
+  "last_run": 1793817057,
   "errors": [],
   "history": [
     {
@@ -130516,6 +130517,19 @@
       "controls_version": "controls-1",
       "observed_equity": 64.7326748314294,
       "entries_blocked": []
+    },
+    {
+      "ts": 1793817057,
+      "cash": 64.7326748314294,
+      "realized": -935.2673251685706,
+      "fresh_estimate": 0.0,
+      "stale_estimate": 0.0,
+      "unresolved": 0,
+      "open": 0,
+      "errors": [],
+      "controls_version": "controls-1",
+      "observed_equity": 64.7326748314294,
+      "entries_blocked": []
     }
   ],
   "controls": {
@@ -133136,12 +133150,28 @@
       {
         "ts": 1793817027,
         "equity": 64.7326748314294
+      },
+      {
+        "ts": 1793817055,
+        "equity": 64.7326748314294
+      },
+      {
+        "ts": 1793817055,
+        "equity": 64.7326748314294
+      },
+      {
+        "ts": 1793817055,
+        "equity": 64.7326748314294
+      },
+      {
+        "ts": 1793817057,
+        "equity": 64.7326748314294
       }
     ],
     "pause_until": 0,
     "pauses": [],
-    "last_cycle": 1793817027,
-    "last_gap": 24,
+    "last_cycle": 1793817057,
+    "last_gap": 30,
     "max_gap": 8482,
     "blocked": [],
     "costs": {
@@ -133153,7 +133183,7 @@
       "slippage": 40.290130898878395
     },
     "accounted_trades": 90,
-    "valued_cycles": 9063,
+    "valued_cycles": 9064,
     "unresolved_cycles": 0,
     "loss_pause_enabled": false,
     "last_value": 64.7326748314294,
