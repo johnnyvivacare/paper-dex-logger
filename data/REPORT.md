@@ -1,8 +1,8 @@
 # Solana paper test — $1,000 USD
 
 Started: 2026-10-09 00:41 UTC
-Last collection: 2026-11-13 23:33 UTC
-Cycles: 9445
+Last collection: 2026-11-14 03:33 UTC
+Cycles: 9446
 
 | Item | USD |
 |---|---:|
@@ -29,7 +29,7 @@ Metrics below cover only the period since this upgrade.
 Initial valued equity: $1000.00
 Current equity with quotes <=120s old: $64.73
 Maximum observed portfolio decline since upgrade: 93.53%
-Latest / largest saved-cycle gap: 30s / 37623s.
+Latest / largest saved-cycle gap: 14352s / 37623s.
 Cycles with uncertain equity: 0.
 New entries: allowed by controls
 
